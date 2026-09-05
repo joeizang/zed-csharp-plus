@@ -1,0 +1,28 @@
+corpus/msbuild/build.targets
+  pattern: 0
+    capture: 1 - indent, start: (0, 0), end: (0, 9), text: `<Project>`
+    capture: 0 - end, start: (0, 8), end: (0, 9), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (2, 2), end: (2, 17), text: `<PropertyGroup>`
+    capture: 0 - end, start: (2, 16), end: (2, 17), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (3, 4), end: (3, 16), text: `<DocsOutput>`
+    capture: 0 - end, start: (3, 15), end: (3, 16), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (7, 2), end: (7, 94), text: `<Target Name="PublishDocs" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">`
+    capture: 0 - end, start: (7, 93), end: (7, 94), text: `>`
+  pattern: 1
+    capture: 1 - indent, start: (8, 4), end: (8, 86), text: `<Message Text="Collecting documentation into $(DocsOutput)" Importance="normal" />`
+    capture: 0 - end, start: (8, 84), end: (8, 86), text: `/>`
+  pattern: 1
+    capture: 1 - indent, start: (9, 4), end: (9, 43), text: `<MakeDir Directories="$(DocsOutput)" />`
+    capture: 0 - end, start: (9, 41), end: (9, 43), text: `/>`
+  pattern: 1
+    capture: 1 - indent, start: (10, 4), end: (10, 97), text: `<Copy SourceFiles="@(DocFile)" DestinationFolder="$(DocsOutput)" SkipUnchangedFiles="true" />`
+    capture: 0 - end, start: (10, 95), end: (10, 97), text: `/>`
+  pattern: 0
+    capture: 1 - indent, start: (13, 2), end: (13, 54), text: `<Target Name="WarnSlowTargets" AfterTargets="Build">`
+    capture: 0 - end, start: (13, 53), end: (13, 54), text: `>`
+  pattern: 1
+    capture: 1 - indent, start: (14, 4), end: (14, 64), text: `<Exec Command="echo docs published" IgnoreExitCode="true" />`
+    capture: 0 - end, start: (14, 62), end: (14, 64), text: `/>`

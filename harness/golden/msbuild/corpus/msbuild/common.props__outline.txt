@@ -1,0 +1,37 @@
+corpus/msbuild/common.props
+  pattern: 0
+    capture: item, start: (0, 0), end: (21, 10)
+    capture: 0 - name, start: (0, 1), end: (0, 8), text: `Project`
+  pattern: 0
+    capture: item, start: (3, 2), end: (7, 18)
+    capture: 0 - name, start: (3, 3), end: (3, 16), text: `PropertyGroup`
+  pattern: 0
+    capture: 1 - item, start: (4, 4), end: (4, 37), text: `<LangVersion>latest</LangVersion>`
+    capture: 0 - name, start: (4, 5), end: (4, 16), text: `LangVersion`
+  pattern: 0
+    capture: 1 - item, start: (5, 4), end: (5, 55), text: `<TreatWarningsAsErrors>true</TreatWarningsAsErrors>`
+    capture: 0 - name, start: (5, 5), end: (5, 26), text: `TreatWarningsAsErrors`
+  pattern: 0
+    capture: 1 - item, start: (6, 4), end: (6, 43), text: `<Company>WebSample Collective</Company>`
+    capture: 0 - name, start: (6, 5), end: (6, 12), text: `Company`
+  pattern: 0
+    capture: item, start: (9, 2), end: (12, 18)
+    capture: 0 - name, start: (9, 3), end: (9, 16), text: `PropertyGroup`
+  pattern: 0
+    capture: 1 - item, start: (10, 4), end: (10, 65), text: `<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>`
+    capture: 0 - name, start: (10, 5), end: (10, 31), text: `ContinuousIntegrationBuild`
+  pattern: 0
+    capture: 1 - item, start: (11, 4), end: (11, 35), text: `<DebugType>embedded</DebugType>`
+    capture: 0 - name, start: (11, 5), end: (11, 14), text: `DebugType`
+  pattern: 0
+    capture: item, start: (14, 2), end: (19, 14)
+    capture: 0 - name, start: (14, 3), end: (14, 12), text: `ItemGroup`
+  pattern: 0
+    capture: item, start: (15, 4), end: (18, 24)
+    capture: 0 - name, start: (15, 5), end: (15, 22), text: `AssemblyAttribute`
+  pattern: 0
+    capture: 1 - item, start: (16, 6), end: (16, 46), text: `<_Parameter1>RepositoryUrl</_Parameter1>`
+    capture: 0 - name, start: (16, 7), end: (16, 18), text: `_Parameter1`
+  pattern: 0
+    capture: 1 - item, start: (17, 6), end: (17, 70), text: `<_Parameter2>https://example.invalid/websample/web</_Parameter2>`
+    capture: 0 - name, start: (17, 7), end: (17, 18), text: `_Parameter2`

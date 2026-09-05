@@ -1,0 +1,5 @@
+(compilation_unit [0, 0] - [8, 0]
+  (razor_page_directive [0, 0] - [0, 23]
+    (string_literal [0, 6] - [0, 23]
+      (string_literal_content [0, 7] - [0, 22])))
+  (razor_comment [2, 0] - [8, 0]))

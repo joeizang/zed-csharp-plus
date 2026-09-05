@@ -1,0 +1,237 @@
+corpus/csharp/strings-and-interpolation.cs
+  pattern: 31
+    capture: 14 - keyword, start: (0, 0), end: (0, 5), text: `using`
+  pattern: 0
+    capture: 0 - variable, start: (0, 6), end: (0, 12), text: `System`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (0, 12), end: (0, 13), text: `;`
+  pattern: 31
+    capture: 14 - keyword, start: (2, 0), end: (2, 9), text: `namespace`
+  pattern: 0
+    capture: 0 - variable, start: (2, 10), end: (2, 19), text: `WebSample`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (2, 19), end: (2, 20), text: `.`
+  pattern: 0
+    capture: 0 - variable, start: (2, 20), end: (2, 24), text: `Text`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (2, 24), end: (2, 25), text: `;`
+  pattern: 30
+    capture: 14 - keyword, start: (4, 0), end: (4, 6), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (4, 7), end: (4, 13), text: `static`
+  pattern: 31
+    capture: 14 - keyword, start: (4, 7), end: (4, 13), text: `static`
+  pattern: 31
+    capture: 14 - keyword, start: (4, 14), end: (4, 19), text: `class`
+  pattern: 5
+    capture: 2 - type, start: (4, 20), end: (4, 29), text: `Templates`
+  pattern: 0
+    capture: 0 - variable, start: (4, 20), end: (4, 29), text: `Templates`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `{`
+  pattern: 30
+    capture: 14 - keyword, start: (6, 4), end: (6, 10), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (6, 11), end: (6, 16), text: `const`
+  pattern: 20
+    capture: 5 - type.builtin, start: (6, 17), end: (6, 23), text: `string`
+  pattern: 0
+    capture: 0 - variable, start: (6, 24), end: (6, 36), text: `VerbatimPath`
+  pattern: 28
+    capture: 12 - operator, start: (6, 37), end: (6, 38), text: `=`
+  pattern: 23
+    capture: 7 - string, start: (6, 39), end: (6, 65), text: `@"C:\logs\app\service.log"`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (6, 65), end: (6, 66), text: `;`
+  pattern: 30
+    capture: 14 - keyword, start: (8, 4), end: (8, 10), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (8, 11), end: (8, 16), text: `const`
+  pattern: 20
+    capture: 5 - type.builtin, start: (8, 17), end: (8, 23), text: `string`
+  pattern: 0
+    capture: 0 - variable, start: (8, 24), end: (8, 31), text: `RawJson`
+  pattern: 28
+    capture: 12 - operator, start: (8, 32), end: (8, 33), text: `=`
+  pattern: 23
+    capture: string, start: (9, 8), end: (14, 11)
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (14, 11), end: (14, 12), text: `;`
+  pattern: 30
+    capture: 14 - keyword, start: (16, 4), end: (16, 10), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (16, 11), end: (16, 17), text: `static`
+  pattern: 31
+    capture: 14 - keyword, start: (16, 11), end: (16, 17), text: `static`
+  pattern: 20
+    capture: 5 - type.builtin, start: (16, 18), end: (16, 24), text: `string`
+  pattern: 1
+    capture: 1 - function, start: (16, 25), end: (16, 33), text: `Greeting`
+  pattern: 0
+    capture: 0 - variable, start: (16, 25), end: (16, 33), text: `Greeting`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (16, 33), end: (16, 34), text: `(`
+  pattern: 20
+    capture: 5 - type.builtin, start: (16, 34), end: (16, 40), text: `string`
+  pattern: 37
+    capture: 16 - variable.parameter, start: (16, 41), end: (16, 45), text: `name`
+  pattern: 0
+    capture: 0 - variable, start: (16, 41), end: (16, 45), text: `name`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (16, 45), end: (16, 46), text: `,`
+  pattern: 20
+    capture: 5 - type.builtin, start: (16, 47), end: (16, 50), text: `int`
+  pattern: 37
+    capture: 16 - variable.parameter, start: (16, 51), end: (16, 56), text: `count`
+  pattern: 0
+    capture: 0 - variable, start: (16, 51), end: (16, 56), text: `count`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (16, 56), end: (16, 57), text: `)`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (17, 4), end: (17, 5), text: `{`
+  pattern: 31
+    capture: 14 - keyword, start: (18, 8), end: (18, 14), text: `return`
+  pattern: 23
+    capture: 7 - string, start: (18, 15), end: (18, 97), text: `$"Hello, {name.Trim()}! You have {count} {(count == 1 ? "message" : "messages")}."`
+  pattern: 23
+    capture: 7 - string, start: (18, 15), end: (18, 16), text: `$`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 24), end: (18, 25), text: `{`
+  pattern: 0
+    capture: 0 - variable, start: (18, 25), end: (18, 29), text: `name`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (18, 29), end: (18, 30), text: `.`
+  pattern: 39
+    capture: 1 - function, start: (18, 30), end: (18, 34), text: `Trim`
+  pattern: 0
+    capture: 0 - variable, start: (18, 30), end: (18, 34), text: `Trim`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 34), end: (18, 35), text: `(`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 35), end: (18, 36), text: `)`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 36), end: (18, 37), text: `}`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 48), end: (18, 49), text: `{`
+  pattern: 0
+    capture: 0 - variable, start: (18, 49), end: (18, 54), text: `count`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 54), end: (18, 55), text: `}`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 56), end: (18, 57), text: `{`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 57), end: (18, 58), text: `(`
+  pattern: 0
+    capture: 0 - variable, start: (18, 58), end: (18, 63), text: `count`
+  pattern: 28
+    capture: 12 - operator, start: (18, 64), end: (18, 66), text: `==`
+  pattern: 22
+    capture: 6 - number, start: (18, 67), end: (18, 68), text: `1`
+  pattern: 28
+    capture: 12 - operator, start: (18, 69), end: (18, 70), text: `?`
+  pattern: 23
+    capture: 7 - string, start: (18, 71), end: (18, 80), text: `"message"`
+  pattern: 28
+    capture: 12 - operator, start: (18, 81), end: (18, 82), text: `:`
+  pattern: 23
+    capture: 7 - string, start: (18, 83), end: (18, 93), text: `"messages"`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 93), end: (18, 94), text: `)`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (18, 94), end: (18, 95), text: `}`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (18, 97), end: (18, 98), text: `;`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (19, 4), end: (19, 5), text: `}`
+  pattern: 30
+    capture: 14 - keyword, start: (21, 4), end: (21, 10), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (21, 11), end: (21, 17), text: `static`
+  pattern: 31
+    capture: 14 - keyword, start: (21, 11), end: (21, 17), text: `static`
+  pattern: 20
+    capture: 5 - type.builtin, start: (21, 18), end: (21, 24), text: `string`
+  pattern: 1
+    capture: 1 - function, start: (21, 25), end: (21, 28), text: `Sql`
+  pattern: 0
+    capture: 0 - variable, start: (21, 25), end: (21, 28), text: `Sql`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (21, 28), end: (21, 29), text: `(`
+  pattern: 20
+    capture: 5 - type.builtin, start: (21, 29), end: (21, 35), text: `string`
+  pattern: 37
+    capture: 16 - variable.parameter, start: (21, 36), end: (21, 41), text: `table`
+  pattern: 0
+    capture: 0 - variable, start: (21, 36), end: (21, 41), text: `table`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (21, 41), end: (21, 42), text: `)`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (22, 4), end: (22, 5), text: `{`
+  pattern: 31
+    capture: 14 - keyword, start: (23, 8), end: (23, 14), text: `return`
+  pattern: 23
+    capture: 7 - string, start: (23, 15), end: (23, 59), text: `$"SELECT * FROM [{table}] WHERE Deleted = 0"`
+  pattern: 23
+    capture: 7 - string, start: (23, 15), end: (23, 16), text: `$`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (23, 32), end: (23, 33), text: `{`
+  pattern: 0
+    capture: 0 - variable, start: (23, 33), end: (23, 38), text: `table`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (23, 38), end: (23, 39), text: `}`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (23, 59), end: (23, 60), text: `;`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (24, 4), end: (24, 5), text: `}`
+  pattern: 30
+    capture: 14 - keyword, start: (26, 4), end: (26, 10), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (26, 11), end: (26, 17), text: `static`
+  pattern: 31
+    capture: 14 - keyword, start: (26, 11), end: (26, 17), text: `static`
+  pattern: 20
+    capture: 5 - type.builtin, start: (26, 18), end: (26, 24), text: `string`
+  pattern: 1
+    capture: 1 - function, start: (26, 25), end: (26, 32), text: `Escapes`
+  pattern: 0
+    capture: 0 - variable, start: (26, 25), end: (26, 32), text: `Escapes`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (26, 32), end: (26, 33), text: `(`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (26, 33), end: (26, 34), text: `)`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (27, 4), end: (27, 5), text: `{`
+  pattern: 31
+    capture: 14 - keyword, start: (28, 8), end: (28, 14), text: `return`
+  pattern: 23
+    capture: 7 - string, start: (28, 15), end: (28, 60), text: `"tab:\t quote:\" backslash:\\ unicode:\u00e9"`
+  pattern: 24
+    capture: 8 - string.escape, start: (28, 20), end: (28, 22), text: `\t`
+  pattern: 24
+    capture: 8 - string.escape, start: (28, 29), end: (28, 31), text: `\"`
+  pattern: 24
+    capture: 8 - string.escape, start: (28, 42), end: (28, 44), text: `\\`
+  pattern: 24
+    capture: 8 - string.escape, start: (28, 53), end: (28, 59), text: `\u00e9`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (28, 60), end: (28, 61), text: `;`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (29, 4), end: (29, 5), text: `}`
+  pattern: 30
+    capture: 14 - keyword, start: (31, 4), end: (31, 10), text: `public`
+  pattern: 30
+    capture: 14 - keyword, start: (31, 11), end: (31, 17), text: `static`
+  pattern: 31
+    capture: 14 - keyword, start: (31, 11), end: (31, 17), text: `static`
+  pattern: 20
+    capture: 5 - type.builtin, start: (31, 18), end: (31, 22), text: `char`
+  pattern: 0
+    capture: 0 - variable, start: (31, 23), end: (31, 32), text: `Separator`
+  pattern: 28
+    capture: 12 - operator, start: (31, 33), end: (31, 35), text: `=>`
+  pattern: 23
+    capture: 7 - string, start: (31, 36), end: (31, 39), text: `'/'`
+  pattern: 27
+    capture: 11 - punctuation.delimiter, start: (31, 39), end: (31, 40), text: `;`
+  pattern: 29
+    capture: 13 - punctuation.bracket, start: (32, 0), end: (32, 1), text: `}`

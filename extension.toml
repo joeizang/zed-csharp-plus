@@ -1,7 +1,7 @@
 id = "csharp-plus"
 name = "C# Plus"
 description = "C#, Razor, and .NET project support."
-version = "1.2.2"
+version = "1.3.0"
 schema_version = 1
 # Upstream authors of zed-extensions/csharp, retained per the Apache-2.0
 # NOTICE requirements. See README.md for the fork's provenance.
@@ -14,15 +14,15 @@ repository = "https://github.com/joeizang/zed-csharp-plus"
 
 [language_servers.omnisharp]
 name = "OmniSharp"
-language = "CSharp"
+languages = ["CSharp"]
 
 [language_servers.roslyn]
 name = "Roslyn"
-language = "CSharp"
+languages = ["CSharp"]
 
 [language_servers.csharp-ls]
 name = "csharp-ls"
-language = "CSharp"
+languages = ["CSharp"]
 
 [grammars.c_sharp]
 repository = "https://github.com/tree-sitter/tree-sitter-c-sharp"
@@ -32,3 +32,8 @@ commit = "485f0bae0274ac9114797fc10db6f7034e4086e3"
 repository = "https://github.com/tree-sitter-grammars/tree-sitter-xml"
 commit = "863dbc381f44f6c136a399e684383b977bb2beaa"
 path = "xml"
+
+# Fork of tris203/tree-sitter-razor; see docs/razor-grammar-audit.md.
+[grammars.razor]
+repository = "https://github.com/joeizang/tree-sitter-razor"
+commit = "4ede6ff6e5c85630e8232eb9f52aca952f327ce7"

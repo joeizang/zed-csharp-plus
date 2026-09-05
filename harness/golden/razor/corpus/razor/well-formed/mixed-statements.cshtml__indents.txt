@@ -1,0 +1,62 @@
+corpus/razor/well-formed/mixed-statements.cshtml
+  pattern: 3
+    capture: 1 - indent, start: (2, 0), end: (2, 21), text: `<h1>Page content</h1>`
+    capture: 2 - start, start: (2, 0), end: (2, 1), text: `<`
+    capture: 0 - end, start: (2, 16), end: (2, 18), text: `</`
+  pattern: 1
+    capture: 1 - indent, start: (6, 18), end: (6, 52), text: `new[] { "alpha", "beta", "gamma" }`
+    capture: 0 - end, start: (6, 22), end: (6, 23), text: `]`
+  pattern: 0
+    capture: 1 - indent, start: (6, 24), end: (6, 52), text: `{ "alpha", "beta", "gamma" }`
+    capture: 0 - end, start: (6, 51), end: (6, 52), text: `}`
+  pattern: 0
+    capture: indent, start: (4, 0), end: (7, 1)
+    capture: 0 - end, start: (7, 0), end: (7, 1), text: `}`
+  pattern: 2
+    capture: indent, start: (10, 4), end: (15, 5)
+    capture: 0 - end, start: (10, 44), end: (10, 45), text: `)`
+  pattern: 3
+    capture: indent, start: (12, 8), end: (14, 18)
+    capture: 2 - start, start: (12, 8), end: (12, 9), text: `<`
+    capture: 0 - end, start: (14, 8), end: (14, 10), text: `</`
+  pattern: 0
+    capture: indent, start: (10, 4), end: (15, 5)
+    capture: 0 - end, start: (15, 4), end: (15, 5), text: `}`
+  pattern: 3
+    capture: indent, start: (9, 0), end: (16, 6)
+    capture: 2 - start, start: (9, 0), end: (9, 1), text: `<`
+    capture: 0 - end, start: (16, 0), end: (16, 2), text: `</`
+  pattern: 2
+    capture: 1 - indent, start: (18, 7), end: (18, 14), text: `(false)`
+    capture: 0 - end, start: (18, 13), end: (18, 14), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (20, 4), end: (20, 22), text: `<span>never</span>`
+    capture: 2 - start, start: (20, 4), end: (20, 5), text: `<`
+    capture: 0 - end, start: (20, 15), end: (20, 17), text: `</`
+  pattern: 0
+    capture: indent, start: (18, 0), end: (21, 1)
+    capture: 0 - end, start: (21, 0), end: (21, 1), text: `}`
+  pattern: 3
+    capture: 1 - indent, start: (25, 4), end: (25, 29), text: `<span>@Model.Risky</span>`
+    capture: 2 - start, start: (25, 4), end: (25, 5), text: `<`
+    capture: 0 - end, start: (25, 22), end: (25, 24), text: `</`
+  pattern: 0
+    capture: indent, start: (23, 0), end: (34, 1)
+    capture: 0 - end, start: (26, 0), end: (26, 1), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (27, 6), end: (27, 36), text: `(InvalidOperationException ex)`
+    capture: 0 - end, start: (27, 35), end: (27, 36), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (29, 4), end: (29, 42), text: `<span class="error">@ex.Message</span>`
+    capture: 2 - start, start: (29, 4), end: (29, 5), text: `<`
+    capture: 0 - end, start: (29, 35), end: (29, 37), text: `</`
+  pattern: 0
+    capture: indent, start: (27, 0), end: (30, 1)
+    capture: 0 - end, start: (30, 0), end: (30, 1), text: `}`
+  pattern: 3
+    capture: 1 - indent, start: (33, 4), end: (33, 21), text: `<span>done</span>`
+    capture: 2 - start, start: (33, 4), end: (33, 5), text: `<`
+    capture: 0 - end, start: (33, 14), end: (33, 16), text: `</`
+  pattern: 0
+    capture: indent, start: (31, 0), end: (34, 1)
+    capture: 0 - end, start: (34, 0), end: (34, 1), text: `}`

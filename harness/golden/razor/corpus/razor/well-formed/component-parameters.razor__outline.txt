@@ -1,0 +1,4 @@
+corpus/razor/well-formed/component-parameters.razor
+  pattern: 4
+    capture: item, start: (8, 4), end: (11, 6)
+    capture: context, start: (8, 12), end: (11, 5)

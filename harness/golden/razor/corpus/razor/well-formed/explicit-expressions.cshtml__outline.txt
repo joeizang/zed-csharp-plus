@@ -1,0 +1,4 @@
+corpus/razor/well-formed/explicit-expressions.cshtml
+  pattern: 4
+    capture: 1 - item, start: (9, 4), end: (9, 58), text: `var label = Model.Items.Count == 1 ? "item" : "items";`
+    capture: 2 - context, start: (9, 4), end: (9, 57), text: `var label = Model.Items.Count == 1 ? "item" : "items"`

@@ -1,0 +1,43 @@
+corpus/csharp/classes-and-records.cs
+  pattern: 0
+    capture: item, start: (4, 0), end: (24, 1)
+    capture: 0 - context, start: (5, 14), end: (5, 19), text: `class`
+    capture: 1 - name, start: (5, 20), end: (5, 27), text: `Invoice`
+  pattern: 3
+    capture: 2 - item, start: (7, 4), end: (7, 49), text: `private readonly List<string> _lines = new();`
+    capture: 0 - context, start: (7, 21), end: (7, 48), text: `List<string> _lines = new()`
+  pattern: 2
+    capture: 2 - item, start: (9, 4), end: (9, 41), text: `public string Customer { get; init; }`
+    capture: 0 - context, start: (9, 11), end: (9, 17), text: `string`
+    capture: 1 - name, start: (9, 18), end: (9, 26), text: `Customer`
+  pattern: 2
+    capture: 2 - item, start: (11, 4), end: (11, 46), text: `public decimal Total { get; private set; }`
+    capture: 0 - context, start: (11, 11), end: (11, 18), text: `decimal`
+    capture: 1 - name, start: (11, 19), end: (11, 24), text: `Total`
+  pattern: 2
+    capture: 2 - item, start: (13, 4), end: (13, 36), text: `public bool IsPaid { get; set; }`
+    capture: 0 - context, start: (13, 11), end: (13, 15), text: `bool`
+    capture: 1 - name, start: (13, 16), end: (13, 22), text: `IsPaid`
+  pattern: 1
+    capture: item, start: (15, 4), end: (18, 5)
+    capture: 1 - name, start: (15, 11), end: (15, 18), text: `Invoice`
+  pattern: 4
+    capture: item, start: (20, 4), end: (23, 5)
+    capture: 1 - name, start: (20, 16), end: (20, 23), text: `AddLine`
+    capture: 0 - context, start: (20, 23), end: (20, 36), text: `(string line)`
+  pattern: 4
+    capture: item, start: (28, 4), end: (31, 5)
+    capture: 1 - name, start: (28, 18), end: (28, 26), text: `ToString`
+    capture: 0 - context, start: (28, 26), end: (28, 75), text: `(string? format, IFormatProvider? formatProvider)`
+  pattern: 7
+    capture: item, start: (34, 0), end: (37, 1)
+    capture: 0 - context, start: (34, 7), end: (34, 16), text: `interface`
+    capture: 1 - name, start: (34, 17), end: (34, 27), text: `IAuditable`
+  pattern: 2
+    capture: 2 - item, start: (36, 4), end: (36, 29), text: `string AuditNote { get; }`
+    capture: 0 - context, start: (36, 4), end: (36, 10), text: `string`
+    capture: 1 - name, start: (36, 11), end: (36, 20), text: `AuditNote`
+  pattern: 5
+    capture: item, start: (39, 0), end: (44, 1)
+    capture: 0 - context, start: (39, 7), end: (39, 11), text: `enum`
+    capture: 1 - name, start: (39, 12), end: (39, 18), text: `Status`

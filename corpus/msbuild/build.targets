@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <DocsOutput>$(MSBuildThisFileDirectory)..\artifacts\docs</DocsOutput>
+  </PropertyGroup>
+
+  <!-- Publishes API documentation after a successful Release build. -->
+  <Target Name="PublishDocs" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Message Text="Collecting documentation into $(DocsOutput)" Importance="normal" />
+    <MakeDir Directories="$(DocsOutput)" />
+    <Copy SourceFiles="@(DocFile)" DestinationFolder="$(DocsOutput)" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="WarnSlowTargets" AfterTargets="Build">
+    <Exec Command="echo docs published" IgnoreExitCode="true" />
+  </Target>
+
+</Project>

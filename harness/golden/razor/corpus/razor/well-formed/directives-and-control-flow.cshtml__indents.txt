@@ -1,0 +1,77 @@
+corpus/razor/well-formed/directives-and-control-flow.cshtml
+  pattern: 1
+    capture: 1 - indent, start: (5, 11), end: (5, 22), text: `[Authorize]`
+    capture: 0 - end, start: (5, 21), end: (5, 22), text: `]`
+  pattern: 3
+    capture: 1 - indent, start: (7, 0), end: (7, 17), text: `<h1>Products</h1>`
+    capture: 2 - start, start: (7, 0), end: (7, 1), text: `<`
+    capture: 0 - end, start: (7, 12), end: (7, 14), text: `</`
+  pattern: 2
+    capture: indent, start: (9, 0), end: (15, 1)
+    capture: 0 - end, start: (9, 39), end: (9, 40), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (12, 8), end: (12, 34), text: `<span>@product.Name</span>`
+    capture: 2 - start, start: (12, 8), end: (12, 9), text: `<`
+    capture: 0 - end, start: (12, 27), end: (12, 29), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (13, 8), end: (13, 35), text: `<span>@product.Price</span>`
+    capture: 2 - start, start: (13, 8), end: (13, 9), text: `<`
+    capture: 0 - end, start: (13, 28), end: (13, 30), text: `</`
+  pattern: 3
+    capture: indent, start: (11, 4), end: (14, 10)
+    capture: 2 - start, start: (11, 4), end: (11, 5), text: `<`
+    capture: 0 - end, start: (14, 4), end: (14, 6), text: `</`
+  pattern: 0
+    capture: indent, start: (9, 0), end: (15, 1)
+    capture: 0 - end, start: (15, 0), end: (15, 1), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (17, 8), end: (17, 24), text: `(Model.Category)`
+    capture: 0 - end, start: (17, 23), end: (17, 24), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (20, 8), end: (20, 27), text: `<p>Browse books</p>`
+    capture: 2 - start, start: (20, 8), end: (20, 9), text: `<`
+    capture: 0 - end, start: (20, 23), end: (20, 25), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (23, 8), end: (23, 26), text: `<p>Browse toys</p>`
+    capture: 2 - start, start: (23, 8), end: (23, 9), text: `<`
+    capture: 0 - end, start: (23, 22), end: (23, 24), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (26, 8), end: (26, 32), text: `<p>Browse everything</p>`
+    capture: 2 - start, start: (26, 8), end: (26, 9), text: `<`
+    capture: 0 - end, start: (26, 28), end: (26, 30), text: `</`
+  pattern: 0
+    capture: indent, start: (17, 0), end: (28, 1)
+    capture: 0 - end, start: (28, 0), end: (28, 1), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (30, 23), end: (30, 25), text: `()`
+    capture: 0 - end, start: (30, 24), end: (30, 25), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (30, 4), end: (30, 26), text: `(Model.Products.Any())`
+    capture: 0 - end, start: (30, 25), end: (30, 26), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (32, 8), end: (32, 35), text: `(Model.Products.Count > 10)`
+    capture: 0 - end, start: (32, 34), end: (32, 35), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (34, 8), end: (34, 28), text: `<p>Large catalog</p>`
+    capture: 2 - start, start: (34, 8), end: (34, 9), text: `<`
+    capture: 0 - end, start: (34, 24), end: (34, 26), text: `</`
+  pattern: 0
+    capture: indent, start: (32, 4), end: (39, 5)
+    capture: 0 - end, start: (35, 4), end: (35, 5), text: `}`
+  pattern: 3
+    capture: 1 - indent, start: (38, 8), end: (38, 28), text: `<p>Small catalog</p>`
+    capture: 2 - start, start: (38, 8), end: (38, 9), text: `<`
+    capture: 0 - end, start: (38, 24), end: (38, 26), text: `</`
+  pattern: 0
+    capture: indent, start: (36, 4), end: (39, 5)
+    capture: 0 - end, start: (39, 4), end: (39, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (30, 0), end: (44, 1)
+    capture: 0 - end, start: (40, 0), end: (40, 1), text: `}`
+  pattern: 3
+    capture: 1 - indent, start: (43, 4), end: (43, 27), text: `<p>Catalog is empty</p>`
+    capture: 2 - start, start: (43, 4), end: (43, 5), text: `<`
+    capture: 0 - end, start: (43, 23), end: (43, 25), text: `</`
+  pattern: 0
+    capture: indent, start: (41, 0), end: (44, 1)
+    capture: 0 - end, start: (44, 0), end: (44, 1), text: `}`

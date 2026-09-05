@@ -1,0 +1,48 @@
+(compilation_unit [0, 0] - [21, 0]
+  (razor_page_directive [0, 0] - [0, 18]
+    (string_literal [0, 6] - [0, 18]
+      (string_literal_content [0, 7] - [0, 17])))
+  (razor_model_directive [1, 0] - [1, 21]
+    name: (identifier [1, 7] - [1, 21]))
+  (razor_addtaghelper_directive [2, 0] - [2, 52]
+    (taghelper_wildcard [2, 14] - [2, 15])
+    assembly: (qualified_name [2, 17] - [2, 52]
+      qualifier: (qualified_name [2, 17] - [2, 41]
+        qualifier: (qualified_name [2, 17] - [2, 37]
+          qualifier: (identifier [2, 17] - [2, 26])
+          name: (identifier [2, 27] - [2, 37]))
+        name: (identifier [2, 38] - [2, 41]))
+      name: (identifier [2, 42] - [2, 52])))
+  (element [4, 0] - [4, 27]
+    (razor_implicit_expression [4, 4] - [4, 13]
+      (identifier [4, 5] - [4, 13])))
+  (element [6, 0] - [8, 6]
+    (razor_implicit_expression [7, 4] - [7, 47]
+      (await_expression [7, 5] - [7, 47]
+        (invocation_expression [7, 11] - [7, 47]
+          function: (member_access_expression [7, 11] - [7, 28]
+            expression: (identifier [7, 11] - [7, 15])
+            name: (identifier [7, 16] - [7, 28]))
+          arguments: (argument_list [7, 28] - [7, 47]
+            (argument [7, 29] - [7, 39]
+              (string_literal [7, 29] - [7, 39]
+                (string_literal_content [7, 30] - [7, 38])))
+            (argument [7, 41] - [7, 46]
+              (identifier [7, 41] - [7, 46])))))))
+  (element [10, 0] - [12, 6]
+    (razor_implicit_expression [11, 4] - [11, 41]
+      (await_expression [11, 5] - [11, 41]
+        (invocation_expression [11, 11] - [11, 41]
+          function: (member_access_expression [11, 11] - [11, 32]
+            expression: (identifier [11, 11] - [11, 20])
+            name: (identifier [11, 21] - [11, 32]))
+          arguments: (argument_list [11, 32] - [11, 41]
+            (argument [11, 33] - [11, 40]
+              (string_literal [11, 33] - [11, 40]
+                (string_literal_content [11, 34] - [11, 39]))))))))
+  (razor_section [14, 0] - [16, 1]
+    (identifier [14, 9] - [14, 16])
+    (element [15, 4] - [15, 71]))
+  (razor_section [18, 0] - [20, 1]
+    (identifier [18, 9] - [18, 15])
+    (element [19, 4] - [19, 56])))

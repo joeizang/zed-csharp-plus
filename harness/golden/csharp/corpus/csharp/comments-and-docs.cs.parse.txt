@@ -1,0 +1,56 @@
+(compilation_unit [0, 0] - [28, 0]
+  (comment [0, 0] - [0, 49])
+  (using_directive [1, 0] - [1, 13]
+    (identifier [1, 6] - [1, 12]))
+  (file_scoped_namespace_declaration [3, 0] - [3, 29]
+    name: (qualified_name [3, 10] - [3, 28]
+      qualifier: (identifier [3, 10] - [3, 19])
+      name: (identifier [3, 20] - [3, 28])))
+  (comment [5, 0] - [5, 13])
+  (comment [6, 0] - [6, 50])
+  (comment [7, 0] - [7, 14])
+  (comment [8, 0] - [8, 73])
+  (class_declaration [9, 0] - [27, 1]
+    (modifier [9, 0] - [9, 6])
+    name: (identifier [9, 13] - [9, 24])
+    body: (declaration_list [10, 0] - [27, 1]
+      (comment [11, 4] - [11, 57])
+      (comment [12, 4] - [12, 60])
+      (comment [13, 4] - [13, 60])
+      (method_declaration [14, 4] - [19, 5]
+        (modifier [14, 4] - [14, 10])
+        returns: (predefined_type [14, 11] - [14, 15])
+        name: (identifier [14, 16] - [14, 23])
+        parameters: (parameter_list [14, 23] - [14, 52]
+          (parameter [14, 24] - [14, 38]
+            type: (predefined_type [14, 24] - [14, 30])
+            name: (identifier [14, 31] - [14, 38]))
+          (parameter [14, 40] - [14, 51]
+            type: (predefined_type [14, 40] - [14, 46])
+            name: (identifier [14, 47] - [14, 51])))
+        body: (block [15, 4] - [19, 5]
+          (comment [16, 8] - [16, 67])
+          (expression_statement [17, 8] - [17, 58]
+            (invocation_expression [17, 8] - [17, 57]
+              function: (member_access_expression [17, 8] - [17, 25]
+                expression: (identifier [17, 8] - [17, 15])
+                name: (identifier [17, 16] - [17, 25]))
+              arguments: (argument_list [17, 25] - [17, 57]
+                (argument [17, 26] - [17, 56]
+                  (interpolated_string_expression [17, 26] - [17, 56]
+                    (interpolation_start [17, 26] - [17, 27])
+                    (string_content [17, 28] - [17, 46])
+                    (interpolation [17, 46] - [17, 55]
+                      (interpolation_brace [17, 46] - [17, 47])
+                      (identifier [17, 47] - [17, 54])
+                      (interpolation_brace [17, 54] - [17, 55])))))))
+          (return_statement [18, 8] - [18, 20]
+            (boolean_literal [18, 15] - [18, 19]))))
+      (comment [21, 4] - [23, 7])
+      (method_declaration [24, 4] - [26, 5]
+        (modifier [24, 4] - [24, 12])
+        (modifier [24, 13] - [24, 19])
+        returns: (predefined_type [24, 20] - [24, 24])
+        name: (identifier [24, 25] - [24, 30])
+        parameters: (parameter_list [24, 30] - [24, 32])
+        body: (block [25, 4] - [26, 5])))))

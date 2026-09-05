@@ -1,0 +1,46 @@
+corpus/msbuild/WebSample.Web.csproj
+  pattern: 0
+    capture: item, start: (0, 0), end: (25, 10)
+    capture: 0 - name, start: (0, 1), end: (0, 8), text: `Project`
+  pattern: 0
+    capture: item, start: (2, 2), end: (7, 18)
+    capture: 0 - name, start: (2, 3), end: (2, 16), text: `PropertyGroup`
+  pattern: 0
+    capture: 1 - item, start: (3, 4), end: (3, 45), text: `<TargetFramework>net8.0</TargetFramework>`
+    capture: 0 - name, start: (3, 5), end: (3, 20), text: `TargetFramework`
+  pattern: 0
+    capture: 1 - item, start: (4, 4), end: (4, 31), text: `<Nullable>enable</Nullable>`
+    capture: 0 - name, start: (4, 5), end: (4, 13), text: `Nullable`
+  pattern: 0
+    capture: 1 - item, start: (5, 4), end: (5, 43), text: `<ImplicitUsings>enable</ImplicitUsings>`
+    capture: 0 - name, start: (5, 5), end: (5, 19), text: `ImplicitUsings`
+  pattern: 0
+    capture: 1 - item, start: (6, 4), end: (6, 44), text: `<RootNamespace>WebSample</RootNamespace>`
+    capture: 0 - name, start: (6, 5), end: (6, 18), text: `RootNamespace`
+  pattern: 0
+    capture: item, start: (9, 2), end: (12, 14)
+    capture: 0 - name, start: (9, 3), end: (9, 12), text: `ItemGroup`
+  pattern: 1
+    capture: 1 - item, start: (10, 4), end: (10, 79), text: `<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />`
+    capture: 0 - name, start: (10, 5), end: (10, 21), text: `PackageReference`
+  pattern: 1
+    capture: 1 - item, start: (11, 4), end: (11, 73), text: `<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />`
+    capture: 0 - name, start: (11, 5), end: (11, 21), text: `PackageReference`
+  pattern: 0
+    capture: item, start: (14, 2), end: (17, 14)
+    capture: 0 - name, start: (14, 3), end: (14, 12), text: `ItemGroup`
+  pattern: 1
+    capture: 1 - item, start: (15, 4), end: (15, 74), text: `<ProjectReference Include="..\WebSample.Core\WebSample.Core.csproj" />`
+    capture: 0 - name, start: (15, 5), end: (15, 21), text: `ProjectReference`
+  pattern: 1
+    capture: 1 - item, start: (16, 4), end: (16, 60), text: `<EmbeddedResource Include="Persistence\Queries\*.sql" />`
+    capture: 0 - name, start: (16, 5), end: (16, 21), text: `EmbeddedResource`
+  pattern: 0
+    capture: item, start: (20, 2), end: (23, 11)
+    capture: 0 - name, start: (20, 3), end: (20, 9), text: `Target`
+  pattern: 1
+    capture: 1 - item, start: (21, 4), end: (21, 77), text: `<Message Importance="high" Text="Writing revision for $(AssemblyName)" />`
+    capture: 0 - name, start: (21, 5), end: (21, 12), text: `Message`
+  pattern: 1
+    capture: 1 - item, start: (22, 4), end: (22, 145), text: `<WriteLinesToFile File="$(IntermediateOutputPath)revision.txt" Lines="$([System.DateTime]::Now.ToString(yyyyMMddHHmmss))" Overwrite="true" />`
+    capture: 0 - name, start: (22, 5), end: (22, 21), text: `WriteLinesToFile`

@@ -1,0 +1,19 @@
+corpus/csharp/comments-and-docs.cs
+  pattern: 2
+    capture: 1 - indent, start: (14, 23), end: (14, 52), text: `(string address, string body)`
+    capture: 0 - end, start: (14, 51), end: (14, 52), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (17, 25), end: (17, 57), text: `($"queueing mail for {address}")`
+    capture: 0 - end, start: (17, 56), end: (17, 57), text: `)`
+  pattern: 0
+    capture: indent, start: (15, 4), end: (19, 5)
+    capture: 0 - end, start: (19, 4), end: (19, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (24, 30), end: (24, 32), text: `()`
+    capture: 0 - end, start: (24, 31), end: (24, 32), text: `)`
+  pattern: 0
+    capture: indent, start: (25, 4), end: (26, 5)
+    capture: 0 - end, start: (26, 4), end: (26, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (10, 0), end: (27, 1)
+    capture: 0 - end, start: (27, 0), end: (27, 1), text: `}`

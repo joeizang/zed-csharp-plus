@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="src\WebSample.Web\WebSample.Web.csproj">
+    <Deployment>
+      <Target Name="Container"
+              Configuration="Release" />
+    </Deployment>
+  </Project>
+  <Project Path="src\WebSample.Core\WebSample.Core.csproj" />
+  <Project Path="tests\WebSample.Core.Tests\WebSample.Core.Tests.csproj" />
+</Solution>

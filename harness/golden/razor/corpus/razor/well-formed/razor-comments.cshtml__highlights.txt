@@ -1,0 +1,61 @@
+corpus/razor/well-formed/razor-comments.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (1, 0), end: (1, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (1, 1), end: (1, 6), text: `model`
+  pattern: 0
+    capture: 0 - comment, start: (3, 0), end: (3, 36), text: `@* This page shows archived notes *@`
+  pattern: 0
+    capture: comment, start: (4, 0), end: (6, 26)
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (7, 0), end: (7, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (7, 10), end: (7, 11), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (7, 11), end: (7, 12), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (7, 17), end: (7, 18), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 18), end: (7, 19), text: `>`
+  pattern: 2
+    capture: 2 - keyword, start: (8, 4), end: (8, 5), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (8, 5), end: (8, 12), text: `foreach`
+  pattern: 0
+    capture: 0 - comment, start: (10, 8), end: (10, 44), text: `@* Render the note title and body *@`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (11, 8), end: (11, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 16), end: (11, 17), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (12, 12), end: (12, 13), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 15), end: (12, 16), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (12, 16), end: (12, 17), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (12, 27), end: (12, 29), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 31), end: (12, 32), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (13, 12), end: (13, 13), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (13, 14), end: (13, 15), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (13, 15), end: (13, 16), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (13, 25), end: (13, 27), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (13, 28), end: (13, 29), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (14, 8), end: (14, 10), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (14, 17), end: (14, 18), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (16, 0), end: (16, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (16, 5), end: (16, 6), text: `>`

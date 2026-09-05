@@ -1,0 +1,17 @@
+corpus/razor/pathological/half-typed-component-tag.razor
+  pattern: 3
+    capture: 1 - indent, start: (2, 0), end: (2, 15), text: `<h1>Create</h1>`
+    capture: 2 - start, start: (2, 0), end: (2, 1), text: `<`
+    capture: 0 - end, start: (2, 10), end: (2, 12), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (6, 4), end: (6, 22), text: `<span>inner</span>`
+    capture: 2 - start, start: (6, 4), end: (6, 5), text: `<`
+    capture: 0 - end, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 3
+    capture: indent, start: (5, 0), end: (7, 15)
+    capture: 2 - start, start: (5, 0), end: (5, 1), text: `<`
+    capture: 0 - end, start: (7, 0), end: (7, 2), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (11, 0), end: (11, 41), text: `<p>Content after the half-typed tags.</p>`
+    capture: 2 - start, start: (11, 0), end: (11, 1), text: `<`
+    capture: 0 - end, start: (11, 37), end: (11, 39), text: `</`

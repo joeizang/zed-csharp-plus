@@ -1,0 +1,62 @@
+(compilation_unit [0, 0] - [24, 0]
+  (razor_page_directive [0, 0] - [0, 16]
+    (string_literal [0, 6] - [0, 16]
+      (string_literal_content [0, 7] - [0, 15])))
+  (razor_using_directive [1, 0] - [1, 44]
+    (qualified_name [1, 7] - [1, 44]
+      qualifier: (qualified_name [1, 7] - [1, 28]
+        qualifier: (identifier [1, 7] - [1, 13])
+        name: (identifier [1, 14] - [1, 28]))
+      name: (identifier [1, 29] - [1, 44])))
+  (razor_inject_directive [2, 0] - [2, 26]
+    (variable_declaration [2, 8] - [2, 26]
+      type: (identifier [2, 8] - [2, 20])
+      (variable_declarator [2, 21] - [2, 26]
+        name: (identifier [2, 21] - [2, 26]))))
+  (element [4, 0] - [4, 16])
+  (element [6, 0] - [6, 75]
+    (razor_html_attribute [6, 32] - [6, 57]
+      (razor_attribute_name [6, 32] - [6, 40])
+      (razor_attribute_value [6, 41] - [6, 57]
+        (identifier [6, 42] - [6, 56]))))
+  (razor_block [8, 0] - [23, 1]
+    (field_declaration [9, 4] - [9, 33]
+      (modifier [9, 4] - [9, 11])
+      (variable_declaration [9, 12] - [9, 32]
+        type: (predefined_type [9, 12] - [9, 15])
+        (variable_declarator [9, 16] - [9, 32]
+          name: (identifier [9, 16] - [9, 28])
+          (integer_literal [9, 31] - [9, 32]))))
+    (property_declaration [11, 4] - [12, 38]
+      (attribute_list [11, 4] - [11, 15]
+        (attribute [11, 5] - [11, 14]
+          name: (identifier [11, 5] - [11, 14])))
+      (modifier [12, 4] - [12, 10])
+      type: (predefined_type [12, 11] - [12, 14])
+      name: (identifier [12, 15] - [12, 24])
+      accessors: (accessor_list [12, 25] - [12, 38]
+        (accessor_declaration [12, 27] - [12, 31])
+        (accessor_declaration [12, 32] - [12, 36])))
+    (method_declaration [14, 4] - [17, 5]
+      (modifier [14, 4] - [14, 13])
+      (modifier [14, 14] - [14, 22])
+      returns: (predefined_type [14, 23] - [14, 27])
+      name: (identifier [14, 28] - [14, 41])
+      parameters: (parameter_list [14, 41] - [14, 43])
+      body: (block [15, 4] - [17, 5]
+        (expression_statement [16, 8] - [16, 33]
+          (assignment_expression [16, 8] - [16, 32]
+            left: (identifier [16, 8] - [16, 20])
+            right: (identifier [16, 23] - [16, 32])))))
+    (method_declaration [19, 4] - [22, 5]
+      (modifier [19, 4] - [19, 11])
+      returns: (predefined_type [19, 12] - [19, 16])
+      name: (identifier [19, 17] - [19, 31])
+      parameters: (parameter_list [19, 31] - [19, 33])
+      body: (block [20, 4] - [22, 5]
+        (expression_statement [21, 8] - [21, 35]
+          (assignment_expression [21, 8] - [21, 34]
+            left: (identifier [21, 8] - [21, 20])
+            right: (member_access_expression [21, 24] - [21, 34]
+              expression: (identifier [21, 24] - [21, 29])
+              name: (identifier [21, 30] - [21, 34]))))))))

@@ -1,0 +1,9 @@
+corpus/razor/pathological/odd-directives.cshtml
+  pattern: 3
+    capture: 1 - indent, start: (6, 0), end: (6, 19), text: `<p>@Model.Title</p>`
+    capture: 2 - start, start: (6, 0), end: (6, 1), text: `<`
+    capture: 0 - end, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (9, 0), end: (9, 39), text: `<p>Final line after odd directives.</p>`
+    capture: 2 - start, start: (9, 0), end: (9, 1), text: `<`
+    capture: 0 - end, start: (9, 35), end: (9, 37), text: `</`

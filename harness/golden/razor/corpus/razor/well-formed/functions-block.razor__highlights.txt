@@ -1,0 +1,25 @@
+corpus/razor/well-formed/functions-block.razor
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 10), text: `functions`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (9, 0), end: (9, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 3), end: (9, 4), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (9, 4), end: (9, 5), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (9, 13), end: (9, 15), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 17), end: (9, 18), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (11, 0), end: (11, 1), text: `<`
+  pattern: 7
+    capture: 6 - attribute, start: (11, 8), end: (11, 16), text: `@onclick`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 24), end: (11, 25), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (11, 30), end: (11, 32), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 38), end: (11, 39), text: `>`

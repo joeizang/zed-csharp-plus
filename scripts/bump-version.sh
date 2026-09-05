@@ -46,9 +46,20 @@ fi
 
 old_version=$(current)
 
-sed -i '' "0,/^version = \"/s/^version = \"[^\"]*\"/version = \"$new_version\"/" extension.toml
-sed -i '' "0,/^version = \"/s/^version = \"[^\"]*\"/version = \"$new_version\"/" Cargo.toml
+# Portable in-place edit: the `.bak` suffix is required by BSD sed and
+# accepted by GNU sed; the backups are removed below. The pattern pins the
+# OLD version so only the package version line (present once per file) moves.
+for file in extension.toml Cargo.toml; do
+    sed -i.bak "s/^version = \"$old_version\"\$/version = \"$new_version\"/" "$file"
+    rm -f "$file.bak"
+done
 cargo update --workspace --quiet
+
+if ! grep -q "^version = \"$new_version\"" extension.toml || \
+   ! grep -q "^version = \"$new_version\"" Cargo.toml; then
+    echo "error: version bump did not apply (expected $old_version -> $new_version)" >&2
+    exit 1
+fi
 
 echo "bumped $old_version -> $new_version"
 echo

@@ -1,0 +1,12 @@
+(compilation_unit [0, 0] - [12, 0]
+  (razor_page_directive [0, 0] - [0, 22]
+    (string_literal [0, 6] - [0, 22]
+      (string_literal_content [0, 7] - [0, 21])))
+  (element [2, 0] - [2, 15])
+  (element [4, 0] - [4, 13])
+  (element [5, 0] - [7, 15]
+    (razor_html_attribute [5, 14] - [5, 19]
+      (razor_attribute_name [5, 14] - [5, 19]))
+    (element [6, 4] - [6, 22]))
+  (element [9, 0] - [9, 14])
+  (element [11, 0] - [11, 41]))

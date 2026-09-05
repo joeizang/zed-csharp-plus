@@ -1,0 +1,23 @@
+corpus/razor/well-formed/razor-comments.cshtml
+  pattern: 2
+    capture: indent, start: (8, 4), end: (15, 5)
+    capture: 0 - end, start: (8, 37), end: (8, 38), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (12, 12), end: (12, 32), text: `<h3>@note.Title</h3>`
+    capture: 2 - start, start: (12, 12), end: (12, 13), text: `<`
+    capture: 0 - end, start: (12, 27), end: (12, 29), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (13, 12), end: (13, 29), text: `<p>@note.Body</p>`
+    capture: 2 - start, start: (13, 12), end: (13, 13), text: `<`
+    capture: 0 - end, start: (13, 25), end: (13, 27), text: `</`
+  pattern: 3
+    capture: indent, start: (11, 8), end: (14, 18)
+    capture: 2 - start, start: (11, 8), end: (11, 9), text: `<`
+    capture: 0 - end, start: (14, 8), end: (14, 10), text: `</`
+  pattern: 0
+    capture: indent, start: (8, 4), end: (15, 5)
+    capture: 0 - end, start: (15, 4), end: (15, 5), text: `}`
+  pattern: 3
+    capture: indent, start: (7, 0), end: (16, 6)
+    capture: 2 - start, start: (7, 0), end: (7, 1), text: `<`
+    capture: 0 - end, start: (16, 0), end: (16, 2), text: `</`

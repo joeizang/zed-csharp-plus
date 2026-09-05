@@ -1,0 +1,26 @@
+corpus/razor/pathological/at-in-css.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 6), end: (2, 7), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (4, 20), end: (4, 22), text: `@@`
+  pattern: 8
+    capture: 2 - keyword, start: (7, 4), end: (7, 5), text: `@`
+    capture: 2 - keyword, start: (7, 5), end: (7, 10), text: `media`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (10, 0), end: (10, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (10, 7), end: (10, 8), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (12, 0), end: (12, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 2), end: (12, 3), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (12, 15), end: (12, 17), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 18), end: (12, 19), text: `>`

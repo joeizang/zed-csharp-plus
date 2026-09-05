@@ -1,0 +1,22 @@
+(compilation_unit [0, 0] - [14, 0]
+  (razor_page_directive [0, 0] - [0, 23]
+    (string_literal [0, 6] - [0, 23]
+      (string_literal_content [0, 7] - [0, 22])))
+  (ERROR [2, 0] - [13, 30]
+    (razor_condition [3, 4] - [3, 17]
+      (member_access_expression [3, 5] - [3, 16]
+        expression: (identifier [3, 5] - [3, 10])
+        name: (identifier [3, 11] - [3, 16])))
+    type: (implicit_type [6, 14] - [6, 17])
+    left: (identifier [6, 18] - [6, 22])
+    right: (member_access_expression [6, 26] - [6, 37]
+      expression: (identifier [6, 26] - [6, 31])
+      name: (identifier [6, 32] - [6, 37]))
+    (element [8, 8] - [9, 9]
+      (razor_implicit_expression [8, 12] - [8, 17]
+        (identifier [8, 13] - [8, 17])))
+    (ERROR [10, 0] - [10, 6]
+      (identifier [10, 2] - [10, 5]))
+    (element [11, 0] - [11, 31])
+    (ERROR [12, 0] - [12, 2])
+    (element [13, 0] - [13, 30])))

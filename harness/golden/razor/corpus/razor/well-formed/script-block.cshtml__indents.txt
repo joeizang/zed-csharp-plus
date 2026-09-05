@@ -1,0 +1,12 @@
+corpus/razor/well-formed/script-block.cshtml
+  pattern: 2
+    capture: 1 - indent, start: (8, 32), end: (8, 51), text: `("~/api/analytics")`
+    capture: 0 - end, start: (8, 50), end: (8, 51), text: `)`
+  pattern: 3
+    capture: indent, start: (2, 0), end: (10, 9)
+    capture: 2 - start, start: (2, 0), end: (2, 1), text: `<`
+    capture: 0 - end, start: (10, 0), end: (10, 2), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (12, 0), end: (12, 30), text: `<p>Analytics @Model.Status</p>`
+    capture: 2 - start, start: (12, 0), end: (12, 1), text: `<`
+    capture: 0 - end, start: (12, 26), end: (12, 28), text: `</`

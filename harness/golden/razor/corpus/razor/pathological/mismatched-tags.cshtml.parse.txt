@@ -1,0 +1,22 @@
+(compilation_unit [0, 0] - [18, 0]
+  (razor_page_directive [0, 0] - [0, 13]
+    (string_literal [0, 6] - [0, 13]
+      (string_literal_content [0, 7] - [0, 12])))
+  (element [2, 0] - [8, 6]
+    (element [3, 4] - [7, 12]
+      (element [4, 8] - [6, 16]
+        (element [5, 12] - [5, 33]
+          (element [5, 16] - [5, 28])))))
+  (razor_foreach [10, 0] - [15, 1]
+    type: (implicit_type [10, 10] - [10, 13])
+    left: (identifier [10, 14] - [10, 17])
+    right: (member_access_expression [10, 21] - [10, 31]
+      expression: (identifier [10, 21] - [10, 26])
+      name: (identifier [10, 27] - [10, 31]))
+    body: (element [12, 4] - [14, 9]
+      (element [13, 8] - [13, 27]
+        (razor_implicit_expression [13, 12] - [13, 22]
+          (member_access_expression [13, 13] - [13, 22]
+            expression: (identifier [13, 13] - [13, 16])
+            name: (identifier [13, 17] - [13, 22]))))))
+  (element [17, 0] - [17, 49]))

@@ -1,0 +1,21 @@
+corpus/razor/well-formed/bind-and-events.razor
+  pattern: 3
+    capture: 1 - item, start: (17, 4), end: (17, 38), text: `private bool Enabled { get; set; }`
+    capture: 2 - context, start: (17, 12), end: (17, 16), text: `bool`
+    capture: 0 - name, start: (17, 17), end: (17, 24), text: `Enabled`
+  pattern: 3
+    capture: 1 - item, start: (18, 4), end: (18, 47), text: `private string Region { get; set; } = "eu";`
+    capture: 2 - context, start: (18, 12), end: (18, 18), text: `string`
+    capture: 0 - name, start: (18, 19), end: (18, 25), text: `Region`
+  pattern: 5
+    capture: item, start: (20, 4), end: (23, 5)
+    capture: 0 - name, start: (20, 17), end: (20, 23), text: `Toggle`
+    capture: 2 - context, start: (20, 23), end: (20, 35), text: `(bool value)`
+  pattern: 5
+    capture: 1 - item, start: (25, 4), end: (25, 64), text: `private Task Save(System.EventArgs e) => Task.CompletedTask;`
+    capture: 0 - name, start: (25, 17), end: (25, 21), text: `Save`
+    capture: 2 - context, start: (25, 21), end: (25, 41), text: `(System.EventArgs e)`
+  pattern: 5
+    capture: 1 - item, start: (26, 4), end: (26, 54), text: `private Task SaveQuantity() => Task.CompletedTask;`
+    capture: 0 - name, start: (26, 17), end: (26, 29), text: `SaveQuantity`
+    capture: 2 - context, start: (26, 29), end: (26, 31), text: `()`

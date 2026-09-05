@@ -54,7 +54,7 @@ The authoritative mapping; every item below must keep this table accurate.
 | M1.1 | `extension.toml`, `languages/razor/config.toml` | M1.0 harness; M1.5 smoke |
 | M1.2 | `languages/razor/{highlights,injections}.scm` | `harness/golden/razor/**` |
 | M1.3 | `languages/razor/{brackets,indents,outline,textobjects,runes}.scm`, `languages/razor/config.toml` | `harness/golden/razor/**` (outline/textobjects/indents snapshots) |
-| M1.4 | `languages/razor/snippets.json`, `README.md`, `docs/{migration,known-limits}.md` | manual smoke checklist |
+| M1.4 | `languages/razor/razor.json` (named for the language so Zed scopes the snippets to Razor, not globally), `README.md`, `docs/{migration,known-limits}.md` | manual smoke checklist |
 | M1.5 | `CHANGELOG.md`, `extension.toml` + `Cargo.toml` versions, `docs/publishing.md`, `docs/release-smoke.md` | macOS/Linux/Windows smoke, dated in changelog |
 | M2.1 | `src/language_servers/roslyn.rs` (error messages), `docs/dotnet-workflow.md` | manual: each failure keeps files editable; documented remediation |
 | M2.2 | `languages/csproj/tasks.json`, `languages/slnx/tasks.json`, `docs/dotnet-workflow.md` | task definitions against `fixtures/**` (release smoke) |

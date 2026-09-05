@@ -1,0 +1,28 @@
+corpus/razor/well-formed/functions-block.razor
+  pattern: 2
+    capture: 0 - open, start: (1, 27), end: (1, 28), text: `{`
+    capture: 1 - close, start: (1, 39), end: (1, 40), text: `}`
+  pattern: 3
+    capture: 0 - open, start: (1, 43), end: (1, 44), text: `"`
+    capture: 1 - close, start: (1, 49), end: (1, 50), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (3, 21), end: (3, 22), text: `(`
+    capture: 1 - close, start: (3, 22), end: (3, 23), text: `)`
+  pattern: 3
+    capture: 0 - open, start: (5, 19), end: (5, 20), text: `"`
+    capture: 1 - close, start: (5, 20), end: (5, 21), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (4, 4), end: (4, 5), text: `{`
+    capture: 1 - close, start: (6, 4), end: (6, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (0, 11), end: (0, 12), text: `{`
+    capture: 1 - close, start: (7, 0), end: (7, 1), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (9, 0), end: (9, 1), text: `<`
+    capture: 1 - close, start: (9, 13), end: (9, 15), text: `</`
+  pattern: 3
+    capture: 0 - open, start: (11, 17), end: (11, 18), text: `"`
+    capture: 1 - close, start: (11, 23), end: (11, 24), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (11, 0), end: (11, 1), text: `<`
+    capture: 1 - close, start: (11, 30), end: (11, 32), text: `</`

@@ -1,0 +1,119 @@
+(compilation_unit [0, 0] - [33, 0]
+  (using_directive [0, 0] - [0, 13]
+    (identifier [0, 6] - [0, 12]))
+  (file_scoped_namespace_declaration [2, 0] - [2, 25]
+    name: (qualified_name [2, 10] - [2, 24]
+      qualifier: (identifier [2, 10] - [2, 19])
+      name: (identifier [2, 20] - [2, 24])))
+  (class_declaration [4, 0] - [32, 1]
+    (modifier [4, 0] - [4, 6])
+    (modifier [4, 7] - [4, 13])
+    name: (identifier [4, 20] - [4, 29])
+    body: (declaration_list [5, 0] - [32, 1]
+      (field_declaration [6, 4] - [6, 66]
+        (modifier [6, 4] - [6, 10])
+        (modifier [6, 11] - [6, 16])
+        (variable_declaration [6, 17] - [6, 65]
+          type: (predefined_type [6, 17] - [6, 23])
+          (variable_declarator [6, 24] - [6, 65]
+            name: (identifier [6, 24] - [6, 36])
+            (verbatim_string_literal [6, 39] - [6, 65]))))
+      (field_declaration [8, 4] - [14, 12]
+        (modifier [8, 4] - [8, 10])
+        (modifier [8, 11] - [8, 16])
+        (variable_declaration [8, 17] - [14, 11]
+          type: (predefined_type [8, 17] - [8, 23])
+          (variable_declarator [8, 24] - [14, 11]
+            name: (identifier [8, 24] - [8, 31])
+            (raw_string_literal [9, 8] - [14, 11]
+              (raw_string_start [9, 8] - [9, 11])
+              (raw_string_content [9, 11] - [14, 8])
+              (raw_string_end [14, 8] - [14, 11])))))
+      (method_declaration [16, 4] - [19, 5]
+        (modifier [16, 4] - [16, 10])
+        (modifier [16, 11] - [16, 17])
+        returns: (predefined_type [16, 18] - [16, 24])
+        name: (identifier [16, 25] - [16, 33])
+        parameters: (parameter_list [16, 33] - [16, 57]
+          (parameter [16, 34] - [16, 45]
+            type: (predefined_type [16, 34] - [16, 40])
+            name: (identifier [16, 41] - [16, 45]))
+          (parameter [16, 47] - [16, 56]
+            type: (predefined_type [16, 47] - [16, 50])
+            name: (identifier [16, 51] - [16, 56])))
+        body: (block [17, 4] - [19, 5]
+          (return_statement [18, 8] - [18, 98]
+            (interpolated_string_expression [18, 15] - [18, 97]
+              (interpolation_start [18, 15] - [18, 16])
+              (string_content [18, 17] - [18, 24])
+              (interpolation [18, 24] - [18, 37]
+                (interpolation_brace [18, 24] - [18, 25])
+                (invocation_expression [18, 25] - [18, 36]
+                  function: (member_access_expression [18, 25] - [18, 34]
+                    expression: (identifier [18, 25] - [18, 29])
+                    name: (identifier [18, 30] - [18, 34]))
+                  arguments: (argument_list [18, 34] - [18, 36]))
+                (interpolation_brace [18, 36] - [18, 37]))
+              (string_content [18, 37] - [18, 48])
+              (interpolation [18, 48] - [18, 55]
+                (interpolation_brace [18, 48] - [18, 49])
+                (identifier [18, 49] - [18, 54])
+                (interpolation_brace [18, 54] - [18, 55]))
+              (string_content [18, 55] - [18, 56])
+              (interpolation [18, 56] - [18, 95]
+                (interpolation_brace [18, 56] - [18, 57])
+                (parenthesized_expression [18, 57] - [18, 94]
+                  (conditional_expression [18, 58] - [18, 93]
+                    condition: (binary_expression [18, 58] - [18, 68]
+                      left: (identifier [18, 58] - [18, 63])
+                      right: (integer_literal [18, 67] - [18, 68]))
+                    consequence: (string_literal [18, 71] - [18, 80]
+                      (string_literal_content [18, 72] - [18, 79]))
+                    alternative: (string_literal [18, 83] - [18, 93]
+                      (string_literal_content [18, 84] - [18, 92]))))
+                (interpolation_brace [18, 94] - [18, 95]))
+              (string_content [18, 95] - [18, 96])))))
+      (method_declaration [21, 4] - [24, 5]
+        (modifier [21, 4] - [21, 10])
+        (modifier [21, 11] - [21, 17])
+        returns: (predefined_type [21, 18] - [21, 24])
+        name: (identifier [21, 25] - [21, 28])
+        parameters: (parameter_list [21, 28] - [21, 42]
+          (parameter [21, 29] - [21, 41]
+            type: (predefined_type [21, 29] - [21, 35])
+            name: (identifier [21, 36] - [21, 41])))
+        body: (block [22, 4] - [24, 5]
+          (return_statement [23, 8] - [23, 60]
+            (interpolated_string_expression [23, 15] - [23, 59]
+              (interpolation_start [23, 15] - [23, 16])
+              (string_content [23, 17] - [23, 32])
+              (interpolation [23, 32] - [23, 39]
+                (interpolation_brace [23, 32] - [23, 33])
+                (identifier [23, 33] - [23, 38])
+                (interpolation_brace [23, 38] - [23, 39]))
+              (string_content [23, 39] - [23, 58])))))
+      (method_declaration [26, 4] - [29, 5]
+        (modifier [26, 4] - [26, 10])
+        (modifier [26, 11] - [26, 17])
+        returns: (predefined_type [26, 18] - [26, 24])
+        name: (identifier [26, 25] - [26, 32])
+        parameters: (parameter_list [26, 32] - [26, 34])
+        body: (block [27, 4] - [29, 5]
+          (return_statement [28, 8] - [28, 61]
+            (string_literal [28, 15] - [28, 60]
+              (string_literal_content [28, 16] - [28, 20])
+              (escape_sequence [28, 20] - [28, 22])
+              (string_literal_content [28, 22] - [28, 29])
+              (escape_sequence [28, 29] - [28, 31])
+              (string_literal_content [28, 31] - [28, 42])
+              (escape_sequence [28, 42] - [28, 44])
+              (string_literal_content [28, 44] - [28, 53])
+              (escape_sequence [28, 53] - [28, 59])))))
+      (property_declaration [31, 4] - [31, 40]
+        (modifier [31, 4] - [31, 10])
+        (modifier [31, 11] - [31, 17])
+        type: (predefined_type [31, 18] - [31, 22])
+        name: (identifier [31, 23] - [31, 32])
+        value: (arrow_expression_clause [31, 33] - [31, 39]
+          (character_literal [31, 36] - [31, 39]
+            (character_literal_content [31, 37] - [31, 38])))))))

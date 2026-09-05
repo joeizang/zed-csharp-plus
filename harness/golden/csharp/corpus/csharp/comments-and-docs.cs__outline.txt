@@ -1,0 +1,13 @@
+corpus/csharp/comments-and-docs.cs
+  pattern: 0
+    capture: item, start: (9, 0), end: (27, 1)
+    capture: 0 - context, start: (9, 7), end: (9, 12), text: `class`
+    capture: 1 - name, start: (9, 13), end: (9, 24), text: `MailService`
+  pattern: 4
+    capture: item, start: (14, 4), end: (19, 5)
+    capture: 1 - name, start: (14, 16), end: (14, 23), text: `Enqueue`
+    capture: 0 - context, start: (14, 23), end: (14, 52), text: `(string address, string body)`
+  pattern: 4
+    capture: item, start: (24, 4), end: (26, 5)
+    capture: 1 - name, start: (24, 25), end: (24, 30), text: `Reset`
+    capture: 0 - context, start: (24, 30), end: (24, 32), text: `()`

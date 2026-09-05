@@ -1,0 +1,32 @@
+corpus/csharp/generics-and-constraints.cs
+  pattern: 0
+    capture: item, start: (5, 0), end: (31, 1)
+    capture: 0 - context, start: (5, 7), end: (5, 12), text: `class`
+    capture: 1 - name, start: (5, 13), end: (5, 23), text: `Repository`
+  pattern: 3
+    capture: 2 - item, start: (9, 4), end: (9, 62), text: `private readonly Dictionary<TKey, TEntity> _store = new();`
+    capture: 0 - context, start: (9, 21), end: (9, 61), text: `Dictionary<TKey, TEntity> _store = new()`
+  pattern: 4
+    capture: item, start: (11, 4), end: (14, 5)
+    capture: 1 - name, start: (11, 20), end: (11, 24), text: `Find`
+    capture: 0 - context, start: (11, 24), end: (11, 34), text: `(TKey key)`
+  pattern: 4
+    capture: item, start: (16, 4), end: (19, 5)
+    capture: 1 - name, start: (16, 16), end: (16, 19), text: `Add`
+    capture: 0 - context, start: (16, 19), end: (16, 45), text: `(TKey key, TEntity entity)`
+  pattern: 4
+    capture: item, start: (21, 4), end: (25, 5)
+    capture: 1 - name, start: (21, 19), end: (21, 26), text: `Project`
+    capture: 0 - context, start: (21, 35), end: (21, 84), text: `(TEntity entity, Func<TEntity, TResult> selector)`
+  pattern: 4
+    capture: item, start: (27, 4), end: (30, 5)
+    capture: 1 - name, start: (27, 16), end: (27, 23), text: `Dispose`
+    capture: 0 - context, start: (27, 23), end: (27, 25), text: `()`
+  pattern: 0
+    capture: item, start: (33, 0), end: (39, 1)
+    capture: 0 - context, start: (33, 14), end: (33, 19), text: `class`
+    capture: 1 - name, start: (33, 20), end: (33, 28), text: `Comparer`
+  pattern: 4
+    capture: item, start: (35, 4), end: (38, 5)
+    capture: 1 - name, start: (35, 21), end: (35, 24), text: `Min`
+    capture: 0 - context, start: (35, 27), end: (35, 44), text: `(T left, T right)`

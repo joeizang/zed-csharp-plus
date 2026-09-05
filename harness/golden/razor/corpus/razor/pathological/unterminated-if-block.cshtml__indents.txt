@@ -1,0 +1,16 @@
+corpus/razor/pathological/unterminated-if-block.cshtml
+  pattern: 2
+    capture: 1 - indent, start: (3, 8), end: (3, 20), text: `(Model.Open)`
+    capture: 0 - end, start: (3, 19), end: (3, 20), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (7, 8), end: (7, 58), text: `<span>Nested content after the broken block</span>`
+    capture: 2 - start, start: (7, 8), end: (7, 9), text: `<`
+    capture: 0 - end, start: (7, 51), end: (7, 53), text: `</`
+  pattern: 3
+    capture: indent, start: (5, 8), end: (8, 10)
+    capture: 2 - start, start: (5, 8), end: (5, 9), text: `<`
+    capture: 0 - end, start: (8, 4), end: (8, 6), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (9, 0), end: (9, 82), text: `<p>This paragraph follows the unterminated block and must parse as an element.</p>`
+    capture: 2 - start, start: (9, 0), end: (9, 1), text: `<`
+    capture: 0 - end, start: (9, 78), end: (9, 80), text: `</`

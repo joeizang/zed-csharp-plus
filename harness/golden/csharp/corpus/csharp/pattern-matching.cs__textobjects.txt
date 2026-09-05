@@ -1,0 +1,16 @@
+corpus/csharp/pattern-matching.cs
+  pattern: 3
+    capture: function.around, start: (6, 4), end: (13, 6)
+  pattern: 3
+    capture: function.around, start: (15, 4), end: (20, 6)
+  pattern: 3
+    capture: function.around, start: (22, 4), end: (35, 5)
+  pattern: 1
+    capture: function.around, start: (22, 4), end: (35, 5)
+    capture: function.inside, start: (24, 8), end: (27, 9)
+    capture: function.inside, start: (29, 8), end: (34, 10)
+  pattern: 2
+    capture: class.around, start: (4, 0), end: (36, 1)
+    capture: class.inside, start: (6, 4), end: (13, 6)
+    capture: class.inside, start: (15, 4), end: (20, 6)
+    capture: class.inside, start: (22, 4), end: (35, 5)

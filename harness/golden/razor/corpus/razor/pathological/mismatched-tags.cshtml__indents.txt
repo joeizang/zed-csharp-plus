@@ -1,0 +1,39 @@
+corpus/razor/pathological/mismatched-tags.cshtml
+  pattern: 3
+    capture: 1 - indent, start: (5, 16), end: (5, 28), text: `<th>Col</th>`
+    capture: 2 - start, start: (5, 16), end: (5, 17), text: `<`
+    capture: 0 - end, start: (5, 23), end: (5, 25), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (5, 12), end: (5, 33), text: `<tr><th>Col</th></tr>`
+    capture: 2 - start, start: (5, 12), end: (5, 13), text: `<`
+    capture: 0 - end, start: (5, 28), end: (5, 30), text: `</`
+  pattern: 3
+    capture: indent, start: (4, 8), end: (6, 16)
+    capture: 2 - start, start: (4, 8), end: (4, 9), text: `<`
+    capture: 0 - end, start: (6, 8), end: (6, 10), text: `</`
+  pattern: 3
+    capture: indent, start: (3, 4), end: (7, 12)
+    capture: 2 - start, start: (3, 4), end: (3, 5), text: `<`
+    capture: 0 - end, start: (7, 4), end: (7, 6), text: `</`
+  pattern: 3
+    capture: indent, start: (2, 0), end: (8, 6)
+    capture: 2 - start, start: (2, 0), end: (2, 1), text: `<`
+    capture: 0 - end, start: (8, 0), end: (8, 2), text: `</`
+  pattern: 2
+    capture: indent, start: (10, 0), end: (15, 1)
+    capture: 0 - end, start: (10, 31), end: (10, 32), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (13, 8), end: (13, 27), text: `<td>@row.First</td>`
+    capture: 2 - start, start: (13, 8), end: (13, 9), text: `<`
+    capture: 0 - end, start: (13, 22), end: (13, 24), text: `</`
+  pattern: 3
+    capture: indent, start: (12, 4), end: (14, 9)
+    capture: 2 - start, start: (12, 4), end: (12, 5), text: `<`
+    capture: 0 - end, start: (14, 4), end: (14, 6), text: `</`
+  pattern: 0
+    capture: indent, start: (10, 0), end: (15, 1)
+    capture: 0 - end, start: (15, 0), end: (15, 1), text: `}`
+  pattern: 3
+    capture: 1 - indent, start: (17, 0), end: (17, 49), text: `<p>Recovered paragraph after mismatched tags.</p>`
+    capture: 2 - start, start: (17, 0), end: (17, 1), text: `<`
+    capture: 0 - end, start: (17, 45), end: (17, 47), text: `</`

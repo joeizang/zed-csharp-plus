@@ -1,0 +1,73 @@
+corpus/razor/well-formed/directives-and-control-flow.cshtml
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 16), end: (0, 17), text: `"`
+  pattern: 1
+    capture: 0 - open, start: (5, 11), end: (5, 12), text: `[`
+    capture: 1 - close, start: (5, 21), end: (5, 22), text: `]`
+  pattern: 4
+    capture: 0 - open, start: (7, 0), end: (7, 1), text: `<`
+    capture: 1 - close, start: (7, 12), end: (7, 14), text: `</`
+  pattern: 0
+    capture: 0 - open, start: (9, 9), end: (9, 10), text: `(`
+    capture: 1 - close, start: (9, 39), end: (9, 40), text: `)`
+  pattern: 3
+    capture: 0 - open, start: (11, 15), end: (11, 16), text: `"`
+    capture: 1 - close, start: (11, 23), end: (11, 24), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (12, 8), end: (12, 9), text: `<`
+    capture: 1 - close, start: (12, 27), end: (12, 29), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (13, 8), end: (13, 9), text: `<`
+    capture: 1 - close, start: (13, 28), end: (13, 30), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (11, 4), end: (11, 5), text: `<`
+    capture: 1 - close, start: (14, 4), end: (14, 6), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (10, 0), end: (10, 1), text: `{`
+    capture: 1 - close, start: (15, 0), end: (15, 1), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (17, 8), end: (17, 9), text: `(`
+    capture: 1 - close, start: (17, 23), end: (17, 24), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (20, 8), end: (20, 9), text: `<`
+    capture: 1 - close, start: (20, 23), end: (20, 25), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (23, 8), end: (23, 9), text: `<`
+    capture: 1 - close, start: (23, 22), end: (23, 24), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (26, 8), end: (26, 9), text: `<`
+    capture: 1 - close, start: (26, 28), end: (26, 30), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (18, 0), end: (18, 1), text: `{`
+    capture: 1 - close, start: (28, 0), end: (28, 1), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (30, 23), end: (30, 24), text: `(`
+    capture: 1 - close, start: (30, 24), end: (30, 25), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (30, 4), end: (30, 5), text: `(`
+    capture: 1 - close, start: (30, 25), end: (30, 26), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (32, 8), end: (32, 9), text: `(`
+    capture: 1 - close, start: (32, 34), end: (32, 35), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (34, 8), end: (34, 9), text: `<`
+    capture: 1 - close, start: (34, 24), end: (34, 26), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (33, 4), end: (33, 5), text: `{`
+    capture: 1 - close, start: (35, 4), end: (35, 5), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (38, 8), end: (38, 9), text: `<`
+    capture: 1 - close, start: (38, 24), end: (38, 26), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (37, 4), end: (37, 5), text: `{`
+    capture: 1 - close, start: (39, 4), end: (39, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (31, 0), end: (31, 1), text: `{`
+    capture: 1 - close, start: (40, 0), end: (40, 1), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (43, 4), end: (43, 5), text: `<`
+    capture: 1 - close, start: (43, 23), end: (43, 25), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (42, 0), end: (42, 1), text: `{`
+    capture: 1 - close, start: (44, 0), end: (44, 1), text: `}`

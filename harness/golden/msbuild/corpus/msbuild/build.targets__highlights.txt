@@ -1,0 +1,245 @@
+corpus/msbuild/build.targets
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (0, 0), end: (0, 1), text: `<`
+  pattern: 39
+    capture: 6 - tag, start: (0, 1), end: (0, 8), text: `Project`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (0, 8), end: (0, 9), text: `>`
+  pattern: 48
+    capture: markup, start: (0, 9), end: (2, 2)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (2, 2), end: (2, 3), text: `<`
+  pattern: 39
+    capture: 6 - tag, start: (2, 3), end: (2, 16), text: `PropertyGroup`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (2, 16), end: (2, 17), text: `>`
+  pattern: 48
+    capture: markup, start: (2, 17), end: (3, 4)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (3, 4), end: (3, 5), text: `<`
+  pattern: 39
+    capture: 6 - tag, start: (3, 5), end: (3, 15), text: `DocsOutput`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (3, 15), end: (3, 16), text: `>`
+  pattern: 48
+    capture: 19 - markup, start: (3, 16), end: (3, 60), text: `$(MSBuildThisFileDirectory)..\artifacts\docs`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (3, 60), end: (3, 62), text: `</`
+  pattern: 40
+    capture: 6 - tag, start: (3, 62), end: (3, 72), text: `DocsOutput`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (3, 72), end: (3, 73), text: `>`
+  pattern: 48
+    capture: markup, start: (3, 73), end: (4, 2)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (4, 2), end: (4, 4), text: `</`
+  pattern: 40
+    capture: 6 - tag, start: (4, 4), end: (4, 17), text: `PropertyGroup`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (4, 17), end: (4, 18), text: `>`
+  pattern: 48
+    capture: markup, start: (4, 18), end: (6, 2)
+  pattern: 50
+    capture: 22 - comment, start: (6, 2), end: (6, 72), text: `<!-- Publishes API documentation after a successful Release build. -->`
+  pattern: 48
+    capture: markup, start: (6, 72), end: (7, 2)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (7, 2), end: (7, 3), text: `<`
+  pattern: 39
+    capture: 6 - tag, start: (7, 3), end: (7, 9), text: `Target`
+  pattern: 42
+    capture: 1 - property, start: (7, 10), end: (7, 14), text: `Name`
+  pattern: 47
+    capture: 9 - operator, start: (7, 14), end: (7, 15), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (7, 15), end: (7, 28), text: `"PublishDocs"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (7, 15), end: (7, 16), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (7, 27), end: (7, 28), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (7, 29), end: (7, 41), text: `AfterTargets`
+  pattern: 47
+    capture: 9 - operator, start: (7, 41), end: (7, 42), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (7, 42), end: (7, 49), text: `"Build"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (7, 42), end: (7, 43), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (7, 48), end: (7, 49), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (7, 50), end: (7, 59), text: `Condition`
+  pattern: 47
+    capture: 9 - operator, start: (7, 59), end: (7, 60), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (7, 60), end: (7, 93), text: `"'$(Configuration)' == 'Release'"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (7, 60), end: (7, 61), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (7, 92), end: (7, 93), text: `"`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (7, 93), end: (7, 94), text: `>`
+  pattern: 48
+    capture: markup, start: (7, 94), end: (8, 4)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (8, 4), end: (8, 5), text: `<`
+  pattern: 41
+    capture: 6 - tag, start: (8, 5), end: (8, 12), text: `Message`
+  pattern: 42
+    capture: 1 - property, start: (8, 13), end: (8, 17), text: `Text`
+  pattern: 47
+    capture: 9 - operator, start: (8, 17), end: (8, 18), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (8, 18), end: (8, 63), text: `"Collecting documentation into $(DocsOutput)"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (8, 18), end: (8, 19), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (8, 62), end: (8, 63), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (8, 64), end: (8, 74), text: `Importance`
+  pattern: 47
+    capture: 9 - operator, start: (8, 74), end: (8, 75), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (8, 75), end: (8, 83), text: `"normal"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (8, 75), end: (8, 76), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (8, 82), end: (8, 83), text: `"`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (8, 84), end: (8, 86), text: `/>`
+  pattern: 48
+    capture: markup, start: (8, 86), end: (9, 4)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (9, 4), end: (9, 5), text: `<`
+  pattern: 41
+    capture: 6 - tag, start: (9, 5), end: (9, 12), text: `MakeDir`
+  pattern: 42
+    capture: 1 - property, start: (9, 13), end: (9, 24), text: `Directories`
+  pattern: 47
+    capture: 9 - operator, start: (9, 24), end: (9, 25), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (9, 25), end: (9, 40), text: `"$(DocsOutput)"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (9, 25), end: (9, 26), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (9, 39), end: (9, 40), text: `"`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (9, 41), end: (9, 43), text: `/>`
+  pattern: 48
+    capture: markup, start: (9, 43), end: (10, 4)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (10, 4), end: (10, 5), text: `<`
+  pattern: 41
+    capture: 6 - tag, start: (10, 5), end: (10, 9), text: `Copy`
+  pattern: 42
+    capture: 1 - property, start: (10, 10), end: (10, 21), text: `SourceFiles`
+  pattern: 47
+    capture: 9 - operator, start: (10, 21), end: (10, 22), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (10, 22), end: (10, 34), text: `"@(DocFile)"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (10, 22), end: (10, 23), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (10, 33), end: (10, 34), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (10, 35), end: (10, 52), text: `DestinationFolder`
+  pattern: 47
+    capture: 9 - operator, start: (10, 52), end: (10, 53), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (10, 53), end: (10, 68), text: `"$(DocsOutput)"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (10, 53), end: (10, 54), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (10, 67), end: (10, 68), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (10, 69), end: (10, 87), text: `SkipUnchangedFiles`
+  pattern: 47
+    capture: 9 - operator, start: (10, 87), end: (10, 88), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (10, 88), end: (10, 94), text: `"true"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (10, 88), end: (10, 89), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (10, 93), end: (10, 94), text: `"`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (10, 95), end: (10, 97), text: `/>`
+  pattern: 48
+    capture: markup, start: (10, 97), end: (11, 2)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (11, 2), end: (11, 4), text: `</`
+  pattern: 40
+    capture: 6 - tag, start: (11, 4), end: (11, 10), text: `Target`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (11, 10), end: (11, 11), text: `>`
+  pattern: 48
+    capture: markup, start: (11, 11), end: (13, 2)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (13, 2), end: (13, 3), text: `<`
+  pattern: 39
+    capture: 6 - tag, start: (13, 3), end: (13, 9), text: `Target`
+  pattern: 42
+    capture: 1 - property, start: (13, 10), end: (13, 14), text: `Name`
+  pattern: 47
+    capture: 9 - operator, start: (13, 14), end: (13, 15), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (13, 15), end: (13, 32), text: `"WarnSlowTargets"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (13, 15), end: (13, 16), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (13, 31), end: (13, 32), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (13, 33), end: (13, 45), text: `AfterTargets`
+  pattern: 47
+    capture: 9 - operator, start: (13, 45), end: (13, 46), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (13, 46), end: (13, 53), text: `"Build"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (13, 46), end: (13, 47), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (13, 52), end: (13, 53), text: `"`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (13, 53), end: (13, 54), text: `>`
+  pattern: 48
+    capture: markup, start: (13, 54), end: (14, 4)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (14, 4), end: (14, 5), text: `<`
+  pattern: 41
+    capture: 6 - tag, start: (14, 5), end: (14, 9), text: `Exec`
+  pattern: 42
+    capture: 1 - property, start: (14, 10), end: (14, 17), text: `Command`
+  pattern: 47
+    capture: 9 - operator, start: (14, 17), end: (14, 18), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (14, 18), end: (14, 39), text: `"echo docs published"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (14, 18), end: (14, 19), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (14, 38), end: (14, 39), text: `"`
+  pattern: 42
+    capture: 1 - property, start: (14, 40), end: (14, 54), text: `IgnoreExitCode`
+  pattern: 47
+    capture: 9 - operator, start: (14, 54), end: (14, 55), text: `=`
+  pattern: 43
+    capture: 11 - string, start: (14, 55), end: (14, 61), text: `"true"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (14, 55), end: (14, 56), text: `"`
+  pattern: 46
+    capture: 17 - punctuation.delimiter, start: (14, 60), end: (14, 61), text: `"`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (14, 62), end: (14, 64), text: `/>`
+  pattern: 48
+    capture: markup, start: (14, 64), end: (15, 2)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (15, 2), end: (15, 4), text: `</`
+  pattern: 40
+    capture: 6 - tag, start: (15, 4), end: (15, 10), text: `Target`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (15, 10), end: (15, 11), text: `>`
+  pattern: 48
+    capture: markup, start: (15, 11), end: (17, 0)
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (17, 0), end: (17, 2), text: `</`
+  pattern: 40
+    capture: 6 - tag, start: (17, 2), end: (17, 9), text: `Project`
+  pattern: 44
+    capture: 17 - punctuation.delimiter, start: (17, 9), end: (17, 10), text: `>`

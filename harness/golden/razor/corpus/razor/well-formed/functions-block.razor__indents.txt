@@ -1,0 +1,21 @@
+corpus/razor/well-formed/functions-block.razor
+  pattern: 0
+    capture: 1 - indent, start: (1, 27), end: (1, 40), text: `{ get; set; }`
+    capture: 0 - end, start: (1, 39), end: (1, 40), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (3, 21), end: (3, 23), text: `()`
+    capture: 0 - end, start: (3, 22), end: (3, 23), text: `)`
+  pattern: 0
+    capture: indent, start: (4, 4), end: (6, 5)
+    capture: 0 - end, start: (6, 4), end: (6, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (0, 0), end: (7, 1)
+    capture: 0 - end, start: (7, 0), end: (7, 1), text: `}`
+  pattern: 3
+    capture: 1 - indent, start: (9, 0), end: (9, 18), text: `<h1>@Greeting</h1>`
+    capture: 2 - start, start: (9, 0), end: (9, 1), text: `<`
+    capture: 0 - end, start: (9, 13), end: (9, 15), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (11, 0), end: (11, 39), text: `<button @onclick="Reset">Reset</button>`
+    capture: 2 - start, start: (11, 0), end: (11, 1), text: `<`
+    capture: 0 - end, start: (11, 30), end: (11, 32), text: `</`
