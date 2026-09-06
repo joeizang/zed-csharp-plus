@@ -3,12 +3,13 @@
 All notable changes to the C# Plus fork are documented here. Each entry that
 followed an upstream sync records the merged upstream commit (D0.1 policy).
 
-## 1.3.0 — Razor editing (Milestone 0 foundation + Milestone 1)
+## 1.3.0 — Razor editing and the .NET workflow (Milestones 0 + 1 + 2)
 
 The first fork release. Delivers the Milestone 0 foundation (fork hygiene,
-corpus, grammar decision, compatibility contract) and first-class Razor
-*editing* (Milestone 1). This is editing support, not full Razor IDE
-semantics: **no language server starts for Razor buffers in this release**
+corpus, grammar decision, fixtures, compatibility contract), first-class Razor
+*editing* (Milestone 1), and the everyday .NET workflow improvements
+(Milestone 2). Razor support in this release is editing only, not full Razor
+IDE semantics: **no language server starts for Razor buffers**
 (see `docs/razor-contract.md`). The M0.0 feasibility spike remains open and
 does not gate this release.
 
@@ -38,6 +39,26 @@ upstream `88597e1` (v1.2.2).
   `corpus/msbuild/`).
 - Documentation: migration guide (off the upstream C# extension and off the
   community Razor extensions) and known limits (M1.4).
+- Buildable fixture solutions (M0.3b): MVC, Razor Pages, Blazor Web App,
+  Blazor WASM, Razor Class Library, and a multi-project `.slnx` solution,
+  all targeting .NET 8 and verified to build offline after first restore
+  (`scripts/verify-fixtures.sh`), plus generated-state and project-reload
+  lifecycle cases.
+- Everyday .NET workflow (Milestone 2): Roslyn-first guidance with a
+  remediation matrix; actionable diagnostics for every server failure mode
+  (missing SDK / invalid `global.json` / feed unreachable / corrupt package
+  layout / missing binary — each names itself and one concrete fix); nine
+  project task templates and six solution task templates (restore, build,
+  test, run, watch, clean, publish, format, EF migrations) with no auto-run
+  and no secrets; debugging state documentation (no usable .NET debug
+  adapter for Zed today, dated and evidenced); project-file coverage audit
+  (MSBuild highlighting/outline strengthened, `.sln` deliberately not
+  owned).
+
+#### Fixed
+- Task templates quote `$ZED_FILE` / `$ZED_WORKTREE_ROOT`; tasks run through
+  the system shell, so an unquoted path containing spaces word-split and the
+  task acted on the wrong path (or failed).
 
 #### Decisions recorded
 - **G1** (M0.2): fork `tris203/tree-sitter-razor` @ `d4664e4` into

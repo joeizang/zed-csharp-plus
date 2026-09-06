@@ -2,7 +2,9 @@
   {
     "label": "Restore Current Solution",
     "command": "dotnet restore",
-    "args": ["$ZED_FILE"],
+    "args": [
+      "\"$ZED_FILE\""
+    ],
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "always",
@@ -13,7 +15,61 @@
   {
     "label": "Build Current Solution",
     "command": "dotnet build",
-    "args": ["$ZED_FILE"],
+    "args": [
+      "\"$ZED_FILE\""
+    ],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Test Current Solution",
+    "command": "dotnet test",
+    "args": [
+      "\"$ZED_FILE\""
+    ],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Clean Current Solution",
+    "command": "dotnet clean",
+    "args": [
+      "\"$ZED_FILE\""
+    ],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Publish Current Solution",
+    "command": "dotnet publish",
+    "args": [
+      "\"$ZED_FILE\""
+    ],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Format Current Solution",
+    "command": "dotnet format",
+    "args": [
+      "\"$ZED_FILE\""
+    ],
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "always",

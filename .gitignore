@@ -23,3 +23,11 @@ node_modules/
 #
 
 /harness/workspaces
+
+#
+# .NET fixtures (M0.3b) — build output is never tracked
+#
+
+fixtures/**/bin/
+fixtures/**/obj/
+fixtures/**/*.user

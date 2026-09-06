@@ -6,6 +6,23 @@ use crate::language_servers::{nuget::NuGetClient, util};
 
 const PACKAGE_PREFIX: &str = "roslyn-language-server";
 const SERVER_BINARY: &str = "Microsoft.CodeAnalysis.LanguageServer";
+const BINARY_PATH_SETTING: &str = "lsp.roslyn.binary.path";
+
+fn fix_hint() -> String {
+    util::binary_path_override_hint(BINARY_PATH_SETTING, "a local server binary")
+}
+
+fn make_executable_error(detail: &str, version_dir: &str, sdk_requirement: Option<&str>) -> String {
+    util::append_sdk_requirement(
+        format!(
+            "Failed to make the downloaded Roslyn language server binary executable ({detail}). \
+             Fix: delete the cached directory '{version_dir}' in the extension's working directory \
+             and retry, or {}.",
+            fix_hint()
+        ),
+        sdk_requirement,
+    )
+}
 
 pub struct Roslyn {
     cached_server_path: Option<ServerPath>,
@@ -18,7 +35,7 @@ impl Roslyn {
     pub fn new() -> Self {
         Roslyn {
             cached_server_path: None,
-            nuget: NuGetClient::new(),
+            nuget: NuGetClient::new(BINARY_PATH_SETTING),
         }
     }
 
@@ -63,12 +80,14 @@ impl Roslyn {
             _ => "any",
         };
 
+        let sdk_requirement = util::global_json_sdk_requirement(worktree);
         let package_id = format!("{PACKAGE_PREFIX}.{rid}");
         let version = self.nuget.get_latest_version(&package_id)?;
         let version_dir = format!("{}-{}", Self::LANGUAGE_SERVER_ID, version);
 
-        let already_installed = Self::find_server_path(rid, &version_dir)
-            .is_ok_and(|sp| fs::metadata(sp.as_str()).is_ok_and(|stat| stat.is_file()));
+        let already_installed =
+            Self::find_server_path(rid, &version_dir, sdk_requirement.as_deref())
+                .is_ok_and(|sp| fs::metadata(sp.as_str()).is_ok_and(|stat| stat.is_file()));
 
         if !already_installed {
             zed::set_language_server_installation_status(
@@ -77,14 +96,16 @@ impl Roslyn {
             );
 
             self.nuget
-                .download_and_extract(&package_id, &version, &version_dir)?;
+                .download_and_extract(&package_id, &version, &version_dir)
+                .map_err(|e| util::append_sdk_requirement(e, sdk_requirement.as_deref()))?;
 
             util::remove_outdated_versions(Self::LANGUAGE_SERVER_ID, &version_dir)?;
         }
 
-        let server_path = Self::find_server_path(rid, &version_dir)?;
+        let server_path = Self::find_server_path(rid, &version_dir, sdk_requirement.as_deref())?;
         if let ServerPath::Exe(ref path) = server_path {
-            zed::make_file_executable(path)?;
+            zed::make_file_executable(path)
+                .map_err(|e| make_executable_error(&e, &version_dir, sdk_requirement.as_deref()))?;
         }
 
         let command = Self::build_command(&server_path, binary_args);
@@ -116,11 +137,19 @@ impl Roslyn {
         }
     }
 
-    fn find_server_path(rid: &str, version_dir: &str) -> Result<ServerPath> {
+    fn find_server_path(
+        rid: &str,
+        version_dir: &str,
+        sdk_requirement: Option<&str>,
+    ) -> Result<ServerPath> {
         let tools_dir = format!("{version_dir}/tools");
 
+        let layout = |detail: String| {
+            util::package_layout_error(&detail, version_dir, &fix_hint(), sdk_requirement)
+        };
+
         let tfm = fs::read_dir(&tools_dir)
-            .map_err(|e| format!("failed to read tools directory '{tools_dir}': {e}"))?
+            .map_err(|e| layout(format!("failed to read tools directory '{tools_dir}': {e}")))?
             .filter_map(|entry| {
                 let entry = entry.ok()?;
                 if entry.file_type().ok()?.is_dir() {
@@ -130,7 +159,7 @@ impl Roslyn {
                 }
             })
             .next()
-            .ok_or_else(|| format!("no TFM directory found inside '{tools_dir}'"))?;
+            .ok_or_else(|| layout(format!("no TFM directory found inside '{tools_dir}'")))?;
 
         let server_dir = format!("{tools_dir}/{tfm}/{rid}");
         match Self::server_path_for_rid(rid, server_dir) {
@@ -211,5 +240,52 @@ impl ServerPath {
         match self {
             ServerPath::Exe(path) | ServerPath::Dll(path) => path,
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn fix_hint_names_the_roslyn_setting() {
+        assert_eq!(
+            fix_hint(),
+            "set `lsp.roslyn.binary.path` to a local server binary or an already-cached version directory"
+        );
+    }
+
+    #[test]
+    fn make_executable_error_names_cache_directory_and_setting() {
+        let message = make_executable_error("permission denied", "roslyn-5.0.0", None);
+        assert!(message.starts_with(
+            "Failed to make the downloaded Roslyn language server binary executable (permission denied)."
+        ));
+        assert!(message.contains("delete the cached directory 'roslyn-5.0.0'"));
+        assert!(message.contains("lsp.roslyn.binary.path"));
+        assert!(!message.contains("global.json"));
+    }
+
+    #[test]
+    fn make_executable_error_appends_sdk_requirement_when_present() {
+        let message = make_executable_error("permission denied", "roslyn-5.0.0", Some("8.0.100"));
+        assert!(message.ends_with(
+            "global.json requires SDK 8.0.100; ensure an SDK satisfying it is installed."
+        ));
+    }
+
+    #[test]
+    fn find_server_path_layout_errors_include_version_dir_and_sdk_requirement() {
+        // The version directory embeds the resolved version; the layout error
+        // must surface it alongside the binary-path escape and global.json note.
+        let version_dir = format!("{}-5.0.0", Roslyn::LANGUAGE_SERVER_ID);
+        assert_eq!(version_dir, "roslyn-5.0.0");
+        let detail = format!("no TFM directory found inside '{version_dir}/tools'");
+        let message =
+            util::package_layout_error(&detail, &version_dir, &fix_hint(), Some("9.0.100"));
+        assert!(message.contains("unexpected layout"));
+        assert!(message.contains("roslyn-5.0.0"));
+        assert!(message.contains("lsp.roslyn.binary.path"));
+        assert!(message.contains("global.json requires SDK 9.0.100"));
     }
 }

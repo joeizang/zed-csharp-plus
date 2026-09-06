@@ -3,6 +3,21 @@ use zed_extension_api::{self as zed, settings::LspSettings, LanguageServerId, Re
 
 use crate::language_servers::util;
 
+const BINARY_PATH_SETTING: &str = "lsp.omnisharp.binary.path";
+const GITHUB_REPO: &str = "OmniSharp/omnisharp-roslyn";
+
+fn fix_hint() -> String {
+    util::binary_path_override_hint(BINARY_PATH_SETTING, "a local server binary")
+}
+
+fn asset_error(asset_name: &str, release_version: &str) -> String {
+    format!(
+        "No release asset named '{asset_name}' was found in {GITHUB_REPO} release {release_version}; \
+         your platform may not be supported by this release. Fix: {}.",
+        fix_hint()
+    )
+}
+
 pub struct Omnisharp {
     cached_binary_path: Option<String>,
 }
@@ -61,12 +76,19 @@ impl Omnisharp {
             &zed::LanguageServerInstallationStatus::CheckingForUpdate,
         );
         let release = zed::latest_github_release(
-            "OmniSharp/omnisharp-roslyn",
+            GITHUB_REPO,
             zed::GithubReleaseOptions {
                 require_assets: true,
                 pre_release: false,
             },
-        )?;
+        )
+        .map_err(|e| {
+            util::feed_error(
+                &format!("the GitHub release list for '{GITHUB_REPO}'"),
+                &e,
+                &fix_hint(),
+            )
+        })?;
 
         let (platform, arch) = zed::current_platform();
         let asset_name = format!(
@@ -91,7 +113,7 @@ impl Omnisharp {
             .assets
             .iter()
             .find(|asset| asset.name == asset_name)
-            .ok_or_else(|| format!("no asset found matching {:?}", asset_name))?;
+            .ok_or_else(|| asset_error(&asset_name, &release.version))?;
 
         let version_dir = format!("{}-{}", Self::LANGUAGE_SERVER_ID, release.version);
         let binary_path = match platform {
@@ -113,7 +135,17 @@ impl Omnisharp {
                     zed::Os::Windows => zed::DownloadedFileType::Zip,
                 },
             )
-            .map_err(|e| format!("failed to download file: {e}"))?;
+            .map_err(|e| {
+                util::download_error(
+                    &format!(
+                        "the {GITHUB_REPO} release asset '{asset_name}' v{}",
+                        release.version
+                    ),
+                    &e,
+                    &version_dir,
+                    &fix_hint(),
+                )
+            })?;
 
             util::remove_outdated_versions(Self::LANGUAGE_SERVER_ID, &version_dir)?;
         }
@@ -123,5 +155,45 @@ impl Omnisharp {
             path: binary_path,
             args: binary_args,
         })
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn fix_hint_names_the_omnisharp_setting() {
+        assert_eq!(
+            fix_hint(),
+            "set `lsp.omnisharp.binary.path` to a local server binary or an already-cached version directory"
+        );
+    }
+
+    #[test]
+    fn asset_error_names_asset_release_version_and_escape() {
+        let message = asset_error("omnisharp-osx-arm64-net6.0.tar.gz", "v1.2.3");
+        assert!(message.starts_with(
+            "No release asset named 'omnisharp-osx-arm64-net6.0.tar.gz' was found in OmniSharp/omnisharp-roslyn release v1.2.3"
+        ));
+        assert!(message.contains("your platform may not be supported"));
+        assert!(message.contains("Fix: set `lsp.omnisharp.binary.path`"));
+    }
+
+    #[test]
+    fn download_errors_name_asset_version_and_cache_directory() {
+        let message = util::download_error(
+            "the OmniSharp/omnisharp-roslyn release asset 'omnisharp-win-x64-net6.0.zip' v1.2.3",
+            "connection reset",
+            "omnisharp-1.2.3",
+            &fix_hint(),
+        );
+        assert!(
+            message.starts_with("Failed to download the OmniSharp/omnisharp-roslyn release asset")
+        );
+        assert!(message.contains("v1.2.3"));
+        assert!(message.contains("connection reset"));
+        assert!(message.contains("delete the cached directory 'omnisharp-1.2.3'"));
+        assert!(message.contains("lsp.omnisharp.binary.path"));
     }
 }
