@@ -28,8 +28,10 @@ Record: date, OS/arch, server, version resolved, pass/fail.
 
 ## 2. Task definitions against the M0.3b fixtures
 
-> Status: pending M0.3b (fixture solutions). Until the fixtures land, run
-> this section against any throwaway project and record that substitution.
+The fixtures live in `fixtures/` (see `fixtures/README.md`); a first restore
+must happen once online, after which `scripts/verify-fixtures.sh` proves the
+offline build pass. Run each task template from Zed's task UI with the
+corresponding fixture file focused, and record the result per template.
 
 For each task template shipped in `languages/csproj/tasks.json` and
 `languages/slnx/tasks.json`:

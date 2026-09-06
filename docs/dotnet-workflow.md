@@ -142,18 +142,20 @@ alternatives — no automatic selection, no guessing. Focused file decides.
 M2.1 failure modes and how to get unstuck. What you see follows the
 contract in `docs/razor-contract.md` ("Unsupported environment" state): the
 error names the failure and one concrete next action, and **files stay fully
-editable** — syntax highlighting, snippets, and structural editing never
-depend on the server. Exact message strings are finalized by the M2.1
-diagnostics work; the shape is fixed here.
+editable** — syntax editing never depends on the server. The extension-side
+rows below quote the actual shipped message templates (M2.1 diagnostics);
+the server-side rows describe what Roslyn/OmniSharp themselves report — the
+extension never rewrites or hides those.
 
 | Failure | What you see | Remediation |
 | --- | --- | --- |
-| Missing .NET SDK | An extension error naming the missing SDK and one next action, e.g. "Roslyn could not start: no .NET SDK found. Install the .NET SDK (8.0+) from https://dotnet.microsoft.com/download and reopen." Files stay editable. | Install the .NET SDK 8 LTS or newer, verify `dotnet --version` in a terminal, reopen the worktree. |
-| Invalid `global.json` | An error naming the conflict, e.g. "Roslyn could not load any project in this worktree (SDK 8.0.100 found, `global.json` requires 9.0.x). Files stay fully editable. Fix: update the SDK or `global.json`." | Align `global.json`'s `sdk.version`/`rollForward` with an installed SDK (`dotnet --list-sdks`), or install the required SDK. |
-| Project-load failure | An error naming the load outcome and next step, e.g. "Roslyn loaded 0 of 3 projects (see Roslyn output for details). Files stay fully editable. Fix: run *Restore Current Solution* and check `dotnet build` output." | Run the Restore/Build task templates in the terminal to see the real MSBuild error (bad package reference, missing target framework, malformed project file); fix the project and reopen. |
-| Incompatible Roslyn components | An error naming the mismatch, e.g. "Roslyn could not serve this worktree: server/components mismatch (version X). Files stay fully editable. Fix: reload the worktree so C# Plus re-resolves a compatible server." | Reload the worktree (or reinstall the extension) so the pinned server package is re-downloaded; clear the extension's cached server directory if the error persists. Razor semantics additionally require the compatible components per `docs/razor-contract.md`. |
-| Disabled Roslyn (user setting) | No Roslyn session and Razor semantics unavailable; C# still served by whatever remains enabled. With Roslyn disabled by `language_servers: ["!roslyn"]`, Razor files keep editing support and explain that semantics require Roslyn. | Re-enable Roslyn: remove the `!roslyn` entry from `languages.CSharp.language_servers` in the worktree's `.zed/settings.json` and reload. |
-| Offline NuGet | Server-side errors naming offline restore (e.g. "unable to load the service index for https://api.nuget.org/v3/index.json"), files editable. | Restore once online (`dotnet restore` against a worktree with network, or a configured mirror); the M0.3b fixtures restore offline only after a first online restore. Then reload the worktree. |
+| NuGet feed unreachable (Roslyn / csharp-ls install) | `Could not use the NuGet feed (…); check network, proxy, or offline status. Fix: retry later, or set 'lsp.roslyn.binary.path' to a local server binary or an already-cached version directory.` | Restore connectivity (or configure the proxy), retry; or pin the server binary / point at a cached version directory. |
+| Package download or layout failure | `Failed to download NuGet package '<id>' v<version> (…) Fix: delete the cached directory 'roslyn-<version>' … retry, or set 'lsp.roslyn.binary.path' …` / `The downloaded language server package has an unexpected layout (…); it may be corrupt. Fix: delete the cached directory 'roslyn-<version>' …` | Delete the cached `roslyn-<version>` (or `csharp-ls-<version>`) directory in the extension's working directory and retry; or pin `binary.path`. |
+| Missing `dotnet` (csharp-ls) | `Could not find the `dotnet` executable on PATH (csharp-ls runs via `dotnet exec`). Fix: install the .NET SDK 10+ and reopen the project, or set 'lsp.csharp-ls.binary.path' to a standalone `csharp-ls` binary.` | Install the .NET SDK (verify `dotnet --version`), or set `lsp.csharp-ls.binary.path`. |
+| OmniSharp release/asset problems | `Could not use the GitHub release list for 'OmniSharp/omnisharp-roslyn' (…); check network, proxy, or offline status. …` / `No release asset named '<asset>' was found in OmniSharp/omnisharp-roslyn release <version>; your platform may not be supported by this release. Fix: set 'lsp.omnisharp.binary.path' …` | Retry, or pin `lsp.omnisharp.binary.path`; if a release dropped your platform's asset, file an issue. |
+| Invalid/unsatisfiable `global.json` | The server fails project load with its own MSBuild/SDK diagnostics; extension-side install failures additionally append: `global.json requires SDK <version>; ensure an SDK satisfying it is installed.` | Align `global.json`'s `sdk.version`/`rollForward` with an installed SDK (`dotnet --list-sdks`), or install the required SDK. |
+| Project-load failure (server-side) | Roslyn's own diagnostics name the failing projects; files stay editable. | Run *Restore Current Project/Solution*, then `dotnet build` in a terminal for the real MSBuild error; fix the project and reload the worktree. |
+| Disabled Roslyn (user setting) | No Roslyn session; C# still served by whatever remains enabled; Razor files keep editing support. | Re-enable Roslyn by removing the `!roslyn` entry from `languages.CSharp.language_servers` and reload. |
 
 Two invariants hold in every row: syntax editing is always preserved, and
 the extension never silently switches language servers.

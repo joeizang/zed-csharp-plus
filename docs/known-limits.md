@@ -59,6 +59,14 @@ apply unchanged:
   third is the attribute-quote case above. Constructs *after* a broken region
   generally still parse to their correct node types.
 
+## No .NET debugging
+
+C# Plus ships no debugger and no debug adapter (backlog: out of scope). As of
+2026-09-06 there is also no usable third-party .NET debug adapter for Zed to
+hand off to — see [debugging.md](debugging.md) for the dated evidence and
+troubleshooting. `dotnet run` / `dotnet watch` tasks remain the way to run
+apps.
+
 ## Editing never breaks
 
 Whatever the grammar does with a malformed file, the buffer remains fully
