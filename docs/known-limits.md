@@ -67,6 +67,20 @@ hand off to — see [debugging.md](debugging.md) for the dated evidence and
 troubleshooting. `dotnet run` / `dotnet watch` tasks remain the way to run
 apps.
 
+## `global.json` is only read at the worktree root
+
+The SDK-requirement sentence appended to language-server diagnostics (M2.1)
+comes from `global.json` at the worktree root. A `global.json` nested deeper in
+the tree — common in multi-project repositories, including the `multi-project`
+fixture — is not read, so the requirement sentence is silently omitted in
+exactly the layout most likely to need it. The diagnostic itself is unaffected;
+only the "global.json requires SDK X" hint is missing.
+
+This is a platform limit, not an oversight: `language_server_command` receives
+the worktree, not the file being opened, so the extension cannot know which
+nested `global.json` governs a given project. If Zed later exposes the
+triggering file, resolve the nearest `global.json` upward from it.
+
 ## Editing never breaks
 
 Whatever the grammar does with a malformed file, the buffer remains fully

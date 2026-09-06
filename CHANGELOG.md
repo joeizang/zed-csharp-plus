@@ -55,6 +55,11 @@ upstream `88597e1` (v1.2.2).
   (MSBuild highlighting/outline strengthened, `.sln` deliberately not
   owned).
 
+#### Fixed
+- Task templates quote `$ZED_FILE` / `$ZED_WORKTREE_ROOT`; tasks run through
+  the system shell, so an unquoted path containing spaces word-split and the
+  task acted on the wrong path (or failed).
+
 #### Decisions recorded
 - **G1** (M0.2): fork `tris203/tree-sitter-razor` @ `d4664e4` into
   [joeizang/tree-sitter-razor](https://github.com/joeizang/tree-sitter-razor)
