@@ -1,0 +1,71 @@
+corpus/razor/well-formed/component-parameters.razor
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (2, 16), end: (2, 17), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (2, 17), end: (2, 18), text: `"`
+  pattern: 3
+    capture: 3 - variable, start: (2, 18), end: (2, 19), text: `@`
+  pattern: 14
+    capture: 8 - string, start: (2, 37), end: (2, 38), text: `"`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (2, 48), end: (2, 49), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (2, 49), end: (2, 50), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (2, 54), end: (2, 55), text: `"`
+  pattern: 12
+    capture: 7 - punctuation.delimiter, start: (2, 56), end: (2, 58), text: `/>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (3, 0), end: (3, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (3, 16), end: (3, 17), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (3, 17), end: (3, 18), text: `"`
+  pattern: 3
+    capture: 3 - variable, start: (3, 18), end: (3, 19), text: `@`
+  pattern: 14
+    capture: 8 - string, start: (3, 38), end: (3, 39), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (3, 39), end: (3, 40), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (4, 4), end: (4, 5), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 15), end: (4, 16), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (4, 30), end: (4, 32), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 42), end: (4, 43), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (5, 0), end: (5, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 11), end: (5, 12), text: `>`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (7, 0), end: (7, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (7, 1), end: (7, 5), text: `code`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (14, 0), end: (14, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (14, 16), end: (14, 17), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (14, 17), end: (14, 18), text: `"`
+  pattern: 3
+    capture: 3 - variable, start: (14, 18), end: (14, 19), text: `@`
+  pattern: 14
+    capture: 8 - string, start: (14, 35), end: (14, 36), text: `"`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (14, 42), end: (14, 43), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (14, 43), end: (14, 44), text: `"`
+  pattern: 3
+    capture: 3 - variable, start: (14, 44), end: (14, 45), text: `@`
+  pattern: 14
+    capture: 8 - string, start: (14, 50), end: (14, 51), text: `"`
+  pattern: 12
+    capture: 7 - punctuation.delimiter, start: (14, 52), end: (14, 54), text: `/>`

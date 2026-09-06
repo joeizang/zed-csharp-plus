@@ -1,0 +1,9 @@
+corpus/razor/well-formed/style-media-rule.razor
+  pattern: 3
+    capture: 1 - item, start: (21, 4), end: (21, 56), text: `public string AccentColor { get; set; } = "#3fb27f";`
+    capture: 2 - context, start: (21, 11), end: (21, 17), text: `string`
+    capture: 0 - name, start: (21, 18), end: (21, 29), text: `AccentColor`
+  pattern: 3
+    capture: 1 - item, start: (22, 4), end: (22, 57), text: `public string QuotedValue { get; set; } = "css-safe";`
+    capture: 2 - context, start: (22, 11), end: (22, 17), text: `string`
+    capture: 0 - name, start: (22, 18), end: (22, 29), text: `QuotedValue`

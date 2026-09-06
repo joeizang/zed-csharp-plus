@@ -1,0 +1,19 @@
+corpus/csharp/classes-and-records.cs
+  pattern: 3
+    capture: function.around, start: (20, 4), end: (23, 5)
+  pattern: 1
+    capture: function.around, start: (20, 4), end: (23, 5)
+    capture: 1 - function.inside, start: (22, 8), end: (22, 25), text: `_lines.Add(line);`
+  pattern: 2
+    capture: class.around, start: (4, 0), end: (24, 1)
+    capture: 3 - class.inside, start: (7, 4), end: (7, 49), text: `private readonly List<string> _lines = new();`
+    capture: 3 - class.inside, start: (9, 4), end: (9, 41), text: `public string Customer { get; init; }`
+    capture: 3 - class.inside, start: (11, 4), end: (11, 46), text: `public decimal Total { get; private set; }`
+    capture: 3 - class.inside, start: (13, 4), end: (13, 36), text: `public bool IsPaid { get; set; }`
+    capture: class.inside, start: (15, 4), end: (18, 5)
+    capture: class.inside, start: (20, 4), end: (23, 5)
+  pattern: 3
+    capture: function.around, start: (28, 4), end: (31, 5)
+  pattern: 1
+    capture: function.around, start: (28, 4), end: (31, 5)
+    capture: 1 - function.inside, start: (30, 8), end: (30, 41), text: `return $"{Customer}: {Amount:C}";`

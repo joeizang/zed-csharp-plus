@@ -1,0 +1,49 @@
+corpus/csharp/pattern-matching.cs
+  pattern: 2
+    capture: 1 - indent, start: (6, 33), end: (6, 47), text: `(object value)`
+    capture: 0 - end, start: (6, 46), end: (6, 47), text: `)`
+  pattern: 0
+    capture: 1 - indent, start: (9, 15), end: (9, 28), text: `{ Length: 0 }`
+    capture: 0 - end, start: (9, 27), end: (9, 28), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (10, 34), end: (10, 39), text: `('/')`
+    capture: 0 - end, start: (10, 38), end: (10, 39), text: `)`
+  pattern: 0
+    capture: indent, start: (6, 51), end: (13, 5)
+    capture: 0 - end, start: (13, 4), end: (13, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (15, 33), end: (15, 46), text: `(Shape shape)`
+    capture: 0 - end, start: (15, 45), end: (15, 46), text: `)`
+  pattern: 0
+    capture: 1 - indent, start: (18, 18), end: (18, 45), text: `{ Width: > 0, Height: > 0 }`
+    capture: 0 - end, start: (18, 44), end: (18, 45), text: `}`
+  pattern: 0
+    capture: indent, start: (15, 50), end: (20, 5)
+    capture: 0 - end, start: (20, 4), end: (20, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (22, 36), end: (22, 43), text: `(int n)`
+    capture: 0 - end, start: (22, 42), end: (22, 43), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (24, 21), end: (24, 34), text: `(1 or 2 or 3)`
+    capture: 0 - end, start: (24, 33), end: (24, 34), text: `)`
+  pattern: 2
+    capture: indent, start: (24, 8), end: (27, 9)
+    capture: 0 - end, start: (24, 34), end: (24, 35), text: `)`
+  pattern: 0
+    capture: indent, start: (25, 8), end: (27, 9)
+    capture: 0 - end, start: (27, 8), end: (27, 9), text: `}`
+  pattern: 0
+    capture: indent, start: (29, 15), end: (34, 9)
+    capture: 0 - end, start: (34, 8), end: (34, 9), text: `}`
+  pattern: 0
+    capture: indent, start: (23, 4), end: (35, 5)
+    capture: 0 - end, start: (35, 4), end: (35, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (5, 0), end: (36, 1)
+    capture: 0 - end, start: (36, 0), end: (36, 1), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (40, 20), end: (40, 35), text: `(double Radius)`
+    capture: 0 - end, start: (40, 34), end: (40, 35), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (42, 23), end: (42, 52), text: `(double Width, double Height)`
+    capture: 0 - end, start: (42, 51), end: (42, 52), text: `)`

@@ -1,0 +1,21 @@
+corpus/csharp/comments-and-docs.cs
+  pattern: 0
+    capture: 0 - injection.content, start: (0, 0), end: (0, 49), text: `// Plain line comment above a documented service.`
+  pattern: 0
+    capture: 0 - injection.content, start: (5, 0), end: (5, 13), text: `/// <summary>`
+  pattern: 0
+    capture: 0 - injection.content, start: (6, 0), end: (6, 50), text: `/// Sends transactional email for the application.`
+  pattern: 0
+    capture: 0 - injection.content, start: (7, 0), end: (7, 14), text: `/// </summary>`
+  pattern: 0
+    capture: 0 - injection.content, start: (8, 0), end: (8, 73), text: `/// <remarks>Doc comments exercise the comment injection query.</remarks>`
+  pattern: 0
+    capture: 0 - injection.content, start: (11, 4), end: (11, 57), text: `/// <summary>Queues a message for delivery.</summary>`
+  pattern: 0
+    capture: 0 - injection.content, start: (12, 4), end: (12, 60), text: `/// <param name="address">The recipient address.</param>`
+  pattern: 0
+    capture: 0 - injection.content, start: (13, 4), end: (13, 60), text: `/// <returns>True when the message was queued.</returns>`
+  pattern: 0
+    capture: 0 - injection.content, start: (16, 8), end: (16, 67), text: `// Real implementations would talk to an SMTP gateway here.`
+  pattern: 0
+    capture: injection.content, start: (21, 4), end: (23, 7)

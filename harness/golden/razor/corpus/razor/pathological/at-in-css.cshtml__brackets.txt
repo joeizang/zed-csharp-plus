@@ -1,0 +1,10 @@
+corpus/razor/pathological/at-in-css.cshtml
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 17), end: (0, 18), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (2, 0), end: (2, 1), text: `<`
+    capture: 1 - close, start: (10, 0), end: (10, 2), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (12, 0), end: (12, 1), text: `<`
+    capture: 1 - close, start: (12, 15), end: (12, 17), text: `</`

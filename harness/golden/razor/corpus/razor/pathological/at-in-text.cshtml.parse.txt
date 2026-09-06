@@ -1,0 +1,22 @@
+(compilation_unit [0, 0] - [8, 0]
+  (razor_page_directive [0, 0] - [0, 15]
+    (string_literal [0, 6] - [0, 15]
+      (string_literal_content [0, 7] - [0, 14])))
+  (element [2, 0] - [2, 23]
+    (razor_escape [2, 15] - [2, 19]
+      (element [2, 17] - [2, 19])))
+  (element [3, 0] - [3, 59]
+    (razor_escape [3, 12] - [3, 35]
+      (element [3, 14] - [3, 35]))
+    (razor_escape [3, 35] - [3, 55]
+      (element [3, 37] - [3, 55])))
+  (element [4, 0] - [4, 26]
+    (razor_escape [4, 11] - [4, 22]
+      (element [4, 13] - [4, 22])))
+  (element [5, 0] - [5, 26]
+    (razor_escape [5, 20] - [5, 22]
+      (element [5, 22] - [5, 22])))
+  (element [6, 0] - [6, 19]
+    (razor_escape [6, 13] - [6, 15]
+      (element [6, 15] - [6, 15])))
+  (element [7, 0] - [7, 43]))

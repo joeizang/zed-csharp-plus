@@ -1,0 +1,30 @@
+(compilation_unit [0, 0] - [6, 0]
+  (razor_page_directive [0, 0] - [0, 16]
+    (string_literal [0, 6] - [0, 16]
+      (string_literal_content [0, 7] - [0, 15])))
+  (element [2, 0] - [2, 62]
+    (razor_implicit_expression [2, 24] - [2, 36]
+      (member_access_expression [2, 25] - [2, 36]
+        expression: (identifier [2, 25] - [2, 32])
+        name: (identifier [2, 33] - [2, 36])))
+    (razor_implicit_expression [2, 45] - [2, 58]
+      (member_access_expression [2, 46] - [2, 58]
+        expression: (member_access_expression [2, 46] - [2, 57]
+          expression: (identifier [2, 46] - [2, 53])
+          name: (identifier [2, 54] - [2, 57]))
+        name: (identifier [2, 58] - [2, 58]))))
+  (element [3, 0] - [3, 65]
+    (razor_escape [3, 7] - [3, 48]
+      (element [3, 10] - [3, 48]))
+    (razor_escape [3, 48] - [3, 61]
+      (element [3, 50] - [3, 61])))
+  (element [4, 0] - [4, 63]
+    (razor_escape [4, 19] - [4, 38]
+      (element [4, 21] - [4, 38]))
+    (razor_escape [4, 39] - [4, 59]
+      (element [4, 41] - [4, 59])))
+  (element [5, 0] - [5, 48]
+    (razor_escape [5, 19] - [5, 34]
+      (element [5, 21] - [5, 34]))
+    (razor_escape [5, 35] - [5, 44]
+      (element [5, 37] - [5, 44]))))

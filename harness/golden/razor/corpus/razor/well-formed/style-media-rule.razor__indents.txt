@@ -1,0 +1,18 @@
+corpus/razor/well-formed/style-media-rule.razor
+  pattern: 3
+    capture: indent, start: (2, 0), end: (16, 8)
+    capture: 2 - start, start: (2, 0), end: (2, 1), text: `<`
+    capture: 0 - end, start: (16, 0), end: (16, 2), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (18, 0), end: (18, 38), text: `<div class="card">Themed content</div>`
+    capture: 2 - start, start: (18, 0), end: (18, 1), text: `<`
+    capture: 0 - end, start: (18, 32), end: (18, 34), text: `</`
+  pattern: 0
+    capture: 1 - indent, start: (21, 30), end: (21, 43), text: `{ get; set; }`
+    capture: 0 - end, start: (21, 42), end: (21, 43), text: `}`
+  pattern: 0
+    capture: 1 - indent, start: (22, 30), end: (22, 43), text: `{ get; set; }`
+    capture: 0 - end, start: (22, 42), end: (22, 43), text: `}`
+  pattern: 0
+    capture: indent, start: (20, 0), end: (23, 1)
+    capture: 0 - end, start: (23, 0), end: (23, 1), text: `}`

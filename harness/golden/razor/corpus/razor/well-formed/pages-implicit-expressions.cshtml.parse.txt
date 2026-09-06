@@ -1,0 +1,51 @@
+(compilation_unit [0, 0] - [27, 0]
+  (razor_page_directive [0, 0] - [0, 17]
+    (string_literal [0, 6] - [0, 17]
+      (string_literal_content [0, 7] - [0, 16])))
+  (razor_model_directive [1, 0] - [1, 20]
+    name: (identifier [1, 7] - [1, 20]))
+  (razor_block [2, 0] - [4, 1]
+    (expression_statement [3, 4] - [3, 35]
+      (assignment_expression [3, 4] - [3, 34]
+        left: (element_access_expression [3, 4] - [3, 21]
+          expression: (identifier [3, 4] - [3, 12])
+          subscript: (bracketed_argument_list [3, 12] - [3, 21]
+            (argument [3, 13] - [3, 20]
+              (string_literal [3, 13] - [3, 20]
+                (string_literal_content [3, 14] - [3, 19])))))
+        right: (string_literal [3, 24] - [3, 34]
+          (string_literal_content [3, 25] - [3, 33])))))
+  (element [6, 0] - [6, 17])
+  (element [8, 0] - [21, 8]
+    (element [9, 4] - [11, 12]
+      (element [10, 8] - [10, 44]
+        (element [10, 12] - [10, 25])
+        (element [10, 25] - [10, 39])))
+    (element [12, 4] - [20, 12]
+      (razor_foreach [13, 8] - [19, 9]
+        type: (implicit_type [13, 18] - [13, 21])
+        left: (identifier [13, 22] - [13, 29])
+        right: (member_access_expression [13, 33] - [13, 47]
+          expression: (identifier [13, 33] - [13, 38])
+          name: (identifier [13, 39] - [13, 47]))
+        body: (element [15, 12] - [18, 17]
+          (element [16, 16] - [16, 38]
+            (razor_implicit_expression [16, 20] - [16, 33]
+              (member_access_expression [16, 21] - [16, 33]
+                expression: (identifier [16, 21] - [16, 28])
+                name: (identifier [16, 29] - [16, 33]))))
+          (element [17, 16] - [17, 39]
+            (razor_implicit_expression [17, 20] - [17, 34]
+              (member_access_expression [17, 21] - [17, 34]
+                expression: (identifier [17, 21] - [17, 28])
+                name: (identifier [17, 29] - [17, 34]))))))))
+  (razor_if [23, 0] - [26, 1]
+    (razor_condition [23, 4] - [23, 31]
+      (binary_expression [23, 5] - [23, 30]
+        left: (member_access_expression [23, 5] - [23, 25]
+          expression: (member_access_expression [23, 5] - [23, 19]
+            expression: (identifier [23, 5] - [23, 10])
+            name: (identifier [23, 11] - [23, 19]))
+          name: (identifier [23, 20] - [23, 25]))
+        right: (integer_literal [23, 29] - [23, 30])))
+    (element [25, 4] - [25, 27])))

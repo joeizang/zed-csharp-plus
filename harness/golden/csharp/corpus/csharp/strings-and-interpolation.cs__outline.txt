@@ -1,0 +1,27 @@
+corpus/csharp/strings-and-interpolation.cs
+  pattern: 0
+    capture: item, start: (4, 0), end: (32, 1)
+    capture: 0 - context, start: (4, 14), end: (4, 19), text: `class`
+    capture: 1 - name, start: (4, 20), end: (4, 29), text: `Templates`
+  pattern: 3
+    capture: 2 - item, start: (6, 4), end: (6, 66), text: `public const string VerbatimPath = @"C:\logs\app\service.log";`
+    capture: 0 - context, start: (6, 17), end: (6, 65), text: `string VerbatimPath = @"C:\logs\app\service.log"`
+  pattern: 3
+    capture: item, start: (8, 4), end: (14, 12)
+    capture: context, start: (8, 17), end: (14, 11)
+  pattern: 4
+    capture: item, start: (16, 4), end: (19, 5)
+    capture: 1 - name, start: (16, 25), end: (16, 33), text: `Greeting`
+    capture: 0 - context, start: (16, 33), end: (16, 57), text: `(string name, int count)`
+  pattern: 4
+    capture: item, start: (21, 4), end: (24, 5)
+    capture: 1 - name, start: (21, 25), end: (21, 28), text: `Sql`
+    capture: 0 - context, start: (21, 28), end: (21, 42), text: `(string table)`
+  pattern: 4
+    capture: item, start: (26, 4), end: (29, 5)
+    capture: 1 - name, start: (26, 25), end: (26, 32), text: `Escapes`
+    capture: 0 - context, start: (26, 32), end: (26, 34), text: `()`
+  pattern: 2
+    capture: 2 - item, start: (31, 4), end: (31, 40), text: `public static char Separator => '/';`
+    capture: 0 - context, start: (31, 18), end: (31, 22), text: `char`
+    capture: 1 - name, start: (31, 23), end: (31, 32), text: `Separator`

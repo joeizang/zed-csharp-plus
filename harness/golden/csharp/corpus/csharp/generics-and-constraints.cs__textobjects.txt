@@ -1,0 +1,36 @@
+corpus/csharp/generics-and-constraints.cs
+  pattern: 3
+    capture: function.around, start: (11, 4), end: (14, 5)
+  pattern: 1
+    capture: function.around, start: (11, 4), end: (14, 5)
+    capture: 1 - function.inside, start: (13, 8), end: (13, 74), text: `return _store.TryGetValue(key, out var entity) ? entity : default;`
+  pattern: 3
+    capture: function.around, start: (16, 4), end: (19, 5)
+  pattern: 1
+    capture: function.around, start: (16, 4), end: (19, 5)
+    capture: 1 - function.inside, start: (18, 8), end: (18, 29), text: `_store[key] = entity;`
+  pattern: 3
+    capture: function.around, start: (21, 4), end: (25, 5)
+  pattern: 1
+    capture: function.around, start: (21, 4), end: (25, 5)
+    capture: 1 - function.inside, start: (24, 8), end: (24, 32), text: `return selector(entity);`
+  pattern: 3
+    capture: function.around, start: (27, 4), end: (30, 5)
+  pattern: 1
+    capture: function.around, start: (27, 4), end: (30, 5)
+    capture: 1 - function.inside, start: (29, 8), end: (29, 23), text: `_store.Clear();`
+  pattern: 2
+    capture: class.around, start: (5, 0), end: (31, 1)
+    capture: 3 - class.inside, start: (9, 4), end: (9, 62), text: `private readonly Dictionary<TKey, TEntity> _store = new();`
+    capture: class.inside, start: (11, 4), end: (14, 5)
+    capture: class.inside, start: (16, 4), end: (19, 5)
+    capture: class.inside, start: (21, 4), end: (25, 5)
+    capture: class.inside, start: (27, 4), end: (30, 5)
+  pattern: 3
+    capture: function.around, start: (35, 4), end: (38, 5)
+  pattern: 1
+    capture: function.around, start: (35, 4), end: (38, 5)
+    capture: 1 - function.inside, start: (37, 8), end: (37, 57), text: `return left.CompareTo(right) <= 0 ? left : right;`
+  pattern: 2
+    capture: class.around, start: (33, 0), end: (39, 1)
+    capture: class.inside, start: (35, 4), end: (38, 5)

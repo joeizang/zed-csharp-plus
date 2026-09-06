@@ -1,0 +1,29 @@
+corpus/razor/well-formed/layouts-and-sections.cshtml
+  pattern: 3
+    capture: 1 - indent, start: (4, 0), end: (4, 27), text: `<h1>@ViewData["Title"]</h1>`
+    capture: 2 - start, start: (4, 0), end: (4, 1), text: `<`
+    capture: 0 - end, start: (4, 22), end: (4, 24), text: `</`
+  pattern: 2
+    capture: 1 - indent, start: (7, 28), end: (7, 47), text: `("_Summary", Model)`
+    capture: 0 - end, start: (7, 46), end: (7, 47), text: `)`
+  pattern: 3
+    capture: indent, start: (6, 0), end: (8, 6)
+    capture: 2 - start, start: (6, 0), end: (6, 1), text: `<`
+    capture: 0 - end, start: (8, 0), end: (8, 2), text: `</`
+  pattern: 2
+    capture: 1 - indent, start: (11, 32), end: (11, 41), text: `("Stats")`
+    capture: 0 - end, start: (11, 40), end: (11, 41), text: `)`
+  pattern: 3
+    capture: indent, start: (10, 0), end: (12, 6)
+    capture: 2 - start, start: (10, 0), end: (10, 1), text: `<`
+    capture: 0 - end, start: (12, 0), end: (12, 2), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (15, 4), end: (15, 71), text: `<script src="~/js/dashboard.js" asp-append-version="true"></script>`
+    capture: 2 - start, start: (15, 4), end: (15, 5), text: `<`
+    capture: 0 - end, start: (15, 62), end: (15, 64), text: `</`
+  pattern: 0
+    capture: indent, start: (14, 0), end: (16, 1)
+    capture: 0 - end, start: (16, 0), end: (16, 1), text: `}`
+  pattern: 0
+    capture: indent, start: (18, 0), end: (20, 1)
+    capture: 0 - end, start: (20, 0), end: (20, 1), text: `}`

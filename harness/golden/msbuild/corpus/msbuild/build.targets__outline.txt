@@ -1,0 +1,28 @@
+corpus/msbuild/build.targets
+  pattern: 0
+    capture: item, start: (0, 0), end: (17, 10)
+    capture: 0 - name, start: (0, 1), end: (0, 8), text: `Project`
+  pattern: 0
+    capture: item, start: (2, 2), end: (4, 18)
+    capture: 0 - name, start: (2, 3), end: (2, 16), text: `PropertyGroup`
+  pattern: 0
+    capture: 1 - item, start: (3, 4), end: (3, 73), text: `<DocsOutput>$(MSBuildThisFileDirectory)..\artifacts\docs</DocsOutput>`
+    capture: 0 - name, start: (3, 5), end: (3, 15), text: `DocsOutput`
+  pattern: 0
+    capture: item, start: (7, 2), end: (11, 11)
+    capture: 0 - name, start: (7, 3), end: (7, 9), text: `Target`
+  pattern: 1
+    capture: 1 - item, start: (8, 4), end: (8, 86), text: `<Message Text="Collecting documentation into $(DocsOutput)" Importance="normal" />`
+    capture: 0 - name, start: (8, 5), end: (8, 12), text: `Message`
+  pattern: 1
+    capture: 1 - item, start: (9, 4), end: (9, 43), text: `<MakeDir Directories="$(DocsOutput)" />`
+    capture: 0 - name, start: (9, 5), end: (9, 12), text: `MakeDir`
+  pattern: 1
+    capture: 1 - item, start: (10, 4), end: (10, 97), text: `<Copy SourceFiles="@(DocFile)" DestinationFolder="$(DocsOutput)" SkipUnchangedFiles="true" />`
+    capture: 0 - name, start: (10, 5), end: (10, 9), text: `Copy`
+  pattern: 0
+    capture: item, start: (13, 2), end: (15, 11)
+    capture: 0 - name, start: (13, 3), end: (13, 9), text: `Target`
+  pattern: 1
+    capture: 1 - item, start: (14, 4), end: (14, 64), text: `<Exec Command="echo docs published" IgnoreExitCode="true" />`
+    capture: 0 - name, start: (14, 5), end: (14, 9), text: `Exec`

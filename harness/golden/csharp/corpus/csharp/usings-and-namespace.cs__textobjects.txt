@@ -1,0 +1,27 @@
+corpus/csharp/usings-and-namespace.cs
+  pattern: 0
+    capture: 0 - comment.around, start: (0, 0), end: (0, 64), text: `// Baseline usings and namespace shape for the snapshot harness.`
+  pattern: 3
+    capture: function.around, start: (11, 4), end: (15, 5)
+  pattern: 4
+    capture: 2 - function.around, start: (14, 44), end: (14, 61), text: `p => p.Length > 0`
+    capture: 1 - function.inside, start: (14, 49), end: (14, 57), text: `p.Length`
+  pattern: 4
+    capture: 2 - function.around, start: (14, 44), end: (14, 61), text: `p => p.Length > 0`
+    capture: 1 - function.inside, start: (14, 60), end: (14, 61), text: `0`
+  pattern: 1
+    capture: function.around, start: (11, 4), end: (15, 5)
+    capture: 1 - function.inside, start: (13, 8), end: (13, 80), text: `var parts = new List<string> { "utc", DateTime.UtcNow.Year.ToString() };`
+    capture: 1 - function.inside, start: (14, 8), end: (14, 64), text: `return string.Join(":", parts.Where(p => p.Length > 0));`
+  pattern: 2
+    capture: class.around, start: (7, 0), end: (16, 1)
+    capture: 3 - class.inside, start: (9, 4), end: (9, 46), text: `public DateTime UtcNow => DateTime.UtcNow;`
+    capture: class.inside, start: (11, 4), end: (15, 5)
+  pattern: 3
+    capture: function.around, start: (20, 4), end: (26, 5)
+  pattern: 1
+    capture: function.around, start: (20, 4), end: (26, 5)
+    capture: function.inside, start: (22, 8), end: (25, 9)
+  pattern: 2
+    capture: class.around, start: (18, 0), end: (27, 1)
+    capture: class.inside, start: (20, 4), end: (26, 5)

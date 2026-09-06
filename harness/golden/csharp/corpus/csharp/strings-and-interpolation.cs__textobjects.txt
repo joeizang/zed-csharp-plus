@@ -1,0 +1,24 @@
+corpus/csharp/strings-and-interpolation.cs
+  pattern: 3
+    capture: function.around, start: (16, 4), end: (19, 5)
+  pattern: 1
+    capture: function.around, start: (16, 4), end: (19, 5)
+    capture: 1 - function.inside, start: (18, 8), end: (18, 98), text: `return $"Hello, {name.Trim()}! You have {count} {(count == 1 ? "message" : "messages")}.";`
+  pattern: 3
+    capture: function.around, start: (21, 4), end: (24, 5)
+  pattern: 1
+    capture: function.around, start: (21, 4), end: (24, 5)
+    capture: 1 - function.inside, start: (23, 8), end: (23, 60), text: `return $"SELECT * FROM [{table}] WHERE Deleted = 0";`
+  pattern: 3
+    capture: function.around, start: (26, 4), end: (29, 5)
+  pattern: 1
+    capture: function.around, start: (26, 4), end: (29, 5)
+    capture: 1 - function.inside, start: (28, 8), end: (28, 61), text: `return "tab:\t quote:\" backslash:\\ unicode:\u00e9";`
+  pattern: 2
+    capture: class.around, start: (4, 0), end: (32, 1)
+    capture: 3 - class.inside, start: (6, 4), end: (6, 66), text: `public const string VerbatimPath = @"C:\logs\app\service.log";`
+    capture: class.inside, start: (8, 4), end: (14, 12)
+    capture: class.inside, start: (16, 4), end: (19, 5)
+    capture: class.inside, start: (21, 4), end: (24, 5)
+    capture: class.inside, start: (26, 4), end: (29, 5)
+    capture: 3 - class.inside, start: (31, 4), end: (31, 40), text: `public static char Separator => '/';`

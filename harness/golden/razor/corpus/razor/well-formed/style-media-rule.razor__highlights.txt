@@ -1,0 +1,38 @@
+corpus/razor/well-formed/style-media-rule.razor
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 6), end: (2, 7), text: `>`
+  pattern: 8
+    capture: 2 - keyword, start: (3, 4), end: (3, 5), text: `@`
+    capture: 2 - keyword, start: (3, 5), end: (3, 10), text: `media`
+  pattern: 3
+    capture: 3 - variable, start: (10, 15), end: (10, 16), text: `@`
+  pattern: 3
+    capture: 3 - variable, start: (14, 18), end: (14, 19), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (16, 0), end: (16, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (16, 7), end: (16, 8), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (18, 0), end: (18, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (18, 10), end: (18, 11), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (18, 11), end: (18, 12), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (18, 16), end: (18, 17), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (18, 17), end: (18, 18), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (18, 32), end: (18, 34), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (18, 37), end: (18, 38), text: `>`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (20, 0), end: (20, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (20, 1), end: (20, 5), text: `code`

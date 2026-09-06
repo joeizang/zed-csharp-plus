@@ -1,0 +1,75 @@
+(compilation_unit [0, 0] - [45, 0]
+  (razor_page_directive [0, 0] - [0, 17]
+    (string_literal [0, 6] - [0, 17]
+      (string_literal_content [0, 7] - [0, 16])))
+  (razor_model_directive [1, 0] - [1, 20]
+    name: (identifier [1, 7] - [1, 20]))
+  (razor_using_directive [2, 0] - [2, 19]
+    (qualified_name [2, 7] - [2, 19]
+      qualifier: (identifier [2, 7] - [2, 12])
+      name: (identifier [2, 13] - [2, 19])))
+  (razor_inject_directive [3, 0] - [3, 37]
+    (variable_declaration [3, 8] - [3, 37]
+      type: (identifier [3, 8] - [3, 26])
+      (variable_declarator [3, 27] - [3, 37]
+        name: (identifier [3, 27] - [3, 37]))))
+  (razor_inherits_directive [4, 0] - [4, 18]
+    name: (identifier [4, 10] - [4, 18]))
+  (razor_attribute_directive [5, 0] - [5, 22]
+    (attribute_list [5, 11] - [5, 22]
+      (attribute [5, 12] - [5, 21]
+        name: (identifier [5, 12] - [5, 21]))))
+  (element [7, 0] - [7, 17])
+  (razor_foreach [9, 0] - [15, 1]
+    type: (implicit_type [9, 10] - [9, 13])
+    left: (identifier [9, 14] - [9, 21])
+    right: (member_access_expression [9, 25] - [9, 39]
+      expression: (identifier [9, 25] - [9, 30])
+      name: (identifier [9, 31] - [9, 39]))
+    body: (element [11, 4] - [14, 10]
+      (element [12, 8] - [12, 34]
+        (razor_implicit_expression [12, 14] - [12, 27]
+          (member_access_expression [12, 15] - [12, 27]
+            expression: (identifier [12, 15] - [12, 22])
+            name: (identifier [12, 23] - [12, 27]))))
+      (element [13, 8] - [13, 35]
+        (razor_implicit_expression [13, 14] - [13, 28]
+          (member_access_expression [13, 15] - [13, 28]
+            expression: (identifier [13, 15] - [13, 22])
+            name: (identifier [13, 23] - [13, 28]))))))
+  (razor_switch [17, 0] - [28, 1]
+    (razor_condition [17, 8] - [17, 24]
+      (member_access_expression [17, 9] - [17, 23]
+        expression: (identifier [17, 9] - [17, 14])
+        name: (identifier [17, 15] - [17, 23])))
+    (razor_switch_case [19, 4] - [21, 14]
+      (razor_case_condition [19, 8] - [19, 16])
+      (element [20, 8] - [20, 27]))
+    (razor_switch_case [22, 4] - [24, 14]
+      (razor_case_condition [22, 8] - [22, 15])
+      (element [23, 8] - [23, 26]))
+    (razor_switch_default [25, 4] - [27, 14]
+      (element [26, 8] - [26, 32])))
+  (razor_if [30, 0] - [44, 1]
+    (razor_condition [30, 4] - [30, 26]
+      (invocation_expression [30, 5] - [30, 25]
+        function: (member_access_expression [30, 5] - [30, 23]
+          expression: (member_access_expression [30, 5] - [30, 19]
+            expression: (identifier [30, 5] - [30, 10])
+            name: (identifier [30, 11] - [30, 19]))
+          name: (identifier [30, 20] - [30, 23]))
+        arguments: (argument_list [30, 23] - [30, 25])))
+    (razor_if [32, 4] - [39, 5]
+      (razor_condition [32, 8] - [32, 35]
+        (binary_expression [32, 9] - [32, 34]
+          left: (member_access_expression [32, 9] - [32, 29]
+            expression: (member_access_expression [32, 9] - [32, 23]
+              expression: (identifier [32, 9] - [32, 14])
+              name: (identifier [32, 15] - [32, 23]))
+            name: (identifier [32, 24] - [32, 29]))
+          right: (integer_literal [32, 32] - [32, 34])))
+      (element [34, 8] - [34, 28])
+      (razor_else [36, 4] - [39, 5]
+        (element [38, 8] - [38, 28])))
+    (razor_else [41, 0] - [44, 1]
+      (element [43, 4] - [43, 27]))))

@@ -1,0 +1,27 @@
+corpus/razor/well-formed/script-block.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 7), end: (2, 8), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (7, 18), end: (7, 19), text: `@`
+  pattern: 3
+    capture: 3 - variable, start: (8, 20), end: (8, 21), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (10, 0), end: (10, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (10, 8), end: (10, 9), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (12, 0), end: (12, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 2), end: (12, 3), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (12, 13), end: (12, 14), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (12, 26), end: (12, 28), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 29), end: (12, 30), text: `>`

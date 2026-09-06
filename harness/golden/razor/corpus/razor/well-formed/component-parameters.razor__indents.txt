@@ -1,0 +1,21 @@
+corpus/razor/well-formed/component-parameters.razor
+  pattern: 3
+    capture: 1 - indent, start: (4, 4), end: (4, 43), text: `<CardHeader>Previous order</CardHeader>`
+    capture: 2 - start, start: (4, 4), end: (4, 5), text: `<`
+    capture: 0 - end, start: (4, 30), end: (4, 32), text: `</`
+  pattern: 3
+    capture: indent, start: (3, 0), end: (5, 12)
+    capture: 2 - start, start: (3, 0), end: (3, 1), text: `<`
+    capture: 0 - end, start: (5, 0), end: (5, 2), text: `</`
+  pattern: 2
+    capture: 1 - indent, start: (8, 50), end: (8, 52), text: `()`
+    capture: 0 - end, start: (8, 51), end: (8, 52), text: `)`
+  pattern: 1
+    capture: 1 - indent, start: (10, 8), end: (10, 23), text: `["data-testid"]`
+    capture: 0 - end, start: (10, 22), end: (10, 23), text: `]`
+  pattern: 0
+    capture: indent, start: (9, 4), end: (11, 5)
+    capture: 0 - end, start: (11, 4), end: (11, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (7, 0), end: (12, 1)
+    capture: 0 - end, start: (12, 0), end: (12, 1), text: `}`

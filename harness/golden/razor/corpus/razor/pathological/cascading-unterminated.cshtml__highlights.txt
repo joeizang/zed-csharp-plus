@@ -1,0 +1,35 @@
+corpus/razor/pathological/cascading-unterminated.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 2
+    capture: 2 - keyword, start: (6, 4), end: (6, 5), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (6, 5), end: (6, 12), text: `foreach`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (8, 8), end: (8, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (8, 11), end: (8, 12), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (8, 12), end: (8, 13), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (9, 4), end: (9, 6), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 8), end: (9, 9), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (11, 0), end: (11, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 5), end: (11, 6), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (11, 24), end: (11, 26), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 30), end: (11, 31), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (13, 0), end: (13, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (13, 2), end: (13, 3), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (13, 26), end: (13, 28), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (13, 29), end: (13, 30), text: `>`

@@ -1,0 +1,37 @@
+corpus/razor/pathological/mismatched-tags.cshtml
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 12), end: (0, 13), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 11), end: (2, 12), text: `"`
+    capture: 1 - close, start: (2, 16), end: (2, 17), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (5, 16), end: (5, 17), text: `<`
+    capture: 1 - close, start: (5, 23), end: (5, 25), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (5, 12), end: (5, 13), text: `<`
+    capture: 1 - close, start: (5, 28), end: (5, 30), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (4, 8), end: (4, 9), text: `<`
+    capture: 1 - close, start: (6, 8), end: (6, 10), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (3, 4), end: (3, 5), text: `<`
+    capture: 1 - close, start: (7, 4), end: (7, 6), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (2, 0), end: (2, 1), text: `<`
+    capture: 1 - close, start: (8, 0), end: (8, 2), text: `</`
+  pattern: 0
+    capture: 0 - open, start: (10, 9), end: (10, 10), text: `(`
+    capture: 1 - close, start: (10, 31), end: (10, 32), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (13, 8), end: (13, 9), text: `<`
+    capture: 1 - close, start: (13, 22), end: (13, 24), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (12, 4), end: (12, 5), text: `<`
+    capture: 1 - close, start: (14, 4), end: (14, 6), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (11, 0), end: (11, 1), text: `{`
+    capture: 1 - close, start: (15, 0), end: (15, 1), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (17, 0), end: (17, 1), text: `<`
+    capture: 1 - close, start: (17, 45), end: (17, 47), text: `</`

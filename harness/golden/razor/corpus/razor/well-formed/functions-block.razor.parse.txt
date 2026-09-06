@@ -1,0 +1,29 @@
+(compilation_unit [0, 0] - [12, 0]
+  (razor_block [0, 0] - [7, 1]
+    (property_declaration [1, 4] - [1, 51]
+      (modifier [1, 4] - [1, 10])
+      type: (predefined_type [1, 11] - [1, 17])
+      name: (identifier [1, 18] - [1, 26])
+      accessors: (accessor_list [1, 27] - [1, 40]
+        (accessor_declaration [1, 29] - [1, 33])
+        (accessor_declaration [1, 34] - [1, 38]))
+      value: (string_literal [1, 43] - [1, 50]
+        (string_literal_content [1, 44] - [1, 49])))
+    (method_declaration [3, 4] - [6, 5]
+      (modifier [3, 4] - [3, 10])
+      returns: (predefined_type [3, 11] - [3, 15])
+      name: (identifier [3, 16] - [3, 21])
+      parameters: (parameter_list [3, 21] - [3, 23])
+      body: (block [4, 4] - [6, 5]
+        (expression_statement [5, 8] - [5, 22]
+          (assignment_expression [5, 8] - [5, 21]
+            left: (identifier [5, 8] - [5, 16])
+            right: (string_literal [5, 19] - [5, 21]))))))
+  (element [9, 0] - [9, 18]
+    (razor_implicit_expression [9, 4] - [9, 13]
+      (identifier [9, 5] - [9, 13])))
+  (element [11, 0] - [11, 39]
+    (razor_html_attribute [11, 8] - [11, 24]
+      (razor_attribute_name [11, 8] - [11, 16])
+      (razor_attribute_value [11, 17] - [11, 24]
+        (identifier [11, 18] - [11, 23])))))

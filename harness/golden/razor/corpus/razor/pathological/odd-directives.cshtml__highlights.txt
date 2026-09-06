@@ -1,0 +1,29 @@
+corpus/razor/pathological/odd-directives.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 3
+    capture: 3 - variable, start: (2, 0), end: (2, 1), text: `@`
+  pattern: 3
+    capture: 3 - variable, start: (3, 0), end: (3, 1), text: `@`
+  pattern: 5
+    capture: 4 - string.escape, start: (4, 0), end: (4, 2), text: `@@`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (6, 0), end: (6, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 2), end: (6, 3), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (6, 3), end: (6, 4), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 18), end: (6, 19), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (9, 0), end: (9, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 2), end: (9, 3), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (9, 35), end: (9, 37), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 38), end: (9, 39), text: `>`

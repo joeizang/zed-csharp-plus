@@ -1,0 +1,1 @@
+corpus/razor/well-formed/functions-block.razor

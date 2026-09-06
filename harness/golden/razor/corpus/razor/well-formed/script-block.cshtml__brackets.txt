@@ -1,0 +1,16 @@
+corpus/razor/well-formed/script-block.cshtml
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 17), end: (0, 18), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (8, 33), end: (8, 34), text: `"`
+    capture: 1 - close, start: (8, 49), end: (8, 50), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (8, 32), end: (8, 33), text: `(`
+    capture: 1 - close, start: (8, 50), end: (8, 51), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (2, 0), end: (2, 1), text: `<`
+    capture: 1 - close, start: (10, 0), end: (10, 2), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (12, 0), end: (12, 1), text: `<`
+    capture: 1 - close, start: (12, 26), end: (12, 28), text: `</`

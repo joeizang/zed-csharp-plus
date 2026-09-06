@@ -1,0 +1,16 @@
+corpus/razor/well-formed/code-block.razor
+  pattern: 4
+    capture: 1 - item, start: (9, 4), end: (9, 33), text: `private int currentCount = 0;`
+    capture: 2 - context, start: (9, 12), end: (9, 32), text: `int currentCount = 0`
+  pattern: 3
+    capture: item, start: (11, 4), end: (12, 38)
+    capture: 2 - context, start: (12, 11), end: (12, 14), text: `int`
+    capture: 0 - name, start: (12, 15), end: (12, 24), text: `StartFrom`
+  pattern: 5
+    capture: item, start: (14, 4), end: (17, 5)
+    capture: 0 - name, start: (14, 28), end: (14, 41), text: `OnInitialized`
+    capture: 2 - context, start: (14, 41), end: (14, 43), text: `()`
+  pattern: 5
+    capture: item, start: (19, 4), end: (22, 5)
+    capture: 0 - name, start: (19, 17), end: (19, 31), text: `IncrementCount`
+    capture: 2 - context, start: (19, 31), end: (19, 33), text: `()`

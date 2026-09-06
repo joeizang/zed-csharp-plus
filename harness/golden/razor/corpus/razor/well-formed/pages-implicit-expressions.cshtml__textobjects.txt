@@ -1,0 +1,1 @@
+corpus/razor/well-formed/pages-implicit-expressions.cshtml

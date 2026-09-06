@@ -1,0 +1,73 @@
+corpus/csharp/pattern-matching.cs
+  pattern: 0
+    capture: 0 - open, start: (6, 33), end: (6, 34), text: `(`
+    capture: 1 - close, start: (6, 46), end: (6, 47), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (8, 16), end: (8, 17), text: `"`
+    capture: 1 - close, start: (8, 22), end: (8, 23), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (9, 15), end: (9, 16), text: `{`
+    capture: 1 - close, start: (9, 27), end: (9, 28), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (9, 32), end: (9, 33), text: `"`
+    capture: 1 - close, start: (9, 38), end: (9, 39), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (10, 34), end: (10, 35), text: `(`
+    capture: 1 - close, start: (10, 38), end: (10, 39), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (10, 43), end: (10, 44), text: `"`
+    capture: 1 - close, start: (10, 52), end: (10, 53), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (11, 35), end: (11, 36), text: `"`
+    capture: 1 - close, start: (11, 48), end: (11, 49), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (12, 20), end: (12, 21), text: `"`
+    capture: 1 - close, start: (12, 26), end: (12, 27), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (7, 4), end: (7, 5), text: `{`
+    capture: 1 - close, start: (13, 4), end: (13, 5), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (15, 33), end: (15, 34), text: `(`
+    capture: 1 - close, start: (15, 45), end: (15, 46), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (17, 21), end: (17, 22), text: `"`
+    capture: 1 - close, start: (17, 41), end: (17, 42), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (18, 18), end: (18, 19), text: `{`
+    capture: 1 - close, start: (18, 44), end: (18, 45), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (18, 52), end: (18, 53), text: `"`
+    capture: 1 - close, start: (18, 78), end: (18, 79), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (19, 13), end: (19, 14), text: `"`
+    capture: 1 - close, start: (19, 21), end: (19, 22), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (16, 4), end: (16, 5), text: `{`
+    capture: 1 - close, start: (20, 4), end: (20, 5), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (22, 36), end: (22, 37), text: `(`
+    capture: 1 - close, start: (22, 42), end: (22, 43), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (24, 21), end: (24, 22), text: `(`
+    capture: 1 - close, start: (24, 33), end: (24, 34), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (24, 11), end: (24, 12), text: `(`
+    capture: 1 - close, start: (24, 34), end: (24, 35), text: `)`
+  pattern: 2
+    capture: 0 - open, start: (25, 8), end: (25, 9), text: `{`
+    capture: 1 - close, start: (27, 8), end: (27, 9), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (30, 8), end: (30, 9), text: `{`
+    capture: 1 - close, start: (34, 8), end: (34, 9), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (23, 4), end: (23, 5), text: `{`
+    capture: 1 - close, start: (35, 4), end: (35, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (5, 0), end: (5, 1), text: `{`
+    capture: 1 - close, start: (36, 0), end: (36, 1), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (40, 20), end: (40, 21), text: `(`
+    capture: 1 - close, start: (40, 34), end: (40, 35), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (42, 23), end: (42, 24), text: `(`
+    capture: 1 - close, start: (42, 51), end: (42, 52), text: `)`

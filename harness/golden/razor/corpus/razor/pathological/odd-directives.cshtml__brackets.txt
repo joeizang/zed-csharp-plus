@@ -1,0 +1,10 @@
+corpus/razor/pathological/odd-directives.cshtml
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 22), end: (0, 23), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (6, 0), end: (6, 1), text: `<`
+    capture: 1 - close, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (9, 0), end: (9, 1), text: `<`
+    capture: 1 - close, start: (9, 35), end: (9, 37), text: `</`

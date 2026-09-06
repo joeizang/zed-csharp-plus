@@ -1,0 +1,53 @@
+corpus/razor/well-formed/at-escapes-and-email.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 2), end: (2, 3), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (2, 24), end: (2, 25), text: `@`
+  pattern: 3
+    capture: 3 - variable, start: (2, 45), end: (2, 46), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (2, 58), end: (2, 60), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 61), end: (2, 62), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (3, 0), end: (3, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (3, 2), end: (3, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (3, 7), end: (3, 9), text: `@@`
+  pattern: 5
+    capture: 4 - string.escape, start: (3, 48), end: (3, 50), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (3, 61), end: (3, 63), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (3, 64), end: (3, 65), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (4, 0), end: (4, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 2), end: (4, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (4, 19), end: (4, 21), text: `@@`
+  pattern: 5
+    capture: 4 - string.escape, start: (4, 39), end: (4, 41), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (4, 59), end: (4, 61), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 62), end: (4, 63), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (5, 0), end: (5, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 2), end: (5, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (5, 19), end: (5, 21), text: `@@`
+  pattern: 5
+    capture: 4 - string.escape, start: (5, 35), end: (5, 37), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (5, 44), end: (5, 46), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 47), end: (5, 48), text: `>`

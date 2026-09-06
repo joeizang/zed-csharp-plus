@@ -1,0 +1,58 @@
+corpus/csharp/generics-and-constraints.cs
+  pattern: 2
+    capture: 1 - indent, start: (6, 27), end: (6, 32), text: `new()`
+    capture: 0 - end, start: (6, 31), end: (6, 32), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (9, 59), end: (9, 61), text: `()`
+    capture: 0 - end, start: (9, 60), end: (9, 61), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (11, 24), end: (11, 34), text: `(TKey key)`
+    capture: 0 - end, start: (11, 33), end: (11, 34), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (13, 33), end: (13, 54), text: `(key, out var entity)`
+    capture: 0 - end, start: (13, 53), end: (13, 54), text: `)`
+  pattern: 0
+    capture: indent, start: (12, 4), end: (14, 5)
+    capture: 0 - end, start: (14, 4), end: (14, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (16, 19), end: (16, 45), text: `(TKey key, TEntity entity)`
+    capture: 0 - end, start: (16, 44), end: (16, 45), text: `)`
+  pattern: 1
+    capture: 1 - indent, start: (18, 14), end: (18, 19), text: `[key]`
+    capture: 0 - end, start: (18, 18), end: (18, 19), text: `]`
+  pattern: 0
+    capture: indent, start: (17, 4), end: (19, 5)
+    capture: 0 - end, start: (19, 4), end: (19, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (21, 35), end: (21, 84), text: `(TEntity entity, Func<TEntity, TResult> selector)`
+    capture: 0 - end, start: (21, 83), end: (21, 84), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (24, 23), end: (24, 31), text: `(entity)`
+    capture: 0 - end, start: (24, 30), end: (24, 31), text: `)`
+  pattern: 0
+    capture: indent, start: (23, 4), end: (25, 5)
+    capture: 0 - end, start: (25, 4), end: (25, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (27, 23), end: (27, 25), text: `()`
+    capture: 0 - end, start: (27, 24), end: (27, 25), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (29, 20), end: (29, 22), text: `()`
+    capture: 0 - end, start: (29, 21), end: (29, 22), text: `)`
+  pattern: 0
+    capture: indent, start: (28, 4), end: (30, 5)
+    capture: 0 - end, start: (30, 4), end: (30, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (8, 0), end: (31, 1)
+    capture: 0 - end, start: (31, 0), end: (31, 1), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (35, 27), end: (35, 44), text: `(T left, T right)`
+    capture: 0 - end, start: (35, 43), end: (35, 44), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (37, 29), end: (37, 36), text: `(right)`
+    capture: 0 - end, start: (37, 35), end: (37, 36), text: `)`
+  pattern: 0
+    capture: indent, start: (36, 4), end: (38, 5)
+    capture: 0 - end, start: (38, 4), end: (38, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (34, 0), end: (39, 1)
+    capture: 0 - end, start: (39, 0), end: (39, 1), text: `}`

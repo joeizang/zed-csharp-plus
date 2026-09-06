@@ -1,0 +1,18 @@
+corpus/razor/well-formed/bind-and-events.razor
+  pattern: 5
+    capture: 2 - function.around, start: (13, 18), end: (13, 39), text: `() => Toggle(Enabled)`
+    capture: 1 - function.inside, start: (13, 24), end: (13, 30), text: `Toggle`
+    capture: 1 - function.inside, start: (13, 30), end: (13, 39), text: `(Enabled)`
+  pattern: 5
+    capture: 2 - function.around, start: (14, 20), end: (14, 32), text: `e => Save(e)`
+    capture: 1 - function.inside, start: (14, 25), end: (14, 29), text: `Save`
+    capture: 1 - function.inside, start: (14, 29), end: (14, 32), text: `(e)`
+  pattern: 4
+    capture: function.around, start: (20, 4), end: (23, 5)
+  pattern: 2
+    capture: function.around, start: (20, 4), end: (23, 5)
+    capture: 1 - function.inside, start: (22, 8), end: (22, 25), text: `Enabled = !value;`
+  pattern: 4
+    capture: 2 - function.around, start: (25, 4), end: (25, 64), text: `private Task Save(System.EventArgs e) => Task.CompletedTask;`
+  pattern: 4
+    capture: 2 - function.around, start: (26, 4), end: (26, 54), text: `private Task SaveQuantity() => Task.CompletedTask;`

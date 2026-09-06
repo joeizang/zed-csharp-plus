@@ -1,0 +1,21 @@
+corpus/csharp/usings-and-namespace.cs
+  pattern: 0
+    capture: item, start: (7, 0), end: (16, 1)
+    capture: 0 - context, start: (7, 7), end: (7, 12), text: `class`
+    capture: 1 - name, start: (7, 13), end: (7, 18), text: `Clock`
+  pattern: 2
+    capture: 2 - item, start: (9, 4), end: (9, 46), text: `public DateTime UtcNow => DateTime.UtcNow;`
+    capture: 0 - context, start: (9, 11), end: (9, 19), text: `DateTime`
+    capture: 1 - name, start: (9, 20), end: (9, 26), text: `UtcNow`
+  pattern: 4
+    capture: item, start: (11, 4), end: (15, 5)
+    capture: 1 - name, start: (11, 18), end: (11, 26), text: `Describe`
+    capture: 0 - context, start: (11, 26), end: (11, 28), text: `()`
+  pattern: 0
+    capture: item, start: (18, 0), end: (27, 1)
+    capture: 0 - context, start: (18, 14), end: (18, 19), text: `class`
+    capture: 1 - name, start: (18, 20), end: (18, 25), text: `Guard`
+  pattern: 4
+    capture: item, start: (20, 4), end: (26, 5)
+    capture: 1 - name, start: (20, 23), end: (20, 30), text: `NotNull`
+    capture: 0 - context, start: (20, 30), end: (20, 57), text: `(object value, string name)`

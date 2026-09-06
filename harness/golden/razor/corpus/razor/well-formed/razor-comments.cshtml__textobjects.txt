@@ -1,0 +1,6 @@
+corpus/razor/well-formed/razor-comments.cshtml
+  pattern: 1
+    capture: 0 - comment.around, start: (3, 0), end: (3, 36), text: `@* This page shows archived notes *@`
+    capture: comment.around, start: (4, 0), end: (6, 26)
+  pattern: 1
+    capture: 0 - comment.around, start: (10, 8), end: (10, 44), text: `@* Render the note title and body *@`

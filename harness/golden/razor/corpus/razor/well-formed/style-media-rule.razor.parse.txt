@@ -1,0 +1,35 @@
+(compilation_unit [0, 0] - [24, 0]
+  (razor_page_directive [0, 0] - [0, 14]
+    (string_literal [0, 6] - [0, 14]
+      (string_literal_content [0, 7] - [0, 13])))
+  (element [2, 0] - [16, 8]
+    (css_at_rule [3, 4] - [3, 30]
+      (element [3, 5] - [3, 10]))
+    (razor_implicit_expression [10, 15] - [10, 33]
+      (member_access_expression [10, 16] - [10, 33]
+        expression: (identifier [10, 16] - [10, 21])
+        name: (identifier [10, 22] - [10, 33])))
+    (razor_implicit_expression [14, 18] - [14, 36]
+      (member_access_expression [14, 19] - [14, 36]
+        expression: (identifier [14, 19] - [14, 24])
+        name: (identifier [14, 25] - [14, 36]))))
+  (element [18, 0] - [18, 38])
+  (razor_block [20, 0] - [23, 1]
+    (property_declaration [21, 4] - [21, 56]
+      (modifier [21, 4] - [21, 10])
+      type: (predefined_type [21, 11] - [21, 17])
+      name: (identifier [21, 18] - [21, 29])
+      accessors: (accessor_list [21, 30] - [21, 43]
+        (accessor_declaration [21, 32] - [21, 36])
+        (accessor_declaration [21, 37] - [21, 41]))
+      value: (string_literal [21, 46] - [21, 55]
+        (string_literal_content [21, 47] - [21, 54])))
+    (property_declaration [22, 4] - [22, 57]
+      (modifier [22, 4] - [22, 10])
+      type: (predefined_type [22, 11] - [22, 17])
+      name: (identifier [22, 18] - [22, 29])
+      accessors: (accessor_list [22, 30] - [22, 43]
+        (accessor_declaration [22, 32] - [22, 36])
+        (accessor_declaration [22, 37] - [22, 41]))
+      value: (string_literal [22, 46] - [22, 56]
+        (string_literal_content [22, 47] - [22, 55])))))

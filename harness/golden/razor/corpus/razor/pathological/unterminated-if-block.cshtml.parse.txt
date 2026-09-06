@@ -1,0 +1,12 @@
+(compilation_unit [0, 0] - [10, 0]
+  (razor_page_directive [0, 0] - [0, 15]
+    (string_literal [0, 6] - [0, 15]
+      (string_literal_content [0, 7] - [0, 14])))
+  (ERROR [2, 0] - [9, 82]
+    (razor_condition [3, 8] - [3, 20]
+      (member_access_expression [3, 9] - [3, 19]
+        expression: (identifier [3, 9] - [3, 14])
+        name: (identifier [3, 15] - [3, 19])))
+    (element [5, 8] - [8, 10]
+      (element [7, 8] - [7, 58]))
+    (element [9, 0] - [9, 82])))

@@ -1,0 +1,29 @@
+corpus/razor/pathological/unterminated-if-block.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (5, 8), end: (5, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 10), end: (5, 11), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (7, 8), end: (7, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 13), end: (7, 14), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (7, 51), end: (7, 53), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 57), end: (7, 58), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (8, 4), end: (8, 6), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (8, 9), end: (8, 10), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (9, 0), end: (9, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 2), end: (9, 3), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (9, 78), end: (9, 80), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (9, 81), end: (9, 82), text: `>`

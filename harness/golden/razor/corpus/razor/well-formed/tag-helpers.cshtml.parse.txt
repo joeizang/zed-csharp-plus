@@ -1,0 +1,18 @@
+(compilation_unit [0, 0] - [20, 0]
+  (razor_page_directive [0, 0] - [0, 16]
+    (string_literal [0, 6] - [0, 16]
+      (string_literal_content [0, 7] - [0, 15])))
+  (razor_model_directive [1, 0] - [1, 19]
+    name: (identifier [1, 7] - [1, 19]))
+  (element [3, 0] - [15, 7]
+    (element [4, 4] - [8, 10]
+      (element [5, 8] - [5, 45])
+      (element [6, 8] - [6, 60])
+      (element [7, 8] - [7, 74]))
+    (element [9, 4] - [13, 10]
+      (element [10, 8] - [10, 39])
+      (element [11, 8] - [11, 67])
+      (element [12, 8] - [12, 68]))
+    (element [14, 4] - [14, 63]))
+  (element [17, 0] - [19, 14]
+    (element [18, 4] - [18, 47])))

@@ -1,0 +1,131 @@
+corpus/razor/well-formed/directives-and-control-flow.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (1, 0), end: (1, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (1, 1), end: (1, 6), text: `model`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (2, 0), end: (2, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (2, 1), end: (2, 6), text: `using`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (3, 0), end: (3, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (3, 1), end: (3, 7), text: `inject`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (4, 0), end: (4, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (4, 1), end: (4, 9), text: `inherits`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (5, 0), end: (5, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (5, 1), end: (5, 10), text: `attribute`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (7, 0), end: (7, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 3), end: (7, 4), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (7, 12), end: (7, 14), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 16), end: (7, 17), text: `>`
+  pattern: 2
+    capture: 2 - keyword, start: (9, 0), end: (9, 1), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (9, 1), end: (9, 8), text: `foreach`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (11, 4), end: (11, 5), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (11, 14), end: (11, 15), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (11, 15), end: (11, 16), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (11, 23), end: (11, 24), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 24), end: (11, 25), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (12, 8), end: (12, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 13), end: (12, 14), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (12, 14), end: (12, 15), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (12, 27), end: (12, 29), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 33), end: (12, 34), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (13, 8), end: (13, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (13, 13), end: (13, 14), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (13, 14), end: (13, 15), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (13, 28), end: (13, 30), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (13, 34), end: (13, 35), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (14, 4), end: (14, 6), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (14, 9), end: (14, 10), text: `>`
+  pattern: 2
+    capture: 2 - keyword, start: (17, 0), end: (17, 1), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (17, 1), end: (17, 7), text: `switch`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (20, 8), end: (20, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (20, 10), end: (20, 11), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (20, 23), end: (20, 25), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (20, 26), end: (20, 27), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (23, 8), end: (23, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (23, 10), end: (23, 11), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (23, 22), end: (23, 24), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (23, 25), end: (23, 26), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (26, 8), end: (26, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (26, 10), end: (26, 11), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (26, 28), end: (26, 30), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (26, 31), end: (26, 32), text: `>`
+  pattern: 2
+    capture: 2 - keyword, start: (30, 0), end: (30, 1), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (30, 1), end: (30, 3), text: `if`
+  pattern: 2
+    capture: 2 - keyword, start: (32, 4), end: (32, 5), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (32, 5), end: (32, 7), text: `if`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (34, 8), end: (34, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (34, 10), end: (34, 11), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (34, 24), end: (34, 26), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (34, 27), end: (34, 28), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (38, 8), end: (38, 9), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (38, 10), end: (38, 11), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (38, 24), end: (38, 26), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (38, 27), end: (38, 28), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (43, 4), end: (43, 5), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (43, 6), end: (43, 7), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (43, 23), end: (43, 25), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (43, 26), end: (43, 27), text: `>`

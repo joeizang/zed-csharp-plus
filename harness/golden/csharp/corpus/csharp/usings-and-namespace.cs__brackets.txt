@@ -1,0 +1,49 @@
+corpus/csharp/usings-and-namespace.cs
+  pattern: 0
+    capture: 0 - open, start: (11, 26), end: (11, 27), text: `(`
+    capture: 1 - close, start: (11, 27), end: (11, 28), text: `)`
+  pattern: 3
+    capture: 0 - open, start: (13, 28), end: (13, 29), text: `<`
+    capture: 1 - close, start: (13, 35), end: (13, 36), text: `>`
+  pattern: 4
+    capture: 0 - open, start: (13, 39), end: (13, 40), text: `"`
+    capture: 1 - close, start: (13, 43), end: (13, 44), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (13, 75), end: (13, 76), text: `(`
+    capture: 1 - close, start: (13, 76), end: (13, 77), text: `)`
+  pattern: 2
+    capture: 0 - open, start: (13, 37), end: (13, 38), text: `{`
+    capture: 1 - close, start: (13, 78), end: (13, 79), text: `}`
+  pattern: 4
+    capture: 0 - open, start: (14, 27), end: (14, 28), text: `"`
+    capture: 1 - close, start: (14, 29), end: (14, 30), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (14, 43), end: (14, 44), text: `(`
+    capture: 1 - close, start: (14, 61), end: (14, 62), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (14, 26), end: (14, 27), text: `(`
+    capture: 1 - close, start: (14, 62), end: (14, 63), text: `)`
+  pattern: 2
+    capture: 0 - open, start: (12, 4), end: (12, 5), text: `{`
+    capture: 1 - close, start: (15, 4), end: (15, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (8, 0), end: (8, 1), text: `{`
+    capture: 1 - close, start: (16, 0), end: (16, 1), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (20, 30), end: (20, 31), text: `(`
+    capture: 1 - close, start: (20, 56), end: (20, 57), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (22, 11), end: (22, 12), text: `(`
+    capture: 1 - close, start: (22, 25), end: (22, 26), text: `)`
+  pattern: 0
+    capture: 0 - open, start: (24, 43), end: (24, 44), text: `(`
+    capture: 1 - close, start: (24, 48), end: (24, 49), text: `)`
+  pattern: 2
+    capture: 0 - open, start: (23, 8), end: (23, 9), text: `{`
+    capture: 1 - close, start: (25, 8), end: (25, 9), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (21, 4), end: (21, 5), text: `{`
+    capture: 1 - close, start: (26, 4), end: (26, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (19, 0), end: (19, 1), text: `{`
+    capture: 1 - close, start: (27, 0), end: (27, 1), text: `}`

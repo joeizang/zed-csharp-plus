@@ -1,0 +1,22 @@
+corpus/csharp/comments-and-docs.cs
+  pattern: 0
+    capture: 0 - open, start: (14, 23), end: (14, 24), text: `(`
+    capture: 1 - close, start: (14, 51), end: (14, 52), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (17, 27), end: (17, 28), text: `"`
+    capture: 1 - close, start: (17, 55), end: (17, 56), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (17, 25), end: (17, 26), text: `(`
+    capture: 1 - close, start: (17, 56), end: (17, 57), text: `)`
+  pattern: 2
+    capture: 0 - open, start: (15, 4), end: (15, 5), text: `{`
+    capture: 1 - close, start: (19, 4), end: (19, 5), text: `}`
+  pattern: 0
+    capture: 0 - open, start: (24, 30), end: (24, 31), text: `(`
+    capture: 1 - close, start: (24, 31), end: (24, 32), text: `)`
+  pattern: 2
+    capture: 0 - open, start: (25, 4), end: (25, 5), text: `{`
+    capture: 1 - close, start: (26, 4), end: (26, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (10, 0), end: (10, 1), text: `{`
+    capture: 1 - close, start: (27, 0), end: (27, 1), text: `}`

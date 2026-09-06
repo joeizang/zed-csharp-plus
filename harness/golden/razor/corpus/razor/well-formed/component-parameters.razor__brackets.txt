@@ -1,0 +1,67 @@
+corpus/razor/well-formed/component-parameters.razor
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 14), end: (0, 15), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 17), end: (2, 18), text: `"`
+    capture: 1 - close, start: (2, 37), end: (2, 38), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 17), end: (2, 18), text: `"`
+    capture: 1 - close, start: (2, 49), end: (2, 50), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 37), end: (2, 38), text: `"`
+    capture: 1 - close, start: (2, 49), end: (2, 50), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 17), end: (2, 18), text: `"`
+    capture: 1 - close, start: (2, 54), end: (2, 55), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 37), end: (2, 38), text: `"`
+    capture: 1 - close, start: (2, 54), end: (2, 55), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (2, 49), end: (2, 50), text: `"`
+    capture: 1 - close, start: (2, 54), end: (2, 55), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (3, 17), end: (3, 18), text: `"`
+    capture: 1 - close, start: (3, 38), end: (3, 39), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (4, 4), end: (4, 5), text: `<`
+    capture: 1 - close, start: (4, 30), end: (4, 32), text: `</`
+  pattern: 4
+    capture: 0 - open, start: (3, 0), end: (3, 1), text: `<`
+    capture: 1 - close, start: (5, 0), end: (5, 2), text: `</`
+  pattern: 0
+    capture: 0 - open, start: (8, 50), end: (8, 51), text: `(`
+    capture: 1 - close, start: (8, 51), end: (8, 52), text: `)`
+  pattern: 3
+    capture: 0 - open, start: (10, 9), end: (10, 10), text: `"`
+    capture: 1 - close, start: (10, 21), end: (10, 22), text: `"`
+  pattern: 1
+    capture: 0 - open, start: (10, 8), end: (10, 9), text: `[`
+    capture: 1 - close, start: (10, 22), end: (10, 23), text: `]`
+  pattern: 3
+    capture: 0 - open, start: (10, 26), end: (10, 27), text: `"`
+    capture: 1 - close, start: (10, 37), end: (10, 38), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (9, 4), end: (9, 5), text: `{`
+    capture: 1 - close, start: (11, 4), end: (11, 5), text: `}`
+  pattern: 2
+    capture: 0 - open, start: (7, 6), end: (7, 7), text: `{`
+    capture: 1 - close, start: (12, 0), end: (12, 1), text: `}`
+  pattern: 3
+    capture: 0 - open, start: (14, 17), end: (14, 18), text: `"`
+    capture: 1 - close, start: (14, 35), end: (14, 36), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (14, 17), end: (14, 18), text: `"`
+    capture: 1 - close, start: (14, 43), end: (14, 44), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (14, 35), end: (14, 36), text: `"`
+    capture: 1 - close, start: (14, 43), end: (14, 44), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (14, 17), end: (14, 18), text: `"`
+    capture: 1 - close, start: (14, 50), end: (14, 51), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (14, 35), end: (14, 36), text: `"`
+    capture: 1 - close, start: (14, 50), end: (14, 51), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (14, 43), end: (14, 44), text: `"`
+    capture: 1 - close, start: (14, 50), end: (14, 51), text: `"`

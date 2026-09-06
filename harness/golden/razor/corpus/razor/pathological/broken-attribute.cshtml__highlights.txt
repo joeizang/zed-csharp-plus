@@ -1,0 +1,27 @@
+corpus/razor/pathological/broken-attribute.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (2, 8), end: (2, 9), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (2, 9), end: (2, 10), text: `"`
+  pattern: 3
+    capture: 3 - variable, start: (2, 16), end: (2, 17), text: `@`
+  pattern: 14
+    capture: 8 - string, start: (2, 31), end: (2, 32), text: `"`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (2, 36), end: (2, 37), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (2, 37), end: (2, 38), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (2, 42), end: (2, 43), text: `"`
+  pattern: 12
+    capture: 7 - punctuation.delimiter, start: (2, 44), end: (2, 46), text: `/>`
+  pattern: 3
+    capture: 3 - variable, start: (3, 9), end: (3, 10), text: `@`
+  pattern: 3
+    capture: 3 - variable, start: (4, 9), end: (4, 10), text: `@`

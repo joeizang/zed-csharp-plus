@@ -1,0 +1,53 @@
+corpus/razor/pathological/half-typed-component-tag.razor
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 3), end: (2, 4), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (2, 10), end: (2, 12), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 14), end: (2, 15), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (4, 0), end: (4, 1), text: `<`
+  pattern: 12
+    capture: 7 - punctuation.delimiter, start: (4, 13), end: (4, 13), text: ``
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (5, 0), end: (5, 1), text: `<`
+  pattern: 7
+    capture: 6 - attribute, start: (5, 14), end: (5, 19), text: `@bind`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (5, 25), end: (5, 26), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (5, 26), end: (5, 27), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (5, 38), end: (5, 39), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 39), end: (5, 40), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (6, 4), end: (6, 5), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 9), end: (6, 10), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 21), end: (6, 22), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (7, 0), end: (7, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 14), end: (7, 15), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (9, 0), end: (9, 1), text: `<`
+  pattern: 12
+    capture: 7 - punctuation.delimiter, start: (9, 12), end: (9, 14), text: `/>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (11, 0), end: (11, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 2), end: (11, 3), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (11, 37), end: (11, 39), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (11, 40), end: (11, 41), text: `>`

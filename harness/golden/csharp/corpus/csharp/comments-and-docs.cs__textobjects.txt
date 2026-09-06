@@ -1,0 +1,35 @@
+corpus/csharp/comments-and-docs.cs
+  pattern: 0
+    capture: 0 - comment.around, start: (0, 0), end: (0, 49), text: `// Plain line comment above a documented service.`
+  pattern: 0
+    capture: 0 - comment.around, start: (5, 0), end: (5, 13), text: `/// <summary>`
+    capture: 0 - comment.around, start: (6, 0), end: (6, 50), text: `/// Sends transactional email for the application.`
+    capture: 0 - comment.around, start: (7, 0), end: (7, 14), text: `/// </summary>`
+    capture: 0 - comment.around, start: (8, 0), end: (8, 73), text: `/// <remarks>Doc comments exercise the comment injection query.</remarks>`
+  pattern: 0
+    capture: 0 - comment.around, start: (11, 4), end: (11, 57), text: `/// <summary>Queues a message for delivery.</summary>`
+    capture: 0 - comment.around, start: (12, 4), end: (12, 60), text: `/// <param name="address">The recipient address.</param>`
+    capture: 0 - comment.around, start: (13, 4), end: (13, 60), text: `/// <returns>True when the message was queued.</returns>`
+  pattern: 3
+    capture: function.around, start: (14, 4), end: (19, 5)
+  pattern: 0
+    capture: 0 - comment.around, start: (16, 8), end: (16, 67), text: `// Real implementations would talk to an SMTP gateway here.`
+  pattern: 1
+    capture: function.around, start: (14, 4), end: (19, 5)
+    capture: 1 - function.inside, start: (16, 8), end: (16, 67), text: `// Real implementations would talk to an SMTP gateway here.`
+    capture: 1 - function.inside, start: (17, 8), end: (17, 58), text: `Console.WriteLine($"queueing mail for {address}");`
+    capture: 1 - function.inside, start: (18, 8), end: (18, 20), text: `return true;`
+  pattern: 0
+    capture: comment.around, start: (21, 4), end: (23, 7)
+  pattern: 3
+    capture: function.around, start: (24, 4), end: (26, 5)
+  pattern: 1
+    capture: function.around, start: (24, 4), end: (26, 5)
+  pattern: 2
+    capture: class.around, start: (9, 0), end: (27, 1)
+    capture: 3 - class.inside, start: (11, 4), end: (11, 57), text: `/// <summary>Queues a message for delivery.</summary>`
+    capture: 3 - class.inside, start: (12, 4), end: (12, 60), text: `/// <param name="address">The recipient address.</param>`
+    capture: 3 - class.inside, start: (13, 4), end: (13, 60), text: `/// <returns>True when the message was queued.</returns>`
+    capture: class.inside, start: (14, 4), end: (19, 5)
+    capture: class.inside, start: (21, 4), end: (23, 7)
+    capture: class.inside, start: (24, 4), end: (26, 5)

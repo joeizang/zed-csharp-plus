@@ -1,0 +1,62 @@
+(compilation_unit [0, 0] - [35, 0]
+  (razor_page_directive [0, 0] - [0, 20]
+    (string_literal [0, 6] - [0, 20]
+      (string_literal_content [0, 7] - [0, 19])))
+  (element [2, 0] - [2, 21])
+  (razor_block [4, 0] - [7, 1]
+    (expression_statement [5, 4] - [5, 29]
+      (assignment_expression [5, 4] - [5, 28]
+        left: (identifier [5, 4] - [5, 10])
+        right: (string_literal [5, 13] - [5, 28]
+          (string_literal_content [5, 14] - [5, 27]))))
+    (local_declaration_statement [6, 4] - [6, 53]
+      (variable_declaration [6, 4] - [6, 52]
+        type: (implicit_type [6, 4] - [6, 7])
+        (variable_declarator [6, 8] - [6, 52]
+          name: (identifier [6, 8] - [6, 15])
+          (implicit_array_creation_expression [6, 18] - [6, 52]
+            (initializer_expression [6, 24] - [6, 52]
+              (string_literal [6, 26] - [6, 33]
+                (string_literal_content [6, 27] - [6, 32]))
+              (string_literal [6, 35] - [6, 41]
+                (string_literal_content [6, 36] - [6, 40]))
+              (string_literal [6, 43] - [6, 50]
+                (string_literal_content [6, 44] - [6, 49]))))))))
+  (element [9, 0] - [16, 6]
+    (razor_for [10, 4] - [15, 5]
+      initializer: (variable_declaration [10, 10] - [10, 19]
+        type: (implicit_type [10, 10] - [10, 13])
+        (variable_declarator [10, 14] - [10, 19]
+          name: (identifier [10, 14] - [10, 15])
+          (integer_literal [10, 18] - [10, 19])))
+      condition: (binary_expression [10, 21] - [10, 39]
+        left: (identifier [10, 21] - [10, 22])
+        right: (member_access_expression [10, 25] - [10, 39]
+          expression: (identifier [10, 25] - [10, 32])
+          name: (identifier [10, 33] - [10, 39])))
+      update: (postfix_unary_expression [10, 41] - [10, 44]
+        (identifier [10, 41] - [10, 42]))
+      body: (element [12, 8] - [14, 18]
+        (razor_implicit_expression [13, 12] - [13, 20]
+          (identifier [13, 13] - [13, 20])))))
+  (razor_while [18, 0] - [21, 1]
+    (razor_condition [18, 7] - [18, 14]
+      (boolean_literal [18, 8] - [18, 13]))
+    (element [20, 4] - [20, 22]))
+  (razor_try [23, 0] - [34, 1]
+    (element [25, 4] - [25, 29]
+      (razor_implicit_expression [25, 10] - [25, 22]
+        (member_access_expression [25, 11] - [25, 22]
+          expression: (identifier [25, 11] - [25, 16])
+          name: (identifier [25, 17] - [25, 22]))))
+    (razor_catch [27, 0] - [30, 1]
+      (catch_declaration [27, 6] - [27, 36]
+        type: (identifier [27, 7] - [27, 32])
+        name: (identifier [27, 33] - [27, 35]))
+      (element [29, 4] - [29, 42]
+        (razor_implicit_expression [29, 24] - [29, 35]
+          (member_access_expression [29, 25] - [29, 35]
+            expression: (identifier [29, 25] - [29, 27])
+            name: (identifier [29, 28] - [29, 35])))))
+    (razor_finally [31, 0] - [34, 1]
+      (element [33, 4] - [33, 21]))))

@@ -1,0 +1,76 @@
+corpus/razor/well-formed/layouts-and-sections.cshtml
+  pattern: 3
+    capture: 0 - open, start: (0, 6), end: (0, 7), text: `"`
+    capture: 1 - close, start: (0, 17), end: (0, 18), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (4, 0), end: (4, 1), text: `<`
+    capture: 1 - close, start: (4, 22), end: (4, 24), text: `</`
+  pattern: 3
+    capture: 0 - open, start: (6, 11), end: (6, 12), text: `"`
+    capture: 1 - close, start: (6, 15), end: (6, 16), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (7, 29), end: (7, 30), text: `"`
+    capture: 1 - close, start: (7, 38), end: (7, 39), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (7, 28), end: (7, 29), text: `(`
+    capture: 1 - close, start: (7, 46), end: (7, 47), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (6, 0), end: (6, 1), text: `<`
+    capture: 1 - close, start: (8, 0), end: (8, 2), text: `</`
+  pattern: 3
+    capture: 0 - open, start: (10, 11), end: (10, 12), text: `"`
+    capture: 1 - close, start: (10, 15), end: (10, 16), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (11, 33), end: (11, 34), text: `"`
+    capture: 1 - close, start: (11, 39), end: (11, 40), text: `"`
+  pattern: 0
+    capture: 0 - open, start: (11, 32), end: (11, 33), text: `(`
+    capture: 1 - close, start: (11, 40), end: (11, 41), text: `)`
+  pattern: 4
+    capture: 0 - open, start: (10, 0), end: (10, 1), text: `<`
+    capture: 1 - close, start: (12, 0), end: (12, 2), text: `</`
+  pattern: 3
+    capture: 0 - open, start: (15, 16), end: (15, 17), text: `"`
+    capture: 1 - close, start: (15, 34), end: (15, 35), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (15, 16), end: (15, 17), text: `"`
+    capture: 1 - close, start: (15, 55), end: (15, 56), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (15, 34), end: (15, 35), text: `"`
+    capture: 1 - close, start: (15, 55), end: (15, 56), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (15, 16), end: (15, 17), text: `"`
+    capture: 1 - close, start: (15, 60), end: (15, 61), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (15, 34), end: (15, 35), text: `"`
+    capture: 1 - close, start: (15, 60), end: (15, 61), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (15, 55), end: (15, 56), text: `"`
+    capture: 1 - close, start: (15, 60), end: (15, 61), text: `"`
+  pattern: 4
+    capture: 0 - open, start: (15, 4), end: (15, 5), text: `<`
+    capture: 1 - close, start: (15, 62), end: (15, 64), text: `</`
+  pattern: 2
+    capture: 0 - open, start: (14, 17), end: (14, 18), text: `{`
+    capture: 1 - close, start: (16, 0), end: (16, 1), text: `}`
+  pattern: 3
+    capture: 0 - open, start: (19, 14), end: (19, 15), text: `"`
+    capture: 1 - close, start: (19, 25), end: (19, 26), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (19, 14), end: (19, 15), text: `"`
+    capture: 1 - close, start: (19, 32), end: (19, 33), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (19, 25), end: (19, 26), text: `"`
+    capture: 1 - close, start: (19, 32), end: (19, 33), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (19, 14), end: (19, 15), text: `"`
+    capture: 1 - close, start: (19, 52), end: (19, 53), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (19, 25), end: (19, 26), text: `"`
+    capture: 1 - close, start: (19, 52), end: (19, 53), text: `"`
+  pattern: 3
+    capture: 0 - open, start: (19, 32), end: (19, 33), text: `"`
+    capture: 1 - close, start: (19, 52), end: (19, 53), text: `"`
+  pattern: 2
+    capture: 0 - open, start: (18, 16), end: (18, 17), text: `{`
+    capture: 1 - close, start: (20, 0), end: (20, 1), text: `}`

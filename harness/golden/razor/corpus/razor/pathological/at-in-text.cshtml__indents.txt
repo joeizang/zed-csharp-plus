@@ -1,0 +1,25 @@
+corpus/razor/pathological/at-in-text.cshtml
+  pattern: 3
+    capture: 1 - indent, start: (2, 0), end: (2, 23), text: `<p>Meeting at 5@@3.</p>`
+    capture: 2 - start, start: (2, 0), end: (2, 1), text: `<`
+    capture: 0 - end, start: (2, 19), end: (2, 21), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (3, 0), end: (3, 59), text: `<p>Email bob@@example.com and alice@@example.org today.</p>`
+    capture: 2 - start, start: (3, 0), end: (3, 1), text: `<`
+    capture: 0 - end, start: (3, 55), end: (3, 57), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (4, 0), end: (4, 26), text: `<p>Handle: @@developer</p>`
+    capture: 2 - start, start: (4, 0), end: (4, 1), text: `<`
+    capture: 0 - end, start: (4, 22), end: (4, 24), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (5, 0), end: (5, 26), text: `<p>Almost email: bob@@</p>`
+    capture: 2 - start, start: (5, 0), end: (5, 1), text: `<`
+    capture: 0 - end, start: (5, 22), end: (5, 24), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (6, 0), end: (6, 19), text: `<p>Stray at: @@</p>`
+    capture: 2 - start, start: (6, 0), end: (6, 1), text: `<`
+    capture: 0 - end, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (7, 0), end: (7, 43), text: `<p>Normal text after the stray at-sign.</p>`
+    capture: 2 - start, start: (7, 0), end: (7, 1), text: `<`
+    capture: 0 - end, start: (7, 39), end: (7, 41), text: `</`

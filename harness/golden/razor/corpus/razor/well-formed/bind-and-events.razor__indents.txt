@@ -1,0 +1,58 @@
+corpus/razor/well-formed/bind-and-events.razor
+  pattern: 3
+    capture: 1 - indent, start: (3, 0), end: (3, 17), text: `<h1>Settings</h1>`
+    capture: 2 - start, start: (3, 0), end: (3, 1), text: `<`
+    capture: 0 - end, start: (3, 12), end: (3, 14), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (9, 4), end: (9, 38), text: `<option value="eu">Europe</option>`
+    capture: 2 - start, start: (9, 4), end: (9, 5), text: `<`
+    capture: 0 - end, start: (9, 29), end: (9, 31), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (10, 4), end: (10, 45), text: `<option value="us">United States</option>`
+    capture: 2 - start, start: (10, 4), end: (10, 5), text: `<`
+    capture: 0 - end, start: (10, 36), end: (10, 38), text: `</`
+  pattern: 3
+    capture: indent, start: (8, 0), end: (11, 9)
+    capture: 2 - start, start: (8, 0), end: (8, 1), text: `<`
+    capture: 0 - end, start: (11, 0), end: (11, 2), text: `</`
+  pattern: 2
+    capture: 1 - indent, start: (13, 18), end: (13, 20), text: `()`
+    capture: 0 - end, start: (13, 19), end: (13, 20), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (13, 30), end: (13, 39), text: `(Enabled)`
+    capture: 0 - end, start: (13, 38), end: (13, 39), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (13, 0), end: (13, 56), text: `<button @onclick="() => Toggle(Enabled)">Toggle</button>`
+    capture: 2 - start, start: (13, 0), end: (13, 1), text: `<`
+    capture: 0 - end, start: (13, 47), end: (13, 49), text: `</`
+  pattern: 2
+    capture: 1 - indent, start: (14, 29), end: (14, 32), text: `(e)`
+    capture: 0 - end, start: (14, 31), end: (14, 32), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (14, 19), end: (14, 33), text: `(e => Save(e))`
+    capture: 0 - end, start: (14, 32), end: (14, 33), text: `)`
+  pattern: 3
+    capture: 1 - indent, start: (14, 0), end: (14, 48), text: `<button @onclick="@(e => Save(e))">Save</button>`
+    capture: 2 - start, start: (14, 0), end: (14, 1), text: `<`
+    capture: 0 - end, start: (14, 39), end: (14, 41), text: `</`
+  pattern: 0
+    capture: 1 - indent, start: (17, 25), end: (17, 38), text: `{ get; set; }`
+    capture: 0 - end, start: (17, 37), end: (17, 38), text: `}`
+  pattern: 0
+    capture: 1 - indent, start: (18, 26), end: (18, 39), text: `{ get; set; }`
+    capture: 0 - end, start: (18, 38), end: (18, 39), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (20, 23), end: (20, 35), text: `(bool value)`
+    capture: 0 - end, start: (20, 34), end: (20, 35), text: `)`
+  pattern: 0
+    capture: indent, start: (21, 4), end: (23, 5)
+    capture: 0 - end, start: (23, 4), end: (23, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (25, 21), end: (25, 41), text: `(System.EventArgs e)`
+    capture: 0 - end, start: (25, 40), end: (25, 41), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (26, 29), end: (26, 31), text: `()`
+    capture: 0 - end, start: (26, 30), end: (26, 31), text: `)`
+  pattern: 0
+    capture: indent, start: (16, 0), end: (27, 1)
+    capture: 0 - end, start: (27, 0), end: (27, 1), text: `}`

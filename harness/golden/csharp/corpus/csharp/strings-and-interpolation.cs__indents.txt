@@ -1,0 +1,28 @@
+corpus/csharp/strings-and-interpolation.cs
+  pattern: 2
+    capture: 1 - indent, start: (16, 33), end: (16, 57), text: `(string name, int count)`
+    capture: 0 - end, start: (16, 56), end: (16, 57), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (18, 34), end: (18, 36), text: `()`
+    capture: 0 - end, start: (18, 35), end: (18, 36), text: `)`
+  pattern: 2
+    capture: 1 - indent, start: (18, 57), end: (18, 94), text: `(count == 1 ? "message" : "messages")`
+    capture: 0 - end, start: (18, 93), end: (18, 94), text: `)`
+  pattern: 0
+    capture: indent, start: (17, 4), end: (19, 5)
+    capture: 0 - end, start: (19, 4), end: (19, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (21, 28), end: (21, 42), text: `(string table)`
+    capture: 0 - end, start: (21, 41), end: (21, 42), text: `)`
+  pattern: 0
+    capture: indent, start: (22, 4), end: (24, 5)
+    capture: 0 - end, start: (24, 4), end: (24, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (26, 32), end: (26, 34), text: `()`
+    capture: 0 - end, start: (26, 33), end: (26, 34), text: `)`
+  pattern: 0
+    capture: indent, start: (27, 4), end: (29, 5)
+    capture: 0 - end, start: (29, 4), end: (29, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (5, 0), end: (32, 1)
+    capture: 0 - end, start: (32, 0), end: (32, 1), text: `}`

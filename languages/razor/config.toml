@@ -1,0 +1,34 @@
+name = "Razor"
+grammar = "razor"
+path_suffixes = ["razor", "cshtml"]
+# Razor markup has no line-comment form; `//` only exists inside C# code
+# blocks, where the embedded C# layer already owns it. Only the Razor block
+# comment is registered.
+block_comment = ["@* ", " *@"]
+tab_size = 4
+hard_tabs = false
+# `@` so Razor expressions (@Model, @item.Price, @@) participate in
+# cursor-word motion and double-click selection; `_` for C# identifiers.
+word_characters = ["@", "_"]
+autoclose_before = ";:.,=}])>"
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["string", "comment"] },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["string", "comment"] },
+]
+# `<`/`>` are deliberately not auto-closed: a half-typed component tag
+# (`<Foo `) must not gain a stray `>` (see corpus/razor/pathological/
+# half-typed-component-tag.razor). There is no `/* */` pair either: `/*`
+# is not a comment at Razor markup level, only inside C# code blocks,
+# where the embedded C# settings apply.
+
+[overrides.string]
+# An `@` inside a string or attribute value is data (an email address,
+# verbatim text), not an expression sigil; keep word motion to plain words.
+word_characters = []
+
+[overrides.comment]
+# An `@` inside a Razor or C# comment is prose, not an expression sigil.
+word_characters = []

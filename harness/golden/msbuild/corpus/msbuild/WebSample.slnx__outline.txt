@@ -1,0 +1,19 @@
+corpus/msbuild/WebSample.slnx
+  pattern: 0
+    capture: item, start: (0, 0), end: (9, 11)
+    capture: 0 - name, start: (0, 1), end: (0, 9), text: `Solution`
+  pattern: 0
+    capture: item, start: (1, 2), end: (6, 12)
+    capture: 0 - name, start: (1, 3), end: (1, 10), text: `Project`
+  pattern: 0
+    capture: item, start: (2, 4), end: (5, 17)
+    capture: 0 - name, start: (2, 5), end: (2, 15), text: `Deployment`
+  pattern: 1
+    capture: item, start: (3, 6), end: (4, 40)
+    capture: 0 - name, start: (3, 7), end: (3, 13), text: `Target`
+  pattern: 1
+    capture: 1 - item, start: (7, 2), end: (7, 61), text: `<Project Path="src\WebSample.Core\WebSample.Core.csproj" />`
+    capture: 0 - name, start: (7, 3), end: (7, 10), text: `Project`
+  pattern: 1
+    capture: 1 - item, start: (8, 2), end: (8, 75), text: `<Project Path="tests\WebSample.Core.Tests\WebSample.Core.Tests.csproj" />`
+    capture: 0 - name, start: (8, 3), end: (8, 10), text: `Project`

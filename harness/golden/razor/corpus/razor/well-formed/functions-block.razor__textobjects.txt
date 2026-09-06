@@ -1,0 +1,6 @@
+corpus/razor/well-formed/functions-block.razor
+  pattern: 4
+    capture: function.around, start: (3, 4), end: (6, 5)
+  pattern: 2
+    capture: function.around, start: (3, 4), end: (6, 5)
+    capture: 1 - function.inside, start: (5, 8), end: (5, 22), text: `Greeting = "";`

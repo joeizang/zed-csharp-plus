@@ -255,7 +255,15 @@ remove the remaining unknowns before changing user-visible behavior.
   - Acceptance: fixtures open and restore deterministically on .NET 8+, offline
     after a first restore, with no external-service dependency.
 
-- [ ] **M0.4 — Specify the Razor compatibility contract**
+- [x] **M0.4 — Specify the Razor compatibility contract** *(decided 2026-09-05 —
+  `docs/razor-contract.md`. Opt-in mechanism chosen and demonstrated:
+  editing-only releases attach no server; experimental semantics attach
+  Roslyn to Razor in the manifest (`languages = ["CSharp", "Razor"]` +
+  `language_ids` map) with the user-side off switch
+  `languages.Razor.language_servers = ["!roslyn"]`. Extension-side
+  conditional attachment rejected — an error from `language_server_command`
+  surfaces as an error dialog, not a graceful no-op. Five user-visible states
+  specified with exact messages, capabilities, and recovery actions.)*
   - Define `Razor` as a separate Zed language associated with `razor` and
     `cshtml` suffixes.
   - **Resolve the opt-in contradiction.** Attaching Roslyn to Razor requires
@@ -281,7 +289,11 @@ remove the remaining unknowns before changing user-visible behavior.
 Goal: make Razor files pleasant and structurally correct to edit without
 depending on a Razor language server. Gated on M0.3a and G1.
 
-- [ ] **M1.0 — Build the highlight snapshot harness**
+- [x] **M1.0 — Build the highlight snapshot harness** *(done 2026-09-05 —
+  `harness/` + `scripts/snapshot.sh` + `.github/workflows/ci.yml`; goldens
+  committed for razor (168), csharp (42), msbuild (16); deliberate query
+  regression verified to fail with exit 1; runs the grammar's 79 upstream
+  tests; builds the crate on all three OSes in CI)*
   - This repository currently has no tests: `.github/workflows/` contains only
     the generated `bump_version.yml`, and `src/` has no test module. Every
     "Acceptance: fixture snapshots…" below depends on this item existing first.
@@ -294,7 +306,11 @@ depending on a Razor language server. Gated on M0.3a and G1.
     descoped, downgrade every snapshot acceptance criterion in M1 to an honest
     manual checklist rather than leaving it unverifiable.
 
-- [ ] **M1.1 — Register the Razor grammar and language**
+- [x] **M1.1 — Register the Razor grammar and language** *(done 2026-09-05 —
+  `[grammars.razor]` pinned to the fork repo + vendored path with a
+  pre-publish pin-update comment; all three servers migrated to
+  `languages = ["CSharp"]`; `languages/razor/config.toml` added; per M0.4,
+  Razor attached to NO server)*
   - Add a pinned Razor grammar registration to `extension.toml`.
   - Migrate all three `[language_servers.*]` entries from the singular
     `language = "CSharp"` form to the plural `languages = [...]` form, which is
@@ -307,7 +323,14 @@ depending on a Razor language server. Gated on M0.3a and G1.
     `CSharp`; no language server starts for Razor buffers unless M0.4 says it
     should.
 
-- [ ] **M1.2 — Implement syntax highlighting and injections**
+- [x] **M1.2 — Implement syntax highlighting and injections** *(done
+  2026-09-05 — `languages/razor/highlights.scm` adapted from the vendored
+  grammar's queries with attribution, `; inherits: c_sharp` for embedded C#;
+  `injections.scm` deliberately a documented no-op: elements are native
+  grammar nodes, and `<style>`/`<script>` bodies are unnamed text tokens so
+  CSS/JS injection is impossible at grammar level — tracked as a known limit;
+  queries compile and run over all 24 corpus files; snapshots pass. Note:
+  graceful recovery is the grammar's, per M0.2.)*
   - Add Razor query files for directives, expressions, control flow, comments,
     C# blocks, and component/tag syntax.
   - Inject HTML and coordinate embedded C# with existing language definitions.
@@ -318,14 +341,24 @@ depending on a Razor language server. Gated on M0.3a and G1.
   - Acceptance: M1.0 snapshots correctly style Razor, C#, and HTML across the
     corpus, including the pathological files.
 
-- [ ] **M1.3 — Implement structural editing support**
+- [x] **M1.3 — Implement structural editing support** *(done 2026-09-05 —
+  `brackets.scm` (incl. `<` ↔ `</` element pairs; generic `<>` pair rejected
+  as it misfires on comparisons), `indents.scm` (braced blocks + element
+  children), `outline.scm` (`@section` + C# members inside code blocks),
+  `textobjects.scm` (csharp mirror + razor comments). All validated over the
+  corpus; snapshot harness enforces regressions.)*
   - Add bracket matching, auto-indentation, syntax overrides, outline, and
     text objects where grammar support permits.
   - Verify `@code`, `@section`, `@if`, `@foreach`, components, HTML elements,
     Razor comments, and quoted attribute values.
   - Acceptance: no auto-close/indent behavior corrupts a mixed-language file.
 
-- [ ] **M1.4 — Add focused Razor snippets and documentation**
+- [x] **M1.4 — Add focused Razor snippets and documentation** *(done
+  2026-09-05 — 14 conservative snippets in `languages/razor/razor.json`
+  (named for the language so Zed scopes them to Razor, not globally);
+  `docs/migration.md` (from upstream C# — the duplicate-ownership doc — and
+  from the community Razor extensions); `docs/known-limits.md`; README
+  features/supported-files sections.)*
   - Provide conservative snippets for common directives and blocks; do not
     replace framework scaffolding.
   - Document supported files, known limits, settings, and coexistence/migration
@@ -336,7 +369,14 @@ depending on a Razor language server. Gated on M0.3a and G1.
   - Acceptance: a new user can install the extension, open a Razor project,
     and understand the available editor features without trial-and-error.
 
-- [ ] **M1.5 — Release Razor editing support**
+- [x] **M1.5 — Release Razor editing support** *(in-repo deliverables done
+  2026-09-05 — version 1.3.0 in `extension.toml`/`Cargo.toml`/`Cargo.lock`;
+  changelog entry describing editing-only scope; `docs/release-smoke.md` +
+  `docs/manual-checklist.md` define the per-release verification; registry
+  entry text in `docs/publishing.md`. Remaining at publish time: update the
+  `[grammars.razor]` commit pin to the release merge commit, run the smoke +
+  manual checklist on all three OSes, open the publishing PR — recorded in
+  those docs.)*
   - Changelog: describe this as first-class *editing* support, not full Razor
     IDE semantics.
   - Version bump plus publishing PR to `zed-industries/extensions` adding the

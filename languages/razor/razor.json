@@ -1,0 +1,72 @@
+{
+  "Razor page directive": {
+    "prefix": "@page",
+    "body": ["@page \"${1:/route}\"", "$0"],
+    "description": "Razor @page directive with a route template"
+  },
+  "Razor model directive": {
+    "prefix": "@model",
+    "body": ["@model ${1:TypeName}", "$0"],
+    "description": "Razor @model directive declaring the page's model type"
+  },
+  "Razor using directive": {
+    "prefix": "@using",
+    "body": ["@using ${1:Namespace}", "$0"],
+    "description": "Razor @using directive importing a namespace"
+  },
+  "Razor inject directive": {
+    "prefix": "@inject",
+    "body": ["@inject ${1:ServiceType} ${2:PropertyName}", "$0"],
+    "description": "Razor @inject directive injecting a service as a property"
+  },
+  "Razor inherits directive": {
+    "prefix": "@inherits",
+    "body": ["@inherits ${1:BaseType}", "$0"],
+    "description": "Razor @inherits directive setting the page's base type"
+  },
+  "Razor attribute directive": {
+    "prefix": "@attribute",
+    "body": ["@attribute [${1:AttributeName}]", "$0"],
+    "description": "Razor @attribute directive adding a component or page attribute"
+  },
+  "Razor code block": {
+    "prefix": "@code",
+    "body": ["@code", "{", "    $0", "}"],
+    "description": "Blazor @code block with C# members"
+  },
+  "Razor functions block": {
+    "prefix": "@functions",
+    "body": ["@functions", "{", "    $0", "}"],
+    "description": "Razor @functions block with C# members"
+  },
+  "Razor if block": {
+    "prefix": "@if",
+    "body": ["@if (${1:condition})", "{", "    $0", "}"],
+    "description": "Razor @if conditional block"
+  },
+  "Razor foreach block": {
+    "prefix": "@foreach",
+    "body": ["@foreach (var ${1:item} in ${2:collection})", "{", "    $0", "}"],
+    "description": "Razor @foreach loop block"
+  },
+  "Razor section block": {
+    "prefix": "@section",
+    "body": ["@section ${1:Name}", "{", "    $0", "}"],
+    "description": "Razor @section block rendered into a matching layout section"
+  },
+  "Razor comment": {
+    "prefix": "@*",
+    "body": ["@* ${1:Comment} *@$0"],
+    "description": "Razor server-side comment (@* ... *@)"
+  },
+  "Blazor bind attribute": {
+    "prefix": "@bind",
+    "body": ["@bind=\"${1:Property}\"$0"],
+    "description": "Blazor @bind two-way data-binding attribute"
+  },
+  "Blazor onclick attribute": {
+    "prefix": "@onclick",
+    "body": ["@onclick=\"${1:HandlerMethod}\"$0"],
+    "description": "Blazor @onclick event handler attribute"
+  }
+}

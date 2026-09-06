@@ -1,0 +1,17 @@
+corpus/csharp/pattern-matching.cs
+  pattern: 0
+    capture: item, start: (4, 0), end: (36, 1)
+    capture: 0 - context, start: (4, 14), end: (4, 19), text: `class`
+    capture: 1 - name, start: (4, 20), end: (4, 35), text: `RouteClassifier`
+  pattern: 4
+    capture: item, start: (6, 4), end: (13, 6)
+    capture: 1 - name, start: (6, 25), end: (6, 33), text: `Classify`
+    capture: 0 - context, start: (6, 33), end: (6, 47), text: `(object value)`
+  pattern: 4
+    capture: item, start: (15, 4), end: (20, 6)
+    capture: 1 - name, start: (15, 25), end: (15, 33), text: `Describe`
+    capture: 0 - context, start: (15, 33), end: (15, 46), text: `(Shape shape)`
+  pattern: 4
+    capture: item, start: (22, 4), end: (35, 5)
+    capture: 1 - name, start: (22, 23), end: (22, 36), text: `IsInteresting`
+    capture: 0 - context, start: (22, 36), end: (22, 43), text: `(int n)`

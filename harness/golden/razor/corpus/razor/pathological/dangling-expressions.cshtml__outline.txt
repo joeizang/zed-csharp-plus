@@ -1,0 +1,4 @@
+corpus/razor/pathological/dangling-expressions.cshtml
+  pattern: 4
+    capture: 1 - item, start: (7, 4), end: (7, 14), text: `var a = 1;`
+    capture: 2 - context, start: (7, 4), end: (7, 13), text: `var a = 1`

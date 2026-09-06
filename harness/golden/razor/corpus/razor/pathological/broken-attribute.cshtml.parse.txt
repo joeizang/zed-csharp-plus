@@ -1,0 +1,12 @@
+(compilation_unit [0, 0] - [7, 0]
+  (razor_page_directive [0, 0] - [0, 22]
+    (string_literal [0, 6] - [0, 22]
+      (string_literal_content [0, 7] - [0, 21])))
+  (element [2, 0] - [2, 46]
+    (razor_implicit_expression [2, 16] - [2, 22]
+      (identifier [2, 17] - [2, 22])))
+  (ERROR [3, 0] - [7, 0]
+    (razor_implicit_expression [3, 9] - [4, 9]
+      (verbatim_string_literal [3, 10] - [4, 9]))
+    (razor_implicit_expression [4, 9] - [4, 15]
+      (identifier [4, 10] - [4, 15]))))

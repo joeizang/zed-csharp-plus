@@ -1,0 +1,30 @@
+corpus/razor/well-formed/code-block.razor
+  pattern: 3
+    capture: 1 - indent, start: (4, 0), end: (4, 16), text: `<h3>Counter</h3>`
+    capture: 2 - start, start: (4, 0), end: (4, 1), text: `<`
+    capture: 0 - end, start: (4, 11), end: (4, 13), text: `</`
+  pattern: 3
+    capture: 1 - indent, start: (6, 0), end: (6, 75), text: `<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>`
+    capture: 2 - start, start: (6, 0), end: (6, 1), text: `<`
+    capture: 0 - end, start: (6, 66), end: (6, 68), text: `</`
+  pattern: 1
+    capture: 1 - indent, start: (11, 4), end: (11, 15), text: `[Parameter]`
+    capture: 0 - end, start: (11, 14), end: (11, 15), text: `]`
+  pattern: 0
+    capture: 1 - indent, start: (12, 25), end: (12, 38), text: `{ get; set; }`
+    capture: 0 - end, start: (12, 37), end: (12, 38), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (14, 41), end: (14, 43), text: `()`
+    capture: 0 - end, start: (14, 42), end: (14, 43), text: `)`
+  pattern: 0
+    capture: indent, start: (15, 4), end: (17, 5)
+    capture: 0 - end, start: (17, 4), end: (17, 5), text: `}`
+  pattern: 2
+    capture: 1 - indent, start: (19, 31), end: (19, 33), text: `()`
+    capture: 0 - end, start: (19, 32), end: (19, 33), text: `)`
+  pattern: 0
+    capture: indent, start: (20, 4), end: (22, 5)
+    capture: 0 - end, start: (22, 4), end: (22, 5), text: `}`
+  pattern: 0
+    capture: indent, start: (8, 0), end: (23, 1)
+    capture: 0 - end, start: (23, 0), end: (23, 1), text: `}`

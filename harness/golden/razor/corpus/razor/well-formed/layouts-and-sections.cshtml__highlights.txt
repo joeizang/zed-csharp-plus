@@ -1,0 +1,99 @@
+corpus/razor/well-formed/layouts-and-sections.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (1, 0), end: (1, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (1, 1), end: (1, 6), text: `model`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (2, 0), end: (2, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (2, 1), end: (2, 13), text: `addTagHelper`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (4, 0), end: (4, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 3), end: (4, 4), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (4, 4), end: (4, 5), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (4, 22), end: (4, 24), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 26), end: (4, 27), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (6, 0), end: (6, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (6, 10), end: (6, 11), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (6, 11), end: (6, 12), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (6, 15), end: (6, 16), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 16), end: (6, 17), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (7, 4), end: (7, 5), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (8, 0), end: (8, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (8, 5), end: (8, 6), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (10, 0), end: (10, 1), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (10, 10), end: (10, 11), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (10, 11), end: (10, 12), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (10, 15), end: (10, 16), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (10, 16), end: (10, 17), text: `>`
+  pattern: 3
+    capture: 3 - variable, start: (11, 4), end: (11, 5), text: `@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (12, 0), end: (12, 2), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (12, 5), end: (12, 6), text: `>`
+  pattern: 2
+    capture: 2 - keyword, start: (14, 0), end: (14, 1), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (14, 1), end: (14, 8), text: `section`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (15, 4), end: (15, 5), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (15, 15), end: (15, 16), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (15, 16), end: (15, 17), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (15, 34), end: (15, 35), text: `"`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (15, 54), end: (15, 55), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (15, 55), end: (15, 56), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (15, 60), end: (15, 61), text: `"`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (15, 61), end: (15, 62), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (15, 62), end: (15, 64), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (15, 70), end: (15, 71), text: `>`
+  pattern: 2
+    capture: 2 - keyword, start: (18, 0), end: (18, 1), text: `@`
+  pattern: 2
+    capture: 2 - keyword, start: (18, 1), end: (18, 8), text: `section`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (19, 4), end: (19, 5), text: `<`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (19, 13), end: (19, 14), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (19, 14), end: (19, 15), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (19, 25), end: (19, 26), text: `"`
+  pattern: 13
+    capture: 7 - punctuation.delimiter, start: (19, 31), end: (19, 32), text: `=`
+  pattern: 14
+    capture: 8 - string, start: (19, 32), end: (19, 33), text: `"`
+  pattern: 14
+    capture: 8 - string, start: (19, 52), end: (19, 53), text: `"`
+  pattern: 12
+    capture: 7 - punctuation.delimiter, start: (19, 54), end: (19, 56), text: `/>`

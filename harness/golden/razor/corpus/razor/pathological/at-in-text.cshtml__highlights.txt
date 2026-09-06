@@ -1,0 +1,65 @@
+corpus/razor/pathological/at-in-text.cshtml
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 0), end: (0, 1), text: `@`
+  pattern: 1
+    capture: 1 - keyword.directive, start: (0, 1), end: (0, 5), text: `page`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (2, 0), end: (2, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 2), end: (2, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (2, 15), end: (2, 17), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (2, 19), end: (2, 21), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (2, 22), end: (2, 23), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (3, 0), end: (3, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (3, 2), end: (3, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (3, 12), end: (3, 14), text: `@@`
+  pattern: 5
+    capture: 4 - string.escape, start: (3, 35), end: (3, 37), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (3, 55), end: (3, 57), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (3, 58), end: (3, 59), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (4, 0), end: (4, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 2), end: (4, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (4, 11), end: (4, 13), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (4, 22), end: (4, 24), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (4, 25), end: (4, 26), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (5, 0), end: (5, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 2), end: (5, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (5, 20), end: (5, 22), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (5, 22), end: (5, 24), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (5, 25), end: (5, 26), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (6, 0), end: (6, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 2), end: (6, 3), text: `>`
+  pattern: 5
+    capture: 4 - string.escape, start: (6, 13), end: (6, 15), text: `@@`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (6, 15), end: (6, 17), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (6, 18), end: (6, 19), text: `>`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (7, 0), end: (7, 1), text: `<`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 2), end: (7, 3), text: `>`
+  pattern: 10
+    capture: 7 - punctuation.delimiter, start: (7, 39), end: (7, 41), text: `</`
+  pattern: 11
+    capture: 7 - punctuation.delimiter, start: (7, 42), end: (7, 43), text: `>`

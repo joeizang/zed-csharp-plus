@@ -1,0 +1,37 @@
+corpus/msbuild/common.props
+  pattern: 0
+    capture: 1 - indent, start: (0, 0), end: (0, 9), text: `<Project>`
+    capture: 0 - end, start: (0, 8), end: (0, 9), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (3, 2), end: (3, 17), text: `<PropertyGroup>`
+    capture: 0 - end, start: (3, 16), end: (3, 17), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (4, 4), end: (4, 17), text: `<LangVersion>`
+    capture: 0 - end, start: (4, 16), end: (4, 17), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (5, 4), end: (5, 27), text: `<TreatWarningsAsErrors>`
+    capture: 0 - end, start: (5, 26), end: (5, 27), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (6, 4), end: (6, 13), text: `<Company>`
+    capture: 0 - end, start: (6, 12), end: (6, 13), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (9, 2), end: (9, 61), text: `<PropertyGroup Condition="'$(Configuration)' == 'Release'">`
+    capture: 0 - end, start: (9, 60), end: (9, 61), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (10, 4), end: (10, 32), text: `<ContinuousIntegrationBuild>`
+    capture: 0 - end, start: (10, 31), end: (10, 32), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (11, 4), end: (11, 15), text: `<DebugType>`
+    capture: 0 - end, start: (11, 14), end: (11, 15), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (14, 2), end: (14, 13), text: `<ItemGroup>`
+    capture: 0 - end, start: (14, 12), end: (14, 13), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (15, 4), end: (15, 77), text: `<AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">`
+    capture: 0 - end, start: (15, 76), end: (15, 77), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (16, 6), end: (16, 19), text: `<_Parameter1>`
+    capture: 0 - end, start: (16, 18), end: (16, 19), text: `>`
+  pattern: 0
+    capture: 1 - indent, start: (17, 6), end: (17, 19), text: `<_Parameter2>`
+    capture: 0 - end, start: (17, 18), end: (17, 19), text: `>`

@@ -1,0 +1,37 @@
+(compilation_unit [0, 0] - [15, 0]
+  (razor_page_directive [0, 0] - [0, 15]
+    (string_literal [0, 6] - [0, 15]
+      (string_literal_content [0, 7] - [0, 14])))
+  (element [2, 0] - [2, 58]
+    (razor_implicit_expression [2, 18] - [2, 24]
+      (identifier [2, 19] - [2, 24])))
+  (element [3, 0] - [5, 12]
+    (razor_implicit_expression [3, 18] - [3, 24]
+      (identifier [3, 19] - [3, 24]))
+    (element [4, 4] - [4, 43]))
+  (razor_block [7, 0] - [12, 1]
+    (field_declaration [8, 4] - [11, 6]
+      (modifier [8, 4] - [8, 11])
+      (variable_declaration [8, 12] - [11, 5]
+        type: (generic_name [8, 12] - [8, 38]
+          (identifier [8, 12] - [8, 22])
+          (type_argument_list [8, 22] - [8, 38]
+            (predefined_type [8, 23] - [8, 29])
+            (predefined_type [8, 31] - [8, 37])))
+        (variable_declarator [8, 39] - [11, 5]
+          name: (identifier [8, 39] - [8, 44])
+          (implicit_object_creation_expression [8, 47] - [11, 5]
+            (argument_list [8, 50] - [8, 52])
+            (initializer_expression [9, 4] - [11, 5]
+              (assignment_expression [10, 8] - [10, 38]
+                left: (element_binding_expression [10, 8] - [10, 23]
+                  (argument [10, 9] - [10, 22]
+                    (string_literal [10, 9] - [10, 22]
+                      (string_literal_content [10, 10] - [10, 21]))))
+                right: (string_literal [10, 26] - [10, 38]
+                  (string_literal_content [10, 27] - [10, 37])))))))))
+  (element [14, 0] - [14, 54]
+    (razor_implicit_expression [14, 18] - [14, 24]
+      (identifier [14, 19] - [14, 24]))
+    (razor_implicit_expression [14, 44] - [14, 50]
+      (identifier [14, 45] - [14, 50]))))

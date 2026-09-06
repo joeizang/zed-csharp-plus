@@ -1,0 +1,7 @@
+corpus/razor/well-formed/layouts-and-sections.cshtml
+  pattern: 0
+    capture: item, start: (14, 0), end: (16, 1)
+    capture: 0 - name, start: (14, 9), end: (14, 16), text: `Scripts`
+  pattern: 0
+    capture: item, start: (18, 0), end: (20, 1)
+    capture: 0 - name, start: (18, 9), end: (18, 15), text: `Styles`
