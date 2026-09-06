@@ -2,17 +2,29 @@ use std::cmp::Ordering;
 
 use zed_extension_api::{self as zed, http_client, serde_json, Result};
 
+use crate::language_servers::util;
+
 const ROSLYN_NUGET_FEED_INDEX: &str = "https://api.nuget.org/v3/index.json";
 
 pub struct NuGetClient {
     package_base_address: Option<String>,
+    binary_path_setting: &'static str,
 }
 
 impl NuGetClient {
-    pub fn new() -> Self {
+    pub fn new(binary_path_setting: &'static str) -> Self {
         NuGetClient {
             package_base_address: None,
+            binary_path_setting,
         }
+    }
+
+    fn fix_hint(&self) -> String {
+        util::binary_path_override_hint(self.binary_path_setting, "a local server binary")
+    }
+
+    fn feed_error(&self, detail: &str) -> String {
+        util::feed_error("the NuGet feed", detail, &self.fix_hint())
     }
 
     fn ensure_package_base_address(&mut self) -> Result<String> {
@@ -25,15 +37,25 @@ impl NuGetClient {
                 .method(http_client::HttpMethod::Get)
                 .url(ROSLYN_NUGET_FEED_INDEX)
                 .redirect_policy(http_client::RedirectPolicy::FollowAll)
-                .build()?,
-        )?;
+                .build()
+                .map_err(|e| {
+                    self.feed_error(&format!(
+                        "the service index request to '{ROSLYN_NUGET_FEED_INDEX}' could not be built: {e}"
+                    ))
+                })?,
+        )
+        .map_err(|e| {
+            self.feed_error(&format!(
+                "the service index at '{ROSLYN_NUGET_FEED_INDEX}' could not be fetched: {e}"
+            ))
+        })?;
 
         let index: serde_json::Value = serde_json::from_slice(&response.body)
-            .map_err(|e| format!("failed to parse NuGet service index: {e}"))?;
+            .map_err(|e| self.feed_error(&format!("the service index could not be parsed: {e}")))?;
 
         let base_url = index["resources"]
             .as_array()
-            .ok_or("invalid NuGet service index: missing 'resources' array")?
+            .ok_or_else(|| self.feed_error("the service index contains no 'resources' array"))?
             .iter()
             .find(|r| {
                 r["@type"]
@@ -41,7 +63,11 @@ impl NuGetClient {
                     .is_some_and(|t| t == "PackageBaseAddress/3.0.0")
             })
             .and_then(|r| r["@id"].as_str())
-            .ok_or("PackageBaseAddress/3.0.0 not found in NuGet service index")?
+            .ok_or_else(|| {
+                self.feed_error(
+                    "the service index does not list a 'PackageBaseAddress/3.0.0' resource",
+                )
+            })?
             .trim_end_matches('/')
             .to_string();
 
@@ -59,15 +85,30 @@ impl NuGetClient {
                 .method(http_client::HttpMethod::Get)
                 .url(&url)
                 .redirect_policy(http_client::RedirectPolicy::FollowAll)
-                .build()?,
-        )?;
+                .build()
+                .map_err(|e| {
+                    self.feed_error(&format!(
+                        "the version index request for '{package_id}' could not be built: {e}"
+                    ))
+                })?,
+        )
+        .map_err(|e| {
+            self.feed_error(&format!(
+                "the version index for '{package_id}' could not be fetched: {e}"
+            ))
+        })?;
 
-        let body: serde_json::Value = serde_json::from_slice(&response.body)
-            .map_err(|e| format!("failed to parse NuGet version index for '{package_id}': {e}"))?;
+        let body: serde_json::Value = serde_json::from_slice(&response.body).map_err(|e| {
+            self.feed_error(&format!(
+                "the version index for '{package_id}' could not be parsed: {e}"
+            ))
+        })?;
 
-        let versions = body["versions"]
-            .as_array()
-            .ok_or_else(|| format!("no versions array for NuGet package '{package_id}'"))?;
+        let versions = body["versions"].as_array().ok_or_else(|| {
+            self.feed_error(&format!(
+                "the version index for '{package_id}' contains no 'versions' array"
+            ))
+        })?;
 
         versions
             .iter()
@@ -75,7 +116,11 @@ impl NuGetClient {
             .filter_map(NuGetVersion::parse)
             .max()
             .map(|v| v.raw)
-            .ok_or_else(|| format!("no parseable versions found for NuGet package '{package_id}'"))
+            .ok_or_else(|| {
+                self.feed_error(&format!(
+                    "'{package_id}' has no parseable published versions"
+                ))
+            })
     }
 
     pub fn download_and_extract(
@@ -90,8 +135,14 @@ impl NuGetClient {
 
         let url = format!("{base}/{lower_id}/{lower_version}/{lower_id}.{lower_version}.nupkg");
 
-        zed::download_file(&url, dest_dir, zed::DownloadedFileType::Zip)
-            .map_err(|e| format!("failed to download NuGet package '{package_id}' v{version}: {e}"))
+        zed::download_file(&url, dest_dir, zed::DownloadedFileType::Zip).map_err(|e| {
+            util::download_error(
+                &format!("NuGet package '{package_id}' v{version}"),
+                &e,
+                dest_dir,
+                &self.fix_hint(),
+            )
+        })
     }
 }
 
@@ -188,5 +239,84 @@ impl Ord for NuGetVersion {
 impl PartialOrd for NuGetVersion {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         Some(self.cmp(other))
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn parse(input: &str) -> NuGetVersion {
+        NuGetVersion::parse(input).expect("version should parse")
+    }
+
+    #[test]
+    fn parses_two_to_four_segments() {
+        assert_eq!(parse("1").raw, "1");
+        assert_eq!(parse("1.2").raw, "1.2");
+        assert_eq!(parse("1.2.3").raw, "1.2.3");
+        assert_eq!(parse("1.2.3.4").raw, "1.2.3.4");
+        assert_eq!(parse("1.2.3-rc.1").raw, "1.2.3-rc.1");
+        assert_eq!(parse("1.2.3.4-preview").raw, "1.2.3.4-preview");
+    }
+
+    #[test]
+    fn rejects_unparseable_versions() {
+        assert!(NuGetVersion::parse("").is_none());
+        assert!(NuGetVersion::parse("abc").is_none());
+        assert!(NuGetVersion::parse("1.x.3").is_none());
+        assert!(NuGetVersion::parse("1.2.3.4.5").is_none());
+    }
+
+    #[test]
+    fn orders_by_core_segments() {
+        assert!(parse("1.2.3") < parse("1.2.4"));
+        assert!(parse("1.2.9") < parse("1.3.0"));
+        assert!(parse("1.9.9.9") < parse("2.0.0"));
+        assert!(parse("1.2.3.9") < parse("1.2.4"));
+        assert!(parse("1.2.3.4") < parse("1.2.3.5"));
+    }
+
+    #[test]
+    fn prerelease_orders_below_release() {
+        assert!(parse("1.0.0-rc.1") < parse("1.0.0"));
+        assert!(parse("1.0.0-beta") < parse("1.0.0-rc.1"));
+    }
+
+    #[test]
+    fn prerelease_tokens_compare_numerically_then_alphabetically() {
+        assert!(parse("1.0.0-beta.1") < parse("1.0.0-beta.2"));
+        assert!(parse("1.0.0-alpha") < parse("1.0.0-beta"));
+        assert!(parse("1.0.0-1") < parse("1.0.0-alpha"));
+        assert!(parse("1.0.0-RC1") == parse("1.0.0-rc1"));
+    }
+
+    #[test]
+    fn shorter_prerelease_orders_below_longer_equal_prefix() {
+        assert!(parse("1.0.0-beta") < parse("1.0.0-beta.1"));
+        assert!(parse("1.0.0-beta.1") < parse("1.0.0-beta.1.1"));
+    }
+
+    #[test]
+    fn max_picks_highest_version_ignoring_none() {
+        let versions = [
+            "5.0.0-preview.1",
+            "4.2.1",
+            "5.0.0",
+            "not-a-version",
+            "5.0.0-rc.2",
+        ];
+        let highest = versions
+            .iter()
+            .filter_map(|v| NuGetVersion::parse(v))
+            .max()
+            .map(|v| v.raw);
+        assert_eq!(highest.as_deref(), Some("5.0.0"));
+    }
+
+    #[test]
+    fn equality_is_total_order_equality() {
+        assert_eq!(parse("1.2.3"), parse("1.2.3.0"));
+        assert_ne!(parse("1.2.3"), parse("1.2.3-rc.1"));
     }
 }

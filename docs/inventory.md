@@ -11,9 +11,9 @@ table is the M0.1 deliverable**; update it as items land.
 | Language | Path suffixes | Grammar | Tasks | Notes |
 | --- | --- | --- | --- | --- |
 | `CSharp` | `cs` | `tree-sitter-c-sharp` @ `485f0bae` | — | `autoclose_before = ";:.,=}])>"`, `//` and `///` comments, string-aware quote pairs |
-| `C# Project File` | `csproj` | `tree-sitter-xml` @ `863dbc38` (xml) | restore/build current project | |
-| `MSBuild File` | `proj`, `props`, `targets` | `tree-sitter-xml` (xml) | — | |
-| `C# Solution File` | `slnx` | `tree-sitter-xml` (xml) | restore/build current solution | |
+| `C# Project File` | `csproj` | `tree-sitter-xml` @ `863dbc38` (xml) | restore/build/test/run/watch/clean/publish/format/EF-migration task templates (M2.2) | queries shared with `MSBuild File` via symlink; see `docs/project-files.md` |
+| `MSBuild File` | `proj`, `props`, `targets` | `tree-sitter-xml` (xml) | — (fragments by design) | canonical query file (MSBuild vocabulary + curated outline); see `docs/project-files.md` |
+| `C# Solution File` | `slnx` | `tree-sitter-xml` (xml) | restore/build/test/clean/publish/format task templates (M2.2) | shared queries add solution vocabulary; `.sln` deliberately unowned — see `docs/project-files.md` |
 
 ### Language servers (all attached to `CSharp` only, singular `language =` form)
 
@@ -59,7 +59,7 @@ The authoritative mapping; every item below must keep this table accurate.
 | M2.1 | `src/language_servers/roslyn.rs` (error messages), `docs/dotnet-workflow.md` | manual: each failure keeps files editable; documented remediation |
 | M2.2 | `languages/csproj/tasks.json`, `languages/slnx/tasks.json`, `docs/dotnet-workflow.md` | task definitions against `fixtures/**` (release smoke) |
 | M2.3 | `docs/debugging.md` | dated doc decision |
-| M2.4 | `docs/project-files.md`, possibly `languages/msbuild/config.toml` | documented associations |
+| M2.4 | `languages/msbuild/{highlights,outline}.scm` (shared via `languages/{csproj,slnx}` symlinks), `harness/run.py` (csproj/slnx table entries), `docs/project-files.md` | `harness/golden/{msbuild,csproj,slnx}/**` snapshots green; `.sln` decision recorded with evidence, dated 2026-09-06 |
 | M3.1 | `src/language_servers/roslyn.rs` + `razor_support.rs`, `docs/roslyn-razor-pinning.md` | reproducible startup script `scripts/spike/*`; version-mismatch error |
 | M3.2 | `scripts/probe_razor.py`, `src/language_servers/razor_support.rs` | `docs/razor-probe-results.md` evidence table |
 | M3.3 | `docs/upstream-proposal.md` (discussion artifact) | outcome recorded in `BACKLOG.md` G2 |

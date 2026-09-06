@@ -101,6 +101,26 @@ LANGUAGES: dict[str, Language] = {
         suffixes=(".csproj", ".props", ".targets", ".slnx"),
         pinned=PINNED_GRAMMARS["xml"],
     ),
+    # csproj/slnx share the msbuild corpus: their .scm files are symlinks
+    # to languages/msbuild (Zed resolves each language's queries from its
+    # own directory only), but each language still gets its own snapshot
+    # coverage of the corpus files it owns (see docs/project-files.md).
+    "csproj": Language(
+        name="csproj",
+        grammar_dir=PINNED_GRAMMARS["xml"].workspace + "/" + PINNED_GRAMMARS["xml"].subdir,
+        corpus_glob="corpus/msbuild/**",
+        query_glob="languages/csproj/*.scm",
+        suffixes=(".csproj",),
+        pinned=PINNED_GRAMMARS["xml"],
+    ),
+    "slnx": Language(
+        name="slnx",
+        grammar_dir=PINNED_GRAMMARS["xml"].workspace + "/" + PINNED_GRAMMARS["xml"].subdir,
+        corpus_glob="corpus/msbuild/**",
+        query_glob="languages/slnx/*.scm",
+        suffixes=(".slnx",),
+        pinned=PINNED_GRAMMARS["xml"],
+    ),
 }
 
 ANSI_RE = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")

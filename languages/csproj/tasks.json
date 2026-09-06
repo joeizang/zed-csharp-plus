@@ -20,5 +20,82 @@
     "reveal_target": "center",
     "hide": "on_success",
     "shell": "system"
+  },
+  {
+    "label": "Test Current Project",
+    "command": "dotnet test",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Run Current Project",
+    "command": "dotnet run --project",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Watch Current Project",
+    "command": "dotnet watch --project",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Clean Current Project",
+    "command": "dotnet clean",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Publish Current Project",
+    "command": "dotnet publish",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Format Current Project",
+    "command": "dotnet format",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "EF: Create Migration (requires dotnet-ef)",
+    "command": "dotnet ef migrations add",
+    "args": ["MigrationName", "--project", "$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "on_success",
+    "shell": "system"
   }
 ]

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../mvc-web/MvcWeb.csproj" />
+  <Project Path="../razor-classlib/RazorClassLib.csproj" />
+  <Project Path="../razor-pages/RazorPages.csproj" />
+</Solution>

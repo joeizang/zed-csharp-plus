@@ -248,7 +248,12 @@ remove the remaining unknowns before changing user-visible behavior.
   - Acceptance: the corpus is the input to both M0.2's fitness test and M1.0's
     snapshot harness, and contains no secrets.
 
-- [ ] **M0.3b — Buildable fixture solutions (gates M2 and M3)**
+- [x] **M0.3b — Buildable fixture solutions (gates M2 and M3)** *(done
+  2026-09-06 — `fixtures/`: mvc-web, razor-pages, blazor-webapp, blazor-wasm,
+  razor-classlib, multi-project `.slnx`, all targeting net8.0; restore/build
+  verified, offline-after-first-restore verified via `scripts/verify-fixtures.sh`
+  with blackholed network; generated-state (populated bin/obj) and reload
+  (`fixtures/reload-case/add-page.sh`) cases present; no secrets.)*
   - Minimal restorable fixtures for MVC, Razor Pages, Blazor Web App, Blazor
     WASM, Razor Class Library, and a multi-project solution, plus generated and
     project-reload cases.
@@ -390,7 +395,13 @@ depending on a Razor language server. Gated on M0.3a and G1.
 Goal: make standard C# web work natural from a Zed project window. Gated on
 M0.3b.
 
-- [ ] **M2.1 — Roslyn-first project guidance**
+- [x] **M2.1 — Roslyn-first project guidance** *(done 2026-09-06 — Roslyn-first
+  guidance and remediation matrix in `docs/dotnet-workflow.md`; actionable
+  diagnostics implemented in `src/language_servers/*`: every failure names
+  itself + one concrete fix (retry/proxy/offline, cached-dir cleanup,
+  `lsp.<server>.binary.path` escape), global.json SDK requirement surfaced
+  via `read_text_file` where relevant; 35 unit tests; launch behavior
+  unchanged.)*
   - Document and test Roslyn as the recommended default for C# and required
     backend for Razor semantics.
   - Improve actionable diagnostics for missing SDKs, invalid `global.json`,
@@ -398,7 +409,12 @@ M0.3b.
   - Acceptance: each failure keeps files editable and identifies a concrete
     remediation path.
 
-- [ ] **M2.2 — Add safe, parameterized .NET tasks**
+- [x] **M2.2 — Add safe, parameterized .NET tasks** *(done 2026-09-06 — 9
+  project tasks (restore/build/test/run/watch/clean/publish/format/ef-migration)
+  and 6 solution tasks; every template executed against real projects (run/watch
+  booted and killed; EF shape proven end-to-end); no auto-run, no secrets;
+  documented for multi-project selection in `docs/dotnet-workflow.md`; fixtures
+  validation via `scripts/verify-fixtures.sh`.)*
   - Provide discoverable restore, build, test, run, watch, and migration task
     templates where Zed's task model supports them, extending the existing
     `languages/csproj/tasks.json` and `languages/slnx/tasks.json`.
@@ -407,7 +423,12 @@ M0.3b.
   - Acceptance: task definitions work against the M0.3b fixtures and are
     documented for multi-project selection.
 
-- [ ] **M2.3 — Debugger handoff (conditional on a third-party adapter)**
+- [x] **M2.3 — Debugger handoff (conditional on a third-party adapter)** *(done
+  2026-09-06 — branch (b) applies: no usable .NET debug adapter for Zed
+  exists today (built-in adapters have no C#; registry scan found none;
+  vsdbg licence forbids non-VS use; netcoredbg is MIT but only available as
+  an unverified dev-extension wiring). Documented and dated in
+  `docs/debugging.md` with troubleshooting; no debugger code added.)*
   - This item's original acceptance criterion depended on a .NET debug adapter
     for Zed existing and working — which this project neither owns nor can
     deliver. It is therefore conditional.
@@ -419,7 +440,12 @@ M0.3b.
     adapter. Do not block Milestone 2 on it.
   - Acceptance: whichever branch applies is documented and dated.
 
-- [ ] **M2.4 — Project-file ergonomics audit**
+- [x] **M2.4 — Project-file ergonomics audit** *(done 2026-09-06 — coverage
+  table and decisions in `docs/project-files.md`; MSBuild highlighting/outline
+  strengthened; csproj/slnx share msbuild queries via symlinks (upstream's own
+  design, mode 120000 verified); classic `.sln` deliberately not owned
+  (evidence-dated 2026-09-06); snapshot harness extended to csproj+slnx, all
+  five languages green.)*
   - Confirm `.csproj`, `.props`, `.targets`, and `.slnx` coverage.
   - Decide whether classic `.sln` needs extension-owned treatment or is already
     correctly handled by Zed; avoid duplicate ownership.
