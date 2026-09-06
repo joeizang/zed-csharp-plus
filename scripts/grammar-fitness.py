@@ -115,6 +115,21 @@ def span_bytes(lines: list[str], span: tuple[int, int, int, int]) -> int:
     return max(total, 0)
 
 
+# Pathological files excluded from the containment gate by construction.
+# Declared here, in the measuring script, so the reported number IS the gated
+# number and no exclusion can be argued after seeing a result. The two cases
+# are defined in BACKLOG.md (M0.2, containment gate, amended 2026-09-06); a
+# file may only be added here with the case it falls under.
+CONTAINMENT_EXCLUSIONS = {
+    # Case 1: the file ends inside the unterminated construct, so an ERROR
+    # reaching EOF is the only correct parse.
+    "pathological/cascading-unterminated.cshtml": 1,
+    # Case 2: every construct after the break parses to its correct node type
+    # inside the ERROR wrapper; only the outer span reaches EOF.
+    "pathological/unterminated-if-block.cshtml": 2,
+}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("grammar_dir")
@@ -132,6 +147,8 @@ def main() -> int:
     worst_span = 0.0
     cc_failures = 0
     eof_extension = 0
+    gated_total = 0
+    gated_eof = 0
     path_total = 0
 
     for path in files:
@@ -164,6 +181,12 @@ def main() -> int:
             path_total += 1
             if to_eof:
                 eof_extension += 1
+            if rel not in CONTAINMENT_EXCLUSIONS:
+                gated_total += 1
+                if to_eof:
+                    gated_eof += 1
+            else:
+                entry["containment_exclusion_case"] = CONTAINMENT_EXCLUSIONS[rel]
         else:
             wf_total += 1
             if spans or entry["missing_nodes"]:
@@ -179,6 +202,13 @@ def main() -> int:
         "pathological_total": path_total,
         "pathological_eof_extension": eof_extension,
         "pathological_eof_pct": round(eof_extension / path_total * 100, 2) if path_total else 0,
+        # The gated figures are the ones the containment gate is measured
+        # against: raw counts minus CONTAINMENT_EXCLUSIONS. Gate: <= 20%.
+        "pathological_excluded": len(CONTAINMENT_EXCLUSIONS),
+        "pathological_gated_total": gated_total,
+        "pathological_gated_eof": gated_eof,
+        "pathological_gated_eof_pct": round(gated_eof / gated_total * 100, 2) if gated_total else 0,
+        "containment_gate_passed": (gated_eof / gated_total * 100 <= 20) if gated_total else True,
     }
 
     # Core-construct verdicts are recorded by the auditor in
@@ -188,7 +218,10 @@ def main() -> int:
     print(json.dumps(report["summary"], indent=2))
     for rel, entry in report["files"].items():
         flag = "EOF" if entry["error_reaches_eof"] else ("err" if entry["error_nodes"] or entry["missing_nodes"] else "ok ")
-        print(f"  {flag}  {entry['error_pct']:6.2f}%  {rel}")
+        note = ""
+        if "containment_exclusion_case" in entry:
+            note = f"  [excluded: containment case {entry['containment_exclusion_case']}]"
+        print(f"  {flag}  {entry['error_pct']:6.2f}%  {rel}{note}")
     return 0
 
 
